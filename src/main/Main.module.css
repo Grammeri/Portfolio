@@ -1,0 +1,14 @@
+.mainBlock{
+    height: 100vh;
+    background-color: pink;
+}
+
+.greetings{
+    width:300px;
+    background-color: yellow;
+}
+.photo{
+    width:300px;
+    height:400px;
+    background-color: greenyellow;
+}
