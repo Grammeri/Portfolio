@@ -1,4 +1,4 @@
-.skill {
+.myProject {
     width: 250px;
     background-color: burlywood;
     display: flex;
@@ -8,8 +8,8 @@
     padding: 20px;
     box-sizing: border-box
 }
-.icon{
-    height: 60px;
-    width: 60px;
-    background-color: brown;
+
+.myProjectBtn{
+    padding-top:30px;
+    padding-bottom: 30px;
 }

@@ -1,24 +1,23 @@
-.skillsBlock {
+.myProjectsBlock {
     min-height: 100vh; /*adjustment for mobile version*/
-    background-color: red;
+    background-color: yellow;
 }
 
-.skillsContainer {
+.myProjectsContainer {
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
 }
 
 .title{
-background-color: gray;
+    background-color: sandybrown;
 }
 
-.skills{
+.projects{
     border:1px solid;
     width:100%; /*width is relative to parent (skillsContainer width*/
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     box-sizing: border-box;
 }
-
