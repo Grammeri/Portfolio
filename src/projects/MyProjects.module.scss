@@ -1,6 +1,8 @@
+@import '../common/styles/sass/variables';
+
 .myProjectsBlock {
   min-height: 100vh; /*adjustment for mobile version*/
-  background-color: #1f1f20;
+  background-color: $bgColor;
 
   .myProjectsContainer {
     flex-direction: column;
