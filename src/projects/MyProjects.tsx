@@ -4,12 +4,12 @@ import {MyProject} from './project/Myproject';
 import styleContainer from '../common/styles/Container.module.css';
 import {Title} from '../common/Components/title/Title';
 import todoImg from './../assets/image/SocialNetwork.jpg';
-import socialNetWork from './../assets/image/Todolist.jpg';
+import socialNetWorkImg from './../assets/image/Todolist.jpg';
 
 
 export const MyProjects = () => {
     const social = {
-        backgroundImage: `url(${socialNetWork})`,
+        backgroundImage: `url(${socialNetWorkImg})`,
     };
     const todolist = {
         backgroundImage: `url(${todoImg})`,

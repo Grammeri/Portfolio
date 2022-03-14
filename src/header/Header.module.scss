@@ -1,0 +1,16 @@
+@import '../common/styles/sass/variables';
+@import '../common/styles/sass/mixins';
+
+.header{
+    height: 80px;
+    background-color: $headerBgColor;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @media screen and (max-width: 266px) {
+        .header{
+            height: 100px;
+        }
+    }
+}
+
