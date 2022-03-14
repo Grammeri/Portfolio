@@ -6,7 +6,7 @@
     background-color: $mainPagebgColor;
     .greeting{
         width:300px;
-        background-color: lightgray;
+        background-color: $greetingBgColor;
     }
     .greeting p {
         font-size: xx-small;
