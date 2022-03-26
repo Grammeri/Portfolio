@@ -1,0 +1,43 @@
+@import '../common/styles/sass/variables';
+@import '../common/styles/sass/mixins';
+
+.footer {
+    background-color: $footerBgColor;
+    .footerContainer {
+        flex-direction: column;
+        justify-content: flex-start;
+        .title {
+            background-color: $footerBgColor;
+        }
+        .socialIcons {
+            width: 250px;
+            background-color: $footerBgColor;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .socialIcon {
+                width: 50px;
+                height: 50px;
+                background-color: #fff;
+            }
+        }
+    }
+    @media screen and (max-width:318px){
+        .socialIcons {
+            width:100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
