@@ -1,0 +1,21 @@
+@import '../common/styles/sass/variables';
+@import '../common/styles/sass/mixins';
+
+.header{
+    height: 80px;
+    background-color: Orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    z-index: 9999;
+    @media screen and (max-width: 266px) {
+        .header{
+            height: 100px;
+        }
+    }
+}
+

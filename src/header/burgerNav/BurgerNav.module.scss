@@ -1,0 +1,35 @@
+@import '/src/common/styles/sass/variables';
+@import '/src/common/styles/sass/mixins';
+
+.burgerNav{
+    width: 300px;
+    display: flex;
+    align-items: baseline;
+    margin-right: 10px;
+
+    @include text (titleFontFamily, 16px, 1.2);
+    letter-spacing: 1px;
+    margin:0 0 5px;
+
+
+    @media screen and (min-width: 400px) {
+        display: none;
+    }
+}
+
+/*.burgerNav{
+    width: 300px;
+    @include flex(column, space-between, stretch, nowrap);
+    a{@include text($TitleFontFamily, 16pz, 1.2, 400);
+        color:$textColor;
+        cursor: pointer;
+        &:hover{
+            text-decoration: none;
+            color:$primaryColor
+        }
+    }
+    active {
+        color: $primaryColor
+    }
+}*/
+

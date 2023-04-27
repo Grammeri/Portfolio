@@ -1,0 +1,55 @@
+.contactsBlock {
+    min-height: 100vh; /*adjustment for mobile version*/
+    background-color: orange;
+    .contactsContainer {
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        .title{
+            background-color: lightblue;
+        }
+        .contactForm{
+            width:40%;
+            background-color: #eeeef5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            padding:30px;
+            border:1px solid;
+            display:flex;
+
+            .submitBtn {
+                width: 20%;
+                margin: 10px;
+                display:flex;
+                justify-content: center;
+                height: 3em;
+                align-items: center; /* add this line */
+            }
+        }
+        .contactForm input {
+            width:60%;
+            height: 2em;
+        }
+        .contactForm textarea {
+            width:60%;
+            height: 4em;
+        }
+    }
+}
+
+input{
+    margin-bottom: 3px;
+}
+
+textarea{
+    margin-top: 3px;
+}
+
+@media screen and (max-width: 500px){
+    .contactForm{
+        width:100%;
+    }
+}
