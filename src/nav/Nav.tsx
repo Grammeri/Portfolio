@@ -16,6 +16,7 @@ export function Nav() {
                 duration= {500}
             >Projects</Link>*/}
             <a  href="#MyProjects">Projects</a>
+            <a href="#myUpdatedCV">CV</a>
             <a href="#Contacts">Contacts</a>
         </div>
     )

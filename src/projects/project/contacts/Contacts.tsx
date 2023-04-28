@@ -3,12 +3,19 @@ import { useForm } from 'react-form';
 import style from './Contacts.module.scss';
 import styleContainer from './Contacts.module.scss';
 import { Title } from './../../../../src/common/Components/title/Title';
+import axios from "axios";
 
 export const Contacts = () => {
     const handleSubmit = async (values) => {
         // Handle form submission logic here
         // For example, send data to a server or show a success message
         console.log(values);
+        try {
+            const response = await axios.post('http://localhost:3010/sendMessage', values);
+            console.log(response.data);
+        } catch (error) {
+            console.error(error);
+        }
     };
 
     const {

@@ -6,6 +6,7 @@ import {Contacts} from "../src/projects/project/contacts/Contacts";
 import {Skills} from "../src/skills/Skills";
 import {Footer} from "../src/footer/Footer";
 import {Main} from "../src/main/Main";
+import {MyCv} from "myCv";
 
 
 
@@ -18,6 +19,7 @@ function App() {
             <Main/>
             <Skills/>
             <MyProjects/>
+            <MyCv/>
             <Contacts/>
             <Footer/>
         </div>
