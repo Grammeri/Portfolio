@@ -10,6 +10,7 @@ import ReactTypingEffect from "react-typing-effect";
 import Fade from "react-awesome-reveal"
 import { Tilt } from 'react-tilt'
 
+/*
 const particlesOptions = {
     fpsLimit: 120,
     interactivity: {
@@ -77,6 +78,7 @@ const particlesOptions = {
     },
     detectRetina: true,
 }
+*/
 
 export const Main = () => {
 
@@ -101,14 +103,14 @@ export const Main = () => {
 
     return (
         <div id="Main" className={style.mainBlock}>
-            <Particles
+            {/*<Particles
                 className={style}
                 id="tsparticles"
                 init={particlesInit}
                 loaded={particlesLoaded}
                 params={particlesOptions}
                 options={{ fullScreen: { enable: false } }}
-            />
+            />*/}
             <Fade>
                 <div className={styleContainer.container}>
 

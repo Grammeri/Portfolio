@@ -1,8 +1,7 @@
 import React from 'react';
-import { useForm } from 'react-form';
+import {useForm} from 'react-form';
 import style from './Contacts.module.scss';
-import styleContainer from './Contacts.module.scss';
-import { Title } from './../../../../src/common/Components/title/Title';
+import {Title} from './../../../../src/common/Components/title/Title';
 import axios from "axios";
 
 export const Contacts = () => {
@@ -27,6 +26,7 @@ export const Contacts = () => {
         <div id="Contacts" className={style.contactsBlock}>
             <div id="Contacts" className={`${style.contactsContainer}`}>
                 <Title header={'Contacts'} />
+
                 <Form className={style.contactForm}>
                     <label htmlFor="name">Name*</label>
                     <input type="text" name="name" id="name" required />
@@ -37,6 +37,9 @@ export const Contacts = () => {
                     <button type="submit" disabled={isSubmitting} className={style.submitBtn}>
                         Send
                     </button>
+                    <div>
+                        Email and message form is temporarily not working, please use @ link below
+                    </div>
                 </Form>
             </div>
         </div>
