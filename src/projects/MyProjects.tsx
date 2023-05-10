@@ -6,6 +6,7 @@ import {Title} from '../common/Components/title/Title';
 import socialNetWorkImg from './../assets/image/SocialNetwork.jpg';
 import todoImg from './../assets/image/Todolist.jpg';
 import startUpImg from "./../assets/image/StartUp.jpg"
+import flashCardsImg from "./../assets/image/FlashCards.jpg"
 
 
 export const MyProjects = () => {
@@ -24,6 +25,10 @@ export const MyProjects = () => {
         const todoUrl = 'https://silevans-a2m9qgc35-i6169696-gmailcom.vercel.app/';
         window.open(todoUrl, '_blank');
     };
+    const jumpToFlashCards = () => {
+        const todoUrl = 'https://flashcards-bzwnji4ny-horobryh22.vercel.app/packs';
+        window.open(todoUrl, '_blank');
+    };
 
     const social = {
         backgroundImage: `url(${socialNetWorkImg})`,
@@ -36,6 +41,10 @@ export const MyProjects = () => {
         backgroundImage: `url(${startUpImg})`,
     };
 
+    const flashCards = {
+        backgroundImage: `url(${flashCardsImg})`,
+    };
+
     return (
         <div id="MyProjects" className={style.myProjectsBlock}>
             <div className={`${styleContainer.container} ${style.myProjectsContainer}`}>
@@ -43,21 +52,19 @@ export const MyProjects = () => {
                 <div className={style.projects}>
 
                     <div onClick={jumpToToDo}>
-                        <MyProject style={todolist} projectTitle={"Todolist"}
-                                  /* projectDescription={"Lorem ipsum dolor sit amet, consectetur adipisicing elit."}*//>
+                        <MyProject style={todolist} projectTitle={"Todolist"}/>
                     </div>
 
                     <div onClick={jumpToSocialNetwork}>
-                        <MyProject style={social} projectTitle={"Social Network"}
-                                  /* projectDescription={"Lorem ipsum dolor sit amet, consectetur adipisicing elit."}*//>
+                        <MyProject style={social} projectTitle={"Social Network"}/>
                     </div>
 
                     <div onClick={jumpToStartUp}>
-                        <MyProject style={startUp} projectTitle={"Start Up"}
-                                   /*projectDescription={"Lorem ipsum dolor sit amet, consectetur adipisicing elit."}*//>
+                        <MyProject style={startUp} projectTitle={"Start Up"}/>
                     </div>
-
-
+                    <div onClick={jumpToFlashCards}>
+                        <MyProject style={flashCards} projectTitle={"FlashCards"}/>
+                    </div>
                 </div>
             </div>
         </div>
