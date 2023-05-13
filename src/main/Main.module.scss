@@ -1,46 +1,30 @@
 @import '../common/styles/sass/variables';
 @import '../common/styles/sass/mixins';
 
-.mainBlock{
+.mainBlock {
     height: 100vh;
     background-color: $mainPagebgColor;
-    .greeting{
-        width:300px;
-        //background-color: orange;
+
+    .greeting {
+        width: 300px;
         padding: 15px;
         margin-top: 400px;
-        color:orange;
+        color: orange;
     }
+
     .greeting span {
         font-size: large;
     }
-    .photo{
-        width:400px;
-        height:400px;
-/*        background-color: greenyellow;
-        display:flex;
-        justify-content: center;
-        align-items: start;*/
-/*        margin-top: 120px;
-        margin-left: 50px;
-        margin-rigt: 500px*/
-        margin-left:10px
+
+    .photo {
+        width: 400px;
+        height: 400px;
+        margin-left: 10px;
     }
 
-    @media screen and (max-width: 752px){
-        .mainBlock{
+    @media screen and (max-width: 752px) {
+        .mainBlock {
             height: 150vh;
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
