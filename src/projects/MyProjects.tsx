@@ -31,8 +31,8 @@ export const MyProjects = () => {
         {
             title: "FlashCards",
             image: flashCardsImg,
-            appUrl: "https://flashcards-bzwnji4ny-horobryh22.vercel.app/packs",
-            codeUrl: "https://github.com/horobryh22/flashcards"
+            appUrl: "https://grammeri.github.io/flashcards",
+            codeUrl: "https://github.com/Grammeri/flashcards"
         }
     ];
 
@@ -69,8 +69,8 @@ export const MyProjects = () => {
                             <MyProject style={{ backgroundImage: `url(${project.image})` }} projectTitle={project.title} />
                             {activeIndex === index && (
                                 <div className={style.buttonsContainer}>
-                                    <button className={style.appButton} onClick={() => openApp(project.appUrl)}>Open Application</button>
-                                    <button className={style.codeButton} onClick={() => openCode(project.codeUrl)}>Open GitHub</button>
+                                    <button className={style.appButton} onClick={() => openApp(project.appUrl)}>View Project</button>
+                                    <button className={style.codeButton} onClick={() => openCode(project.codeUrl)}>View Code</button>
                                 </div>
                             )}
                         </div>
