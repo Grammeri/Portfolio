@@ -14,11 +14,12 @@ export const MyCv = () => {
                 <img src={myCV} alt="My CV" />
                 <div className={style.downloadContainer}>
                     <a
-                        href="https://drive.google.com/uc?export=download&id=1W4AFSFKswj3ZgCXmxRDkPKyvCmiWHcj_"
+                        href="https://drive.google.com/file/d/1PNxQXSnMdS-pfdt2FuwOY5b_jChqK3_y/view?usp=sharing"
                         download="My_CV.pdf"
                         onClick={handleDownload}
                         className={style.downloadLink}
                     >
+                        <span><h4>Download my CV</h4></span>
                         <BsDownload className={style.downloadIcon} />
                     </a>
                 </div>
