@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import emailjs from 'emailjs-com';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import style from './Contacts.module.scss';
 import {Title} from './../../../../src/common/Components/title/Title';
 
@@ -15,9 +17,10 @@ export const Contacts = () => {
             emailjs.sendForm('service_lal0mp4', 'contact_form', this)
                 .then(function() {
                     console.log('SUCCESS!');
-                    window.alert('Email successfully sent!');
+                    toast.success('Email successfully sent!');
                 }, function(error) {
                     console.log('FAILED...', error);
+                    toast.error('An error occurred.');
                 });
         });
     }, []);
@@ -42,6 +45,7 @@ export const Contacts = () => {
                     </div>
                 </form>
             </div>
+            <ToastContainer />
         </div>
     );
 };
