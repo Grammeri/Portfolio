@@ -2,23 +2,12 @@ import React from 'react';
 import style from './Main.module.scss';
 import styleContainer from './../common/styles/Container.module.css';
 import myPhoto from '../assets/image/4Dima.jpg';
-import { MyPhoto } from './myPhoto/MyPhoto';
-import Particles from "react-particles";
-import { Container, Engine } from "tsparticles-engine";
-import { loadFull } from "tsparticles";
+import {MyPhoto} from './myPhoto/MyPhoto';
 import ReactTypingEffect from "react-typing-effect";
 import Fade from "react-awesome-reveal";
-import { Tilt } from 'react-tilt';
+import {Tilt} from 'react-tilt';
 
 export const Main = () => {
-    const particlesInit = async (engine: Engine) => {
-        console.log(engine);
-        await loadFull(engine);
-    };
-
-    const particlesLoaded = async (container: Container | undefined) => {
-        await console.log(container);
-    };
 
     const dimaPhoto = {
         backgroundImage: `url(${myPhoto})`,
@@ -28,31 +17,32 @@ export const Main = () => {
         objectPosition: 'center',
         width: '100%',
         height: '100%',
+        borderRadius:"20px"
     };
 
     return (
         <div id="Main" className={style.mainBlock}>
-            <Particles
-                className={style.particles}
-                id="tsparticles"
-                init={particlesInit}
-                loaded={particlesLoaded}
-            />
 
             <Fade>
                 <div className={`${styleContainer.container} ${style.mainContainer}`}>
                     <div className={style.greeting}>
-                        <h>Hi there!</h>
-                        <h1>I am Dmitry Nikolayev</h1>
-                        <h1>Frontend React Developer</h1>
-                        <ReactTypingEffect
-                            text={"Frontend React Developer " + "from Houston, Texas"}
-                        />
+                        <h3>Hi there!</h3>
+                        <h1>I am Dmitry</h1>
+                        <h1>Frontend Developer (React)</h1>
+                        <span className={style.typingEffectText}>
+                           <ReactTypingEffect
+                               text={["<p>I like what I do</p>"]}
+                           />
+                       </span>
+
+
                     </div>
 
                     <Tilt options={{}}>
-                        <div className={style.photo}>
-                            <MyPhoto style={dimaPhoto} />
+                        <div className={style.photoWrapper}>
+                            <div className={style.photo}>
+                                <MyPhoto style={dimaPhoto} />
+                            </div>
                         </div>
                     </Tilt>
                 </div>

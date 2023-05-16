@@ -9,6 +9,7 @@
     max-width: 800px;
     margin: 0 auto;
     background-color: gray;
+    margin:10px
 }
 
 .myCv img {
@@ -28,20 +29,19 @@
 }
 
 .downloadLink {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-right: 200px;
     text-decoration: none;
 }
 
 .downloadIcon {
     font-size: 36px;
-    color: black;
+    color: orange;
     font-weight: bold;
 }
 
 h4{
     font-size: 20px;
-    color: black;
+    color:orange;
     text-decoration: none;
+
 }

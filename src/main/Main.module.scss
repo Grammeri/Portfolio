@@ -20,7 +20,25 @@
         width: 400px;
         height: 400px;
         margin-left: 10px;
+        border-radius: 50px;
+        top:0;
+        left:0;
     }
+    .photoWrapper {
+        position: static;
+        padding: 10px; // Adjust this to change the thickness of your frame
+        background-color: orange;
+        border-radius: 25px; // Adjust this to match the border-radius of your image
+        width: 400px;
+        height: 400px;
+    }
+
+    .typingEffectText {
+        font-size: large;
+        font-weight: bold;
+        // ... any other styles you want to apply
+    }
+
 
     @media screen and (max-width: 752px) {
         .mainBlock {
