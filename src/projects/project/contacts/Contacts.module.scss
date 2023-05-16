@@ -1,6 +1,6 @@
 .contactsBlock {
     min-height: 100vh; /*adjustment for mobile version*/
-    background-color: orange;
+    background-color:#1f1f20;
     .contactsContainer {
         height: 400px;
         display: flex;
@@ -11,7 +11,7 @@
         }
         .contactForm{
             width:40%;
-            background-color: #eeeef5;
+            background-color:orange;
             display: flex;
             flex-direction: column;
             align-items: center;

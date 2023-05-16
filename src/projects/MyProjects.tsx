@@ -12,24 +12,29 @@ export const MyProjects = () => {
     const projects = [
         {
             title: "Todolist",
+            description: "This is a simple todolist",
             image: todoImg,
             appUrl: "https://grammeri.github.io/Todolist/",
             codeUrl: "https://github.com/grammeri/Todolist"
         },
         {
             title: "Social Network",
+            description: "This is a social network project",
             image: socialNetWorkImg,
             appUrl: "https://grammeri.github.io/Samurai_23/",
             codeUrl: "https://github.com/grammeri/Samurai_23"
         },
         {
             title: "Start Up",
+            description: "This is a start up project",
             image: startUpImg,
             appUrl: "https://silevans-a2m9qgc35-i6169696-gmailcom.vercel.app/",
             codeUrl: "https://github.com/Dmitry-Klyuev/silevans"
         },
         {
             title: "FlashCards",
+            description: "Flashcards for online training, using the quesion-answer system with the ability to create" +
+                "your own card decks and expand it",
             image: flashCardsImg,
             appUrl: "https://grammeri.github.io/flashcards",
             codeUrl: "https://github.com/Grammeri/flashcards"
@@ -68,9 +73,12 @@ export const MyProjects = () => {
                         >
                             <MyProject style={{ backgroundImage: `url(${project.image})` }} projectTitle={project.title} />
                             {activeIndex === index && (
-                                <div className={style.buttonsContainer}>
-                                    <button className={style.appButton} onClick={() => openApp(project.appUrl)}>View Project</button>
-                                    <button className={style.codeButton} onClick={() => openCode(project.codeUrl)}>View Code</button>
+                                <div className={style.projectOverlay}>
+                                    <div className={style.projectDescription}>{project.description}</div>
+                                    <div className={style.buttonsContainer}>
+                                        <button className={style.appButton} onClick={() => openApp(project.appUrl)}>View Project</button>
+                                        <button className={style.codeButton} onClick={() => openCode(project.codeUrl)}>View Code</button>
+                                    </div>
                                 </div>
                             )}
                         </div>
