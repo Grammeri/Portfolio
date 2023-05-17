@@ -7,28 +7,63 @@ import {Title} from './../../../../src/common/Components/title/Title';
 
 export const Contacts = () => {
     const form:any = useRef();
+    const hasAttachedListener = useRef(false); // create a new ref
 
     useEffect(() => {
         emailjs.init('SW5P4TVHUa0JytrLA');
 
-        form.current.addEventListener('submit', function(event) {
+        const handleFormSubmit = (event) => {
             event.preventDefault();
-            // these IDs from the previous steps
-            emailjs.sendForm('service_lal0mp4', 'contact_form', this)
-                .then(function() {
+            emailjs.sendForm('service_lal0mp4', 'contact_form', form.current)
+                .then(() => {
                     console.log('SUCCESS!');
-                    toast.success('Email successfully sent!');
-                }, function(error) {
+                    toast.success('Email successfully sent!', {
+                        position: "bottom-center",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                    });
+                    form.current.reset(); // reset the form
+                }, (error) => {
                     console.log('FAILED...', error);
-                    toast.error('An error occurred.');
+                    toast.error('An error occurred.', {
+                        position: "bottom-center",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                    });
                 });
-        });
+        };
+
+        // Only attach the listener if we haven't already
+        if (!hasAttachedListener.current) {
+            form.current.addEventListener('submit', handleFormSubmit);
+            hasAttachedListener.current = true; // set the ref to true
+        }
+
+        // Clean up function
+        return () => {
+            form.current.removeEventListener('submit', handleFormSubmit);
+        };
     }, []);
 
     return (
         <div id="Contacts" className={style.contactsBlock}>
+            <h2 style={{color:"orange", position:"absolute", margin:"auto", marginLeft:"20px", marginTop:"100px"}}>
+                {"<Contacts />"}</h2>
+
+
             <div id="Contacts" className={`${style.contactsContainer}`}>
-                <Title header={'Contacts'} />
+
+
+                <Title header={'Let\'s get in touch'} />
+
 
                 <form ref={form} className={style.contactForm}>
                     <label htmlFor="name">Name*</label>
@@ -45,7 +80,9 @@ export const Contacts = () => {
                     </div>
                 </form>
             </div>
-            <ToastContainer />
+            <h2 style={{color:"orange", position:"absolute", margin:"auto", marginLeft:"20px", marginTop:"300px"}}>
+                {"<Contacts />"}</h2>
+            <ToastContainer className={style.toastContainer} />
         </div>
     );
 };

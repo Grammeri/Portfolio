@@ -11,39 +11,40 @@ export const Footer = () => {
     return (
         <div className={style.footer}>
             <div className={`${styleContainer.container} ${style.footerContainer}`}>
-                <Title header={"Dmitry Nikolayev"} />
-                <div className={style.socialIcons}>
-                    <div className={style.socialIcon}>
-                        <a href="https://github.com/Grammeri">
-                            <GithubIcon
-                                style={{ color: "orange", fontSize: "85px", margin: "15px" }}
-                            />
-                        </a>
+                <div className={style.footerContent}>
+                    <div className={style.footerText}>Stack: React, TypeScript, SCSS, HTML & CSS</div>
+                    <div className={style.socialIcons}>
+                        <div className={style.socialIcon}>
+                            <a href="https://github.com/Grammeri">
+                                <GithubIcon
+                                    style={{ color: "black", fontSize: "30px" }}
+                                />
+                            </a>
+                        </div>
+                        <div className={style.socialIcon}>
+                            <a href="https://t.me/dmitrysnikolayev">
+                                <TelegramIcon
+                                    style={{ color: "black", fontSize: "40px" }}
+                                />
+                            </a>
+                        </div>
+                        <div className={style.socialIcon}>
+                            <a href="https://www.linkedin.com/in/dmitry-nikolayev-a34978258/">
+                                <LinkedInIcon
+                                    style={{ color: "black", fontSize: "40px" }}
+                                />
+                            </a>
+                        </div>
+                        <div className={style.socialIcon}>
+                            <a href="mailto:reacttsxgrammer@gmail.com">
+                                <AlternateEmailIcon
+                                    style={{ color: "black", fontSize: "40px" }}
+                                />
+                            </a>
+                        </div>
                     </div>
-
-                    <div className={style.socialIcon}>
-                        <a href="https://t.me/dmitrysnikolayev">
-                            <TelegramIcon
-                                style={{ color: "orange", fontSize: "110px", margin: "15px" }}
-                            />
-                        </a>
-                    </div>
-                    <div className={style.socialIcon}>
-                        <a href="https://www.linkedin.com/in/dmitry-nikolayev-a34978258/">
-                            <LinkedInIcon
-                                style={{ color: "orange", fontSize: "110px", margin: "15px" }}
-                            />
-                        </a>
-                    </div>
-                    <div className={style.socialIcon}>
-                        <a href="mailto:reacttsxgrammer@gmail.com">
-                            <AlternateEmailIcon
-                                style={{ color: "orange", fontSize: "110px", margin: "15px" }}
-                            />
-                        </a>
-                    </div>
+                    <div className={style.footerText}>© Twentytwentythree</div>
                 </div>
-                {/* <span className={style.copyright}>2022 All rights reserved</span>*/}
             </div>
         </div>
     );
