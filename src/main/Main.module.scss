@@ -2,7 +2,8 @@
 @import '../common/styles/sass/mixins';
 
 .mainBlock {
-    height: 100vh;
+    min-height: 100vh; /* Use min-height instead of height to prevent overlap */
+
     background-color: $mainPagebgColor;
 
     .greeting {
@@ -21,9 +22,10 @@
         height: 400px;
         margin-left: 10px;
         border-radius: 50px;
-        top:0;
-        left:0;
+        top: 0;
+        left: 0;
     }
+
     .photoWrapper {
         position: static;
         padding: 10px; // Adjust this to change the thickness of your frame
@@ -38,11 +40,31 @@
         font-weight: bold;
         // ... any other styles you want to apply
     }
+}
 
+@media screen and (max-width: 752px) {
+    .mainBlock {
+        min-height: 150vh; /* Use min-height instead of height for mobile devices */
+    }
+}
 
-    @media screen and (max-width: 752px) {
-        .mainBlock {
-            height: 150vh;
-        }
+@media screen and (max-width: 480px) {
+    .mainBlock {
+        min-height: auto; /* Use min-height instead of height for mobile devices */
+        padding-bottom: 50px;
+    }
+
+    .greeting {
+        width: 100%;
+        padding: 15px;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .photo,
+    .photoWrapper {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
     }
 }

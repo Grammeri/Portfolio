@@ -2,7 +2,7 @@ import React from 'react'
 import style from "./Skills.module.scss"
 import styleContainer from "../common/styles/Container.module.css"
 import {Skill} from "./skill/Skill";
-import {Title} from "../common/Components/title/Title"
+import {Title} from "common/Components/title/Title"
 import reactIcon from "../assets/icons/React.jpg"
 import reduxIcon from "../assets/icons/Redux.jpg"
 import javaScript from "../assets/icons/JavaScript.jpg"

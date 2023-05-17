@@ -55,8 +55,8 @@ export const Contacts = () => {
 
     return (
         <div id="Contacts" className={style.contactsBlock}>
-            <h2 style={{color:"orange", position:"absolute", margin:"auto", marginLeft:"20px", marginTop:"100px"}}>
-                {"<Contacts />"}</h2>
+            <h2 style={{color:"orange", position:"absolute", margin:"auto", marginLeft:"20px", marginTop:"90px"}}>
+                {"<Contacts >"}</h2>
 
 
             <div id="Contacts" className={`${style.contactsContainer}`}>
@@ -80,9 +80,9 @@ export const Contacts = () => {
                     </div>
                 </form>
             </div>
-            <h2 style={{color:"orange", position:"absolute", margin:"auto", marginLeft:"20px", marginTop:"300px"}}>
+            <h2 style={{color:"orange", position:"absolute", margin:"auto", marginLeft:"20px", marginTop:"-100px"}}>
                 {"<Contacts />"}</h2>
-            <ToastContainer className={style.toastContainer} />
+            <ToastContainer position={"bottom-center"} />
         </div>
     );
 };

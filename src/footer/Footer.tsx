@@ -13,11 +13,12 @@ export const Footer = () => {
             <div className={`${styleContainer.container} ${style.footerContainer}`}>
                 <div className={style.footerContent}>
                     <div className={style.footerText}>Stack: React, TypeScript, SCSS, HTML & CSS</div>
+                    <div className={style.footerText}>Adopted for smartphones</div>
                     <div className={style.socialIcons}>
                         <div className={style.socialIcon}>
                             <a href="https://github.com/Grammeri">
                                 <GithubIcon
-                                    style={{ color: "black", fontSize: "30px" }}
+                                    style={{ color: "black", fontSize: "33px" }}
                                 />
                             </a>
                         </div>

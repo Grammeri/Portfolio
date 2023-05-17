@@ -13,19 +13,19 @@
     .projects {
       width: 100%;
       display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
+      flex-wrap: wrap;  /* Keep this as wrap */
+      justify-content: center;  /* Center the items */
+      margin: 0 auto;  /* Center the container */
       box-sizing: border-box;
       margin-top: 30px;
-      align-items: flex-start;
 
       @media screen and (max-width: 1129px) {
-        justify-content: flex-start;
+        justify-content: center;
       }
 
       .projectItem {
         position: relative;
-        margin: 20px;
+        margin: 20px;  /* This will keep the items away from the sides */
         &:hover {
           .projectOverlay {
             opacity: 1;
@@ -69,6 +69,7 @@
         background-color: #fff;
         border: 2px solid #333;
         color: #333;
+
         cursor: pointer;
         border-radius: 50px;
 

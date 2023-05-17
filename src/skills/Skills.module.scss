@@ -13,24 +13,20 @@
         padding-top: 30px;
         background-color: $skillsBgColor;
         border: 1px solid $skillsBorders;
-        .title{
+
+        .title {
             background-color: $btnColor;
         }
-        .skills{
-            border:1px solid gray;
-            width:100%; /*width is relative to parent (skillsContainer width*/
+
+        .skills {
+            border: 1px solid gray;
+            width: 100%; /*width is relative to parent (skillsContainer width)*/
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             flex-wrap: wrap;
             box-sizing: border-box;
         }
     }
-
 }
-
-
-
-
-
 
 
