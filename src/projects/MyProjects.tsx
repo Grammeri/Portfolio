@@ -12,14 +12,18 @@ export const MyProjects = () => {
     const projects = [
         {
             title: "Todolist",
-            description: "This is a simple todolist",
+            description: "This is a todolist hosted on a shared server. Please be prepared to see unorganized or " +
+                "outdated todo lists, as it is accessible to multiple users. Feel free to delete existing tasks and" +
+                " create new ones to check the functionality. You should be able to delete, create, and sort tasks as" +
+                " 'all', 'completed', and 'active'."
+            ,
             image: todoImg,
             appUrl: "https://grammeri.github.io/Todolist/",
             codeUrl: "https://github.com/grammeri/Todolist"
         },
         {
             title: "Social Network",
-            description: "This is a social network project",
+            description: "This is a social network project implemented using class components",
             image: socialNetWorkImg,
             appUrl: "https://grammeri.github.io/Samurai_23/",
             codeUrl: "https://github.com/grammeri/Samurai_23"
@@ -33,8 +37,9 @@ export const MyProjects = () => {
         },
         {
             title: "FlashCards",
-            description: "Flashcards for online training, using the quesion-answer system with the ability to create" +
-                "your own card decks and expand it",
+            description: "Flashcards for online training, using the quesion-answer system with the ability to create/" +
+                "delete your own card decks. The project is publically accessible",
+
             image: flashCardsImg,
             appUrl: "https://grammeri.github.io/flashcards",
             codeUrl: "https://github.com/Grammeri/flashcards"
@@ -74,7 +79,7 @@ export const MyProjects = () => {
                             <MyProject style={{ backgroundImage: `url(${project.image})` }} projectTitle={project.title} />
                             {activeIndex === index && (
                                 <div className={style.projectOverlay}>
-                                    <div className={style.projectDescription}>{project.description}</div>
+                                    <div>{project.description}</div>
                                     <div className={style.buttonsContainer}>
                                         <button className={style.appButton} onClick={() => openApp(project.appUrl)}>View Project</button>
                                         <button className={style.codeButton} onClick={() => openCode(project.codeUrl)}>View Code</button>

@@ -14,7 +14,7 @@ export const MyCv = () => {
                 <img src={myCV} alt="My CV" />
                 <div className={style.downloadContainer}>
                     <a
-                        href="https://drive.google.com/file/d/1PNxQXSnMdS-pfdt2FuwOY5b_jChqK3_y/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1G0f2CQkvxMhNEvjw9D0aKAmIv0MBcJ3q/view?usp=share_link"
                         download="My_CV.pdf"
                         onClick={handleDownload}
                         className={style.downloadLink}
