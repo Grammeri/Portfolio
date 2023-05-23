@@ -7,6 +7,8 @@ import socialNetWorkImg from './../assets/image/SocialNetwork.jpg';
 import todoImg from './../assets/image/Todolist.jpg';
 import startUpImg from "./../assets/image/StartUp.jpg";
 import flashCardsImg from "./../assets/image/FlashCards.jpg";
+import interviewImag from "./../assets/image/interviewImag.webp";
+import instagram from "./../assets/image/instagram.png"
 
 export const MyProjects = () => {
     const projects = [
@@ -15,8 +17,7 @@ export const MyProjects = () => {
             description: "This is a todolist hosted on a shared server. Please be prepared to see unorganized or " +
                 "outdated todo lists, as it is accessible to multiple users. Feel free to delete existing tasks and" +
                 " create new ones to check the functionality. You should be able to delete, create, and sort tasks as" +
-                " 'all', 'completed', and 'active'."
-            ,
+                " 'all', 'completed', and 'active'.",
             image: todoImg,
             appUrl: "https://grammeri.github.io/Todolist/",
             codeUrl: "https://github.com/grammeri/Todolist"
@@ -39,11 +40,24 @@ export const MyProjects = () => {
             title: "FlashCards",
             description: "Flashcards for online training, using the quesion-answer system with the ability to create/" +
                 "delete your own card decks. The project is publically accessible",
-
             image: flashCardsImg,
             appUrl: "https://grammeri.github.io/flashcards",
             codeUrl: "https://github.com/Grammeri/flashcards"
-        }
+        },
+        {
+            title: "TestAssignment",
+            description: "It is a test assignment performed using Redux-Saga, all details can be found in readme file both in Rus and Eng",
+            image: interviewImag,
+            appUrl: "https://grammeri.github.io/TestAssignment/",
+            codeUrl: "https://github.com/Grammeri/TestAssignment"
+        },
+        {
+            title: "Currently in progress",
+            description: "This is an Inctagram project. Project stack: Next.js/Redux Tool Kit/RTK Querry",
+            image: instagram,
+            appUrl: "#",
+            codeUrl: "https://github.com/Crash2022/Inctagram"
+        },
     ];
 
     const [activeIndex, setActiveIndex] = useState(null);
@@ -81,7 +95,13 @@ export const MyProjects = () => {
                                 <div className={style.projectOverlay}>
                                     <div>{project.description}</div>
                                     <div className={style.buttonsContainer}>
-                                        <button className={style.appButton} onClick={() => openApp(project.appUrl)}>View Project</button>
+                                        <button
+                                            className={style.appButton}
+                                            onClick={() => project.title !== "Currently in progress" && openApp(project.appUrl)}
+                                            disabled={project.title === "Currently in progress"}
+                                        >
+                                            {project.title === "Currently in progress" ? "In Progress" : "View Project"}
+                                        </button>
                                         <button className={style.codeButton} onClick={() => openCode(project.codeUrl)}>View Code</button>
                                     </div>
                                 </div>
