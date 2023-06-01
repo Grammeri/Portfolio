@@ -2,10 +2,23 @@
 @import '../common/styles/sass/mixins';
 
 .nav {
-    width: 500px;
+    width: 100%; /* Make nav take full width so the space-between property can work effectively */
     display: flex;
-    justify-content: space-around;
-    margin-right: 10px;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically in the center */
+    padding: 0 10px; /* Add some padding on left and right to avoid touching the edges */
+
+    .links {
+        display: flex;
+        justify-content: space-around;
+        width: 500px;
+    }
+
+    .language {
+        display: flex;
+        justify-content: space-around;
+        width: 150px; /* adjust this value according to your needs */
+    }
 
     a {
         @include text(titleFontFamily, 20px, 1.2);
@@ -22,14 +35,17 @@
     }
 
     @media screen and (max-width: 266px) {
-        .nav {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        flex-direction: column;
+        align-items: center;
 
-            a {
-                margin-bottom: 10px;
-            }
+        .links,
+        .language {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        a {
+            margin-bottom: 10px;
         }
     }
 }

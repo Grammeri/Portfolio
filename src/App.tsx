@@ -7,12 +7,15 @@ import {Skills} from "../src/skills/Skills";
 import {Footer} from "../src/footer/Footer";
 import {Main} from "../src/main/Main";
 import {MyCv} from "myCv";
-
-
-
-
+import { useTranslation } from 'react-i18next';
 
 function App() {
+    const { t, i18n } = useTranslation();
+
+    const changeLanguage = (language: string) => {
+        i18n.changeLanguage(language);
+    };
+
     return (
         <div className="App">
             <Header/>

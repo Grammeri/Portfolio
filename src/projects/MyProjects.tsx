@@ -9,51 +9,57 @@ import startUpImg from "./../assets/image/StartUp.jpg";
 import flashCardsImg from "./../assets/image/FlashCards.jpg";
 import interviewImag from "./../assets/image/interviewImag.webp";
 import instagram from "./../assets/image/instagram.png"
+import whatsUp from "./../assets/image/whatsUp.png"
+import { useTranslation } from 'react-i18next';
 
 export const MyProjects = () => {
+    const { t } = useTranslation();
     const projects = [
         {
             title: "Todolist",
-            description: "This is a todolist hosted on a shared server. Please be prepared to see unorganized or " +
-                "outdated todo lists, as it is accessible to multiple users. Feel free to delete existing tasks and" +
-                " create new ones to check the functionality. You should be able to delete, create, and sort tasks as" +
-                " 'all', 'completed', and 'active'.",
+            description: t("todolistDescription"),
             image: todoImg,
             appUrl: "https://grammeri.github.io/Todolist/",
             codeUrl: "https://github.com/grammeri/Todolist"
         },
         {
             title: "Social Network",
-            description: "This is a social network project implemented using class components",
+            description: t("socialNetworkDescription"),
             image: socialNetWorkImg,
             appUrl: "https://grammeri.github.io/Samurai_23/",
             codeUrl: "https://github.com/grammeri/Samurai_23"
         },
         {
             title: "Start Up",
-            description: "This is a start up project",
+            description: t("startUpDescription"),
             image: startUpImg,
             appUrl: "https://silevans-a2m9qgc35-i6169696-gmailcom.vercel.app/",
             codeUrl: "https://github.com/Dmitry-Klyuev/silevans"
         },
         {
             title: "FlashCards",
-            description: "Flashcards for online training, using the quesion-answer system with the ability to create/" +
-                "delete your own card decks. The project is publically accessible",
+            description: t("flashCardsDescription"),
             image: flashCardsImg,
             appUrl: "https://grammeri.github.io/flashcards",
             codeUrl: "https://github.com/Grammeri/flashcards"
         },
         {
             title: "TestAssignment",
-            description: "It is a test assignment performed using Redux-Saga, all details can be found in readme file both in Rus and Eng",
+            description: t("testAssignmentDescription"),
             image: interviewImag,
             appUrl: "https://grammeri.github.io/TestAssignment/",
             codeUrl: "https://github.com/Grammeri/TestAssignment"
         },
         {
+            title: "Test WhatsUp",
+            description: t("testWhatsUpDescription"),
+            image: whatsUp,
+            appUrl: "https://grammeri.github.io/mockWhatsupTest",
+            codeUrl: "https://https://github.com/Grammeri/mockWhatsupTest/"
+        },
+        {
             title: "Currently in progress",
-            description: "This is an Inctagram project. Project stack: Next.js/Redux Tool Kit/RTK Querry",
+            description: t("currentlyInProgressDescription"),
             image: instagram,
             appUrl: "#",
             codeUrl: "https://github.com/Crash2022/Inctagram"
@@ -81,7 +87,7 @@ export const MyProjects = () => {
     return (
         <div id="MyProjects" className={style.myProjectsBlock}>
             <div className={`${styleContainer.container} ${style.myProjectsContainer}`}>
-                <Title header={"My Projects"} />
+                <Title header={t("myProjects")} />
                 <div className={style.projects}>
                     {projects.map((project, index) => (
                         <div
@@ -97,12 +103,12 @@ export const MyProjects = () => {
                                     <div className={style.buttonsContainer}>
                                         <button
                                             className={style.appButton}
-                                            onClick={() => project.title !== "Currently in progress" && openApp(project.appUrl)}
-                                            disabled={project.title === "Currently in progress"}
+                                            onClick={() => project.title !== t("currentlyInProgress") && openApp(project.appUrl)}
+                                            disabled={project.title === t("currentlyInProgress")}
                                         >
-                                            {project.title === "Currently in progress" ? "In Progress" : "View Project"}
+                                            {project.title === t("currentlyInProgress") ? t("inProgress") : t("viewProject")}
                                         </button>
-                                        <button className={style.codeButton} onClick={() => openCode(project.codeUrl)}>View Code</button>
+                                        <button className={style.codeButton} onClick={() => openCode(project.codeUrl)}>{t("viewCode")}</button>
                                     </div>
                                 </div>
                             )}

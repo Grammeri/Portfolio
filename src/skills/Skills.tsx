@@ -19,12 +19,14 @@ import java from "../assets/icons/Java.jpg"
 import sql from "../assets/icons/Sql.jpg"
 import javalin from "../assets/icons/Javalin.jpg"
 import Fade from "react-awesome-reveal"
+import { useTranslation } from 'react-i18next';
 
 export const Skills = () => {
+    const { t } = useTranslation();
     return (
         <div id="Skills" className={style.skillsBlock}>
             <div className={`${styleContainer.container} ${style.skillsContainer}`}>
-                <Title header={"Skills"}/>
+                <Title header={t("skills")}/>
                 <div className={style.skills}>
                     <Fade top>
                     <Skill title={"React"}
