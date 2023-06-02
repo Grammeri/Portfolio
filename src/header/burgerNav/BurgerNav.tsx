@@ -2,6 +2,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import style from "./BurgerNav.module.scss";
+import { FlagIcon } from "react-flag-kit";
 
 export function BurgerNav() {
     const { t, i18n } = useTranslation();
@@ -16,8 +17,12 @@ export function BurgerNav() {
             <a href="#Skills">{t("Skills")}</a>
             <a href="#MyProjects">{t("Projects")}</a>
             <a href="#Contacts">{t("Contacts")}</a>
-            <button onClick={() => changeLanguage("en")}>EN</button>
-            <button onClick={() => changeLanguage("ru")}>RU</button>
+            <div onClick={() => changeLanguage("en")}>
+                <FlagIcon code="GB" size={64} />
+            </div>
+            <div onClick={() => changeLanguage("ru")}>
+                <FlagIcon code="RU" size={64} />
+            </div>
             <div>{t("text")}</div>
             <div>{t("hello")}</div>
         </div>

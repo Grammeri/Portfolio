@@ -6,14 +6,16 @@ import GithubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import TelegramIcon from "@material-ui/icons/Telegram";
 import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
+import { useTranslation } from 'react-i18next';
 
 export const Footer = () => {
+    const { t } = useTranslation();
     return (
         <div className={style.footer}>
             <div className={`${styleContainer.container} ${style.footerContainer}`}>
                 <div className={style.footerContent}>
-                    <div className={style.footerText}>Stack: React, TypeScript, SCSS, HTML & CSS</div>
-                    <div className={style.footerText}>Adopted for smartphones</div>
+                    <div className={style.footerText}>{t('stack')}</div>
+                    <div className={style.footerText}>{t('adoptedForSmartphones')}</div>
                     <div className={style.socialIcons}>
                         <div className={style.socialIcon}>
                             <a href="https://github.com/Grammeri">
@@ -44,7 +46,7 @@ export const Footer = () => {
                             </a>
                         </div>
                     </div>
-                    <div className={style.footerText}>© Twentytwentythree</div>
+                    <div className={style.footerText}>{t('copyRight')}</div>
                 </div>
             </div>
         </div>

@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import style from './Nav.module.scss';
+import ruFlag from '../assets/image/RussianFlag.jpg';
+import gbFlag from '../assets/image/BritishFlag.jpg';
 
 export function Nav() {
     const [activeLink, setActiveLink] = useState('');
@@ -11,7 +13,7 @@ export function Nav() {
         i18n.changeLanguage(language);
     };
 
-    const handleLinkClick = (event) => {
+    const handleLinkClick = (event:any) => {
         setActiveLink(event.target.textContent);
     };
 
@@ -35,10 +37,12 @@ export function Nav() {
                 </a>
             </div>
             <div className={style.language}>
-                <button onClick={() => changeLanguage("en")}>EN</button>
-                <button onClick={() => changeLanguage("ru")}>RU</button>
-{/*                <div>{t("text")}</div>
-                <div>{t("hello")}</div>*/}
+                <div onClick={() => changeLanguage("en")}>
+                    <img src={gbFlag} alt="UK Flag" style={{width: '32px', height: '32px'}} />
+                </div>
+                <div onClick={() => changeLanguage("ru")}>
+                    <img src={ruFlag} alt="RU Flag" style={{width: '32px', height: '32px'}} />
+                </div>
             </div>
         </div>
     );
