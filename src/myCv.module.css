@@ -18,7 +18,7 @@
 .downloadContainer {
     position: absolute;
     bottom: 20px;
-    right: -220px; /* Adjust the value to move it further right */
+    right: -240px; /* Adjust the value to move it further right */
     display: flex;
     align-items: center;
 }
