@@ -14,7 +14,7 @@ export const Footer = () => {
         <div className={style.footer}>
             <div className={`${styleContainer.container} ${style.footerContainer}`}>
                 <div className={style.footerContent}>
-                    <div className={style.footerText}>{t('stack')}</div>
+                    <div className={style.footerText}>{t('portfolioStack')}</div>
                     <div className={style.footerText}>{t('adoptedForSmartphones')}</div>
                     <div className={style.socialIcons}>
                         <div className={style.socialIcon}>

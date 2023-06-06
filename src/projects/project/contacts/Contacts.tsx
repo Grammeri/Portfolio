@@ -1,17 +1,15 @@
-import React, { useEffect, useRef } from 'react';
-import emailjs from 'emailjs-com';
-import { toast, ToastContainer } from 'react-toastify';
+import React, {useRef} from 'react';
+import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import style from './Contacts.module.scss';
-import { Title } from './../../../../src/common/Components/title/Title';
-import { useTranslation } from 'react-i18next';
+import {Title} from './../../../../src/common/Components/title/Title';
+import {useTranslation} from 'react-i18next';
 
 export const Contacts = () => {
     const form:any = useRef();
     const hasAttachedListener = useRef(false); // create a new ref
     const { t } = useTranslation();
 
-    // the rest of your code ...
 
     return (
         <div id="Contacts" className={style.contactsBlock}>

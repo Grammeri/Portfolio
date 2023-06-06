@@ -13,11 +13,12 @@
 .myCv img {
     width: 100%;
     height: auto;
+    margin: 20px 0;
 }
 
 .downloadContainer {
     position: absolute;
-    bottom: 20px;
+    bottom: 24px;
     right: -240px; /* Adjust the value to move it further right */
     display: flex;
     align-items: center;
