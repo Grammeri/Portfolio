@@ -1,55 +1,74 @@
 {
-  "text": "Some text",
-  "hello": "Hello World!",
+  "//Header": "This is Header Section",
+
   "home": "Home",
   "skills": "Skills",
   "projects": "Projects",
   "cv": "CV",
   "contacts": "Contacts",
+
+  "//MainPage": "This is MainPage",
+
   "greeting": "Hi there!",
   "name": "My name is Dmitry",
   "role": " I am a Frontend Developer (React)",
   "typingText": "<p>I like what I do</p>",
+
+  "//SkillsPage": "This is SkillsPage",
+
   "skills": "Skills",
+
+  "//MyProjectsPage": "This is MyProjectsPage",
+
   "myProjects": "My Projects",
-  "currentlyInProgress": "Currently in progress",
+
+  "//MyProjectsPageButtons": "This is MyProjectsPageButtons",
+
   "inProgress": "In Progress",
   "viewProject": "View Project",
   "viewCode": "View Code",
-  "myProjects": "My Projects",
-  "viewProject": "View Project",
-  "viewCode": "View Code",
-  "inProgress": "In Progress",
   "more": "More",
   "less": "Less",
+
+  "//listOfdifferentProjects": "This is List of Different Projects",
+
   "todolistTitle": "Todolist",
   "tdlDate": "December, 2021",
   "tdlStack": "Stack: ReactJS, TypeScript, Redux Toolkit, RestAPI, Axios, Redux-Thunk, Material UI, Yup, Unit testing, Storybook",
-  "socialNetworkStack": "Stack: React, Redux, React Redux, React Router, Material-UI, Ant Design (Antd), Axios, Formik, Final Form, Yup, UUID, React YouTube, Reselect",
   "todolistDescription": "Features: login functionality, form validation for login and task creation, creation/removal of to-do lists, adding/removing tasks, displaying task status/filtering by status: all, in progress, completed,\nerror handling.\nPlease note that when opening the application and testing its functionality, you may see disorganized to-do lists as the server has unrestricted access and other users can add and remove todo lists.\n",
-  "socialNetworkDate" : "April, 2022",
+
+  "socialNetworkStack": "Stack: React, Redux, React Redux, React Router, Material-UI, Ant Design (Antd), Axios, Formik, Final Form, Yup, UUID, React YouTube, Reselect",
+  "socialNetworkDate": "April, 2022",
   "socialNetworkTitle": "Social Network",
   "socialNetworkDescription": "This is a social networking project implemented using class components. The application allows users to perform various actions, such as viewing registered members, adding or removing friends, updating their status, and adding/removing posts.",
+
   "startUpDate": "September, 2022",
   "startUpStack": "Stack: Next.js, React, TypeScript, Axios, Formik, Yup, Sass, Swiper",
   "startUpTitle": "Start Up",
   "startUpDescription": "Web studio SILEVANS startup. A website with company information and functionality including call ordering, questionnaire filling, and portfolio display.",
+
   "flashCardsDate": "June 2022",
   "flashCardsStack": "Stack: TypeScript, React, Redux, React-Redux, Redux-Thunk, React-Router-dom, Axios, Material UI, React-Hook-Form, HTML, CSS, ESLint, Prettier",
   "flashCardsTitle": "FlashCards",
   "flashCardsDescription": "Features: registration, login, password recovery, \"remember me\" user session persistence, search for decks with cards, sorting decks by parameters: \"my\" / \"others\", number of cards, sorting tables by different parameters, creating/deleting decks/cards using modals, switching to study mode. The project is publicly accessible, so there is no content control for the cards. More detailed information about the application is provided in the Readme when accessing the code.",
+
   "sagaAssignmentDate": "May, 2023",
   "sagaAssignmentStack": "Stack: React, Redux, React Router, Bootstrap, Axios, Redux Saga ",
   "sagaAssignmentTitle": "Test Assignment",
   "sagaAssignmentDescription": "Detailed description of the test assignment is provided in the code in the Readme section",
+
   "whatsUpDate": "May, 2023",
-  "whatsUpStack": "Stack:•React, React Router DOM, React Redux, React Hook Form, React Toastify, RTK Query",
+  "whatsUpStack": "Stack: React, React Router DOM, React Redux, React Hook Form, React Toastify, RTK Query",
   "whatsUpTitle": "Test WhatsUp",
   "whatsUpDescription": "May 26, 2023. It is a test assignment Mockup version, The next step is to provide connection with Server",
+
   "inctagramDate": "Under development",
-  "inctagramStack": "Stack: •\tNext.js, React, Redux, RTK Query, Next Redux Wrapper, TypeScript, Sass, Yup,\n•\tnext-i18next, React-i18next, React-Hook-Form, React-Easy-Crop, React-Paginate, React-Select, Notistack, Storybook\n",
+  "inctagramStack": "Stack: Next.js, React, Redux, RTK Query, Next Redux Wrapper, TypeScript, Sass, Yup,\n•\tnext-i18next, React-i18next, React-Hook-Form, React-Easy-Crop, React-Paginate, React-Select, Notistack, Storybook\n",
   "inctagramTitle": "Currently in progress",
   "inctagramDescription": "This is a team project involving 5 frontend developer, 1 backend developer",
+
+  "//contactsPage": "This is Contacts Page",
+
   "contactsOpenTag": "<div id=\"Contacts\" className={`${style.contactsContainer}`} >",
   "contactsCloseTag": "<div />",
   "letsGetInTouch": "Let's get in touch",
@@ -61,6 +80,9 @@
   "yourMessage": "Your message",
   "send": "Send",
   "formNote": "I am a working form configured with emailjs, please send your messages to Dmitry!",
+
+  "//footerPage": "This is Footer Page",
+
   "adoptedForSmartphones": "Adopted for smartphones",
   "copyRight": "© Twentytwentythree",
   "downloadMyCv": "Download my CV",

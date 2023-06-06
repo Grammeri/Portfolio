@@ -1,35 +1,51 @@
 {
-  "text": "Какой-то текст",
-  "hello": "Привет, мир!",
+  "//Header": "Раздел Header",
   "home": "Главная",
   "skills": "Навыки",
   "projects": "Проекты",
   "cv": "Резюме",
   "contacts": "Контакты",
+
+  "//MainPage": "Главная страница",
+
   "greeting": "Приветствую!",
   "name": "Меня зовут Дмитрий",
   "role": "Я фронтенд разработчик (React)",
   "typingText": "<p>Мне нравится то, что я делаю</p>",
+
+  "//SkillsPage": "Страница Навыки",
+
   "skills": "Навыки",
+
+  "//MyProjectsPage": "Страница Мои проекты",
+
   "myProjects": "Мои проекты",
-  "currentlyInProgress": "В разработке",
+
+  "//MyProjectsPageButtons": "This is MyProjectsPageButtons",
+
   "inProgress": "В разработке",
   "viewProject": "Посмотреть проект",
   "viewCode": "Посмотреть код",
   "more": "Больше",
   "less": "Меньше",
+
+  "//listOfdifferentProjects": "Это перечень различных проектов",
+
   "todolistTitle": "Список дел",
   "tdlDate": "Декабрь 2021 г.",
   "tdlStack": "Стэк: ReactJS, TypeScript, Redux Toolkit, RestAPI, Axios, Redux-Thunk, Material UI, Yup, Unit testing, Storybook",
-  "socialNetworkStack": "Стэк: React, Redux, React Redux, React Router, Material-UI, Ant Design (Antd), Axios, Formik, Final Form, Yup, UUID, React YouTube, Reselect",
   "todolistDescription": "Функционал: валидация формы входа в систему и создания задач, создание/удаление туду листов, добавление/удаление задач, отображение статуса задач /фильтрация по статусу: «все», «в работе», «завершенные», обработка ошибок.\n\nПожалуйста, обратите внимание, что при открытии приложения и проверке его функционала, вы можете увидеть неорганизованные списки дел, так как к серверу есть свободный доступ и другие пользователи могут добавлять и удалять туду листы.\n",
+
+  "socialNetworkStack": "Стэк: React, Redux, React Redux, React Router, Material-UI, Ant Design (Antd), Axios, Formik, Final Form, Yup, UUID, React YouTube, Reselect",
   "socialNetworkDate": "Апрель 2022 г.",
   "socialNetworkTitle": "Социальная сеть",
   "socialNetworkDescription": "Это проект социальной сети, реализованный с использованием классовых компонентов. Приложение позволяет пользователям выполнять различные действия, такие как просмотр зарегистрированных участников, добавление или удаление друзей, обновление своего статуса и добавление/удаление постов.",
+
   "startUpDate": "Сентябрь, 2022",
   "startUpStack": "Стэк: Next.js, React, TypeScript, Axios, Formik, Yup, Sass, Swiper",
   "startUpTitle": "Стартап",
   "startUpDescription": "Стартап веб-студии SILEVANS. Веб сайт, с информацией о компании, с функционалом: заказа звонка, заполнения анкеты, портфолио.",
+
   "flashCardsDate": "Июнь 2022 г.",
   "flashCardsStack": "Стэк: TypeScript, React, Redux, React-Redux, Redux-Thunk, React-Router-dom, Axios, Material UI, React-Hook-Form, HTML, CSS, ESLint, Prettier",
   "flashCardsTitle": "Карточки",
@@ -39,14 +55,19 @@
   "sagaAssignmentStack": "Стэк: React, Redux, React Router, Bootstrap, Axios, Redux Saga ",
   "sagaAssignmentTitle": "Тестовое задание",
   "sagaAssignmentDescription": "Подробное описание тестового задания представлено в коде в разделе Read me.",
+
   "whatsUpDate": "Май 2023 г.",
-  "whatsUpStack": "Стэк:•React, React Router DOM, React Redux, React Hook Form, React Toastify, RTK Query",
+  "whatsUpStack": "Стэк: React, React Router DOM, React Redux, React Hook Form, React Toastify, RTK Query",
   "whatsUpTitle": "Тестовое приложение WhatsUp",
   "whatsUpDescription": "26 мая 2023 года. Это тестовая версия приложения WhatsUp. Следующий шаг - обеспечить связь с сервером.",
+
   "inctagramDate": "В разработке",
-  "inctagramStack": "Стэк: •\tNext.js, React, Redux, RTK Query, Next Redux Wrapper, TypeScript, Sass, Yup,\n•\tnext-i18next, React-i18next, React-Hook-Form, React-Easy-Crop, React-Paginate, React-Select, Notistack, Storybook\n",
+  "inctagramStack": "Стэк: Next.js, React, Redux, RTK Query, Next Redux Wrapper, TypeScript, Sass, Yup,\n•\tnext-i18next, React-i18next, React-Hook-Form, React-Easy-Crop, React-Paginate, React-Select, Notistack, Storybook\n",
   "inctagramTitle": "В разработке",
   "inctagramDescription": "Это командный проект с участием 5 фронтэнд разработчиков и 1 бэкэнд разработчика.",
+
+  "//contactsPage": "Это страница Контактов",
+
   "contactsOpenTag": "<div id=\"Contacts\" className={`${style.contactsContainer}`} >",
   "contactsCloseTag": "<div />",
   "letsGetInTouch": "Отправьте мне сообщение",
@@ -58,6 +79,9 @@
   "yourMessage": "Ваше сообщение",
   "send": "Отправить",
   "formNote": "Я рабочая форма, настроенная с emailjs, пожалуйста, отправляйте ваши сообщения Дмитрию!",
+
+  "//footerPage": "Это страничка футер",
+
   "adoptedForSmartphones": "Адаптировано для смартфонов",
   "copyRight": "© ДвадцатьДвадцатьТри",
   "downloadMyCv": "Скачать мое резюме",
