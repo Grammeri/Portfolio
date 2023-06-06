@@ -1,51 +1,74 @@
-@import '../common/styles/sass/variables';
-@import '../common/styles/sass/mixins';
+@import "../common/styles/sass/variables";
+@import "../common/styles/sass/mixins";
 
 .nav {
-    width: 100%; /* Make nav take full width so the space-between property can work effectively */
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Align items vertically in the center */
-    padding: 0 10px; /* Add some padding on left and right to avoid touching the edges */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
 
-    .links {
-        display: flex;
-        justify-content: space-around;
-        width: 500px;
+  .links {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-left: 20px
+  }
+
+  .flags {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Add margin-left for separation */
+    margin-right: 20px;
+  }
+
+  .flag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+  }
+
+  .languageLabel {
+    @include text(titleFontFamily, 16px, 1.2);
+    margin-top: 5px;
+  }
+
+  .languageLabelHidden {
+    @include text(titleFontFamily, 16px, 1.2);
+    margin-top: 5px;
+    visibility: hidden;
+  }
+
+  a {
+    @include text(titleFontFamily, 20px, 1.2);
+    color: black;
+    text-decoration: none;
+    margin-right: 10px;
+    white-space: nowrap;
+
+    &:hover {
+      color: gray;
     }
 
-    .language {
-        display: flex;
-        justify-content: space-around;
-        width: 150px; /* adjust this value according to your needs */
+    &.active {
+      color: white;
+    }
+  }
+
+  @media screen and (max-width: 266px) {
+    flex-direction: column;
+    align-items: center;
+
+    .links,
+    .flags {
+      width: 100%;
+      margin-bottom: 10px;
     }
 
     a {
-        @include text(titleFontFamily, 20px, 1.2);
-        color: black;
-        text-decoration: none;
-
-        &:hover {
-            color: gray;
-        }
-
-        &.active {
-            color: white;
-        }
+      margin-bottom: 10px;
     }
-
-    @media screen and (max-width: 266px) {
-        flex-direction: column;
-        align-items: center;
-
-        .links,
-        .language {
-            width: 100%;
-            margin-bottom: 10px;
-        }
-
-        a {
-            margin-bottom: 10px;
-        }
-    }
+  }
 }

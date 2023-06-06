@@ -1,49 +1,111 @@
-// Nav.tsx
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import style from './Nav.module.scss';
-import ruFlag from '../assets/image/RussianFlag.jpg';
-import gbFlag from '../assets/image/BritishFlag.jpg';
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import style from "./Nav.module.scss";
+import ruFlag from "../assets/image/RussianFlag.jpg";
+import gbFlag from "../assets/image/BritishFlag.jpg";
 
 export function Nav() {
-    const [activeLink, setActiveLink] = useState('');
-    const { t, i18n } = useTranslation();
+  const [activeLink, setActiveLink] = useState("");
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
 
-    const changeLanguage = (language: string) => {
-        i18n.changeLanguage(language);
-    };
+  const changeLanguage = (language: string) => {
+    i18n.changeLanguage(language);
+  };
 
-    const handleLinkClick = (event:any) => {
-        setActiveLink(event.target.textContent);
-    };
+  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    const linkText = event.currentTarget.textContent || "";
+    setActiveLink(linkText);
 
-    return (
-        <div className={style.nav}>
-            <div className={style.links}>
-                <a href="#Main" style={{ color: activeLink === t('home') ? 'white' : 'black' }} onClick={handleLinkClick}>
-                    {t('home')}
-                </a>
-                <a href="#Skills" style={{ color: activeLink === t('skills') ? 'white' : 'black' }} onClick={handleLinkClick}>
-                    {t('skills')}
-                </a>
-                <a href="#MyProjects" style={{ color: activeLink === t('projects') ? 'white' : 'black' }} onClick={handleLinkClick}>
-                    {t('projects')}
-                </a>
-                <a href="#myUpdatedCV" style={{ color: activeLink === t('cv') ? 'white' : 'black' }} onClick={handleLinkClick}>
-                    {t('cv')}
-                </a>
-                <a href="#Contacts" style={{ color: activeLink === t('contacts') ? 'white' : 'black' }} onClick={handleLinkClick}>
-                    {t('contacts')}
-                </a>
-            </div>
-            <div className={style.language}>
-                <div onClick={() => changeLanguage("en")}>
-                    <img src={gbFlag} alt="UK Flag" style={{width: '32px', height: '32px'}} />
-                </div>
-                <div onClick={() => changeLanguage("ru")}>
-                    <img src={ruFlag} alt="RU Flag" style={{width: '32px', height: '32px'}} />
-                </div>
-            </div>
+    if (linkText === t("portfolioCode")) {
+      window.open("https://github.com/Grammeri/Portfolio", "_blank");
+    }
+  };
+
+  return (
+    <div className={style.nav}>
+      <div className={style.links}>
+        <a
+          href="#Main"
+          className={activeLink === t("home") ? style.active : ""}
+          onClick={handleLinkClick}
+        >
+          {t("home")}
+        </a>
+        <a
+          href="#Skills"
+          className={activeLink === t("skills") ? style.active : ""}
+          onClick={handleLinkClick}
+        >
+          {t("skills")}
+        </a>
+        <a
+          href="#MyProjects"
+          className={activeLink === t("projects") ? style.active : ""}
+          onClick={handleLinkClick}
+        >
+          {t("projects")}
+        </a>
+        <a
+          href="#myUpdatedCV"
+          className={activeLink === t("cv") ? style.active : ""}
+          onClick={handleLinkClick}
+        >
+          {t("cv")}
+        </a>
+        <a
+          href="#Contacts"
+          className={activeLink === t("contacts") ? style.active : ""}
+          onClick={handleLinkClick}
+        >
+          {t("contacts")}
+        </a>
+        <a
+          href="#Code"
+          className={activeLink === t("portfolioCode") ? style.active : ""}
+          onClick={handleLinkClick}
+        >
+          {t("portfolioCode")}
+        </a>
+      </div>
+      <div className={style.flags}>
+        <div className={style.flag}>
+          <div onClick={() => changeLanguage("en")}>
+            <img
+              src={gbFlag}
+              alt="UK Flag"
+              style={{ width: "32px", height: "32px" }}
+            />
+          </div>
+          <span
+            className={
+              currentLanguage === "en"
+                ? style.languageLabel
+                : style.languageLabelHidden
+            }
+          >
+            Eng
+          </span>
         </div>
-    );
+        <div className={style.flag}>
+          <div onClick={() => changeLanguage("ru")}>
+            <img
+              src={ruFlag}
+              alt="RU Flag"
+              style={{ width: "32px", height: "32px" }}
+            />
+          </div>
+          <span
+            className={
+              currentLanguage === "ru"
+                ? style.languageLabel
+                : style.languageLabelHidden
+            }
+          >
+            Rus
+          </span>
+        </div>
+      </div>
+    </div>
+  );
 }
