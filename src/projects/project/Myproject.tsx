@@ -10,6 +10,7 @@ type PropsTypes = {
   projectTitle: string;
   date: string;
   stack: string;
+  videoUrl?: string; // Added this
 };
 
 export const MyProject = (props: PropsTypes) => {
@@ -18,8 +19,7 @@ export const MyProject = (props: PropsTypes) => {
 
   const toggleShowMore = () => setShowMore(!showMore);
 
-  // Calculate the smallest image size
-  const imageSize = "100px"; // Replace with the desired size or calculate dynamically
+  const imageSize = "100px";
 
   return (
     <div className={style.myProject}>
@@ -62,6 +62,14 @@ export const MyProject = (props: PropsTypes) => {
             >
               {t("viewCode")}
             </button>
+            {props.videoUrl && (
+              <button
+                className={`${style.button} ${style.videoButton}`}
+                onClick={() => window.open(props.videoUrl, "_blank")}
+              >
+                {t("viewVideo")}
+              </button>
+            )}
           </div>
         </div>
       </div>

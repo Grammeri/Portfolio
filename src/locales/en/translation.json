@@ -6,6 +6,7 @@
   "projects": "Projects",
   "cv": "CV",
   "contacts": "Contacts",
+  "portfolioCode": "Portfolio code",
 
   "//MainPage": "This is MainPage",
 
@@ -29,6 +30,7 @@
   "viewCode": "View Code",
   "more": "More",
   "less": "Less",
+  "viewVideo": "Video",
 
   "//listOfdifferentProjects": "This is List of Different Projects",
 

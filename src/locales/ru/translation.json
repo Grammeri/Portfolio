@@ -5,6 +5,7 @@
   "projects": "Проекты",
   "cv": "Резюме",
   "contacts": "Контакты",
+  "portfolioCode": "Код портфолио",
 
   "//MainPage": "Главная страница",
 
@@ -28,6 +29,7 @@
   "viewCode": "Посмотреть код",
   "more": "Больше",
   "less": "Меньше",
+  "viewVideo": "Видео",
 
   "//listOfdifferentProjects": "Это перечень различных проектов",
 
