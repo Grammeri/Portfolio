@@ -1,43 +1,58 @@
 .cvContainer {
-    display: flex;
-    justify-content: center;
-    background-color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
 }
 
 .myCv {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
 }
 
 .myCv img {
-    width: 100%;
-    height: auto;
-    margin: 20px 0;
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
 }
 
-.downloadContainer {
-    position: absolute;
-    bottom: 24px;
-    right: -240px; /* Adjust the value to move it further right */
+.downloadContainerDesktop {
+  position: absolute;
+  bottom: 24px;
+  right: -240px;
+  display: flex;
+  align-items: center;
+}
+
+.downloadContainerMobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .downloadContainerDesktop {
+    display: none;
+  }
+  .downloadContainerMobile {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
 }
 
 .downloadLink {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    background-color: orange;
-    color: #000000;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: orange;
+  color: #000000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .downloadIcon {
-    margin-left: 10px;
+  margin-left: 10px;
 }
-
-
