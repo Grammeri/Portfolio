@@ -72,5 +72,7 @@ export const projectsList = (t: TFunction) => [
     image: todoImg,
     appUrl: "https://grammeri.github.io/Todolist/",
     codeUrl: "https://github.com/grammeri/Todolist",
+    videoUrl:
+      "https://drive.google.com/file/d/1FdQHPT-zno8CGwebp281kDQXJQvFh1Ac/view?usp=drive_link",
   },
 ];
