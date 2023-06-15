@@ -11,7 +11,7 @@
 
   "greeting": "Приветствую!",
   "name": "Меня зовут Дмитрий",
-  "role": "Я фронтенд разработчик (React)",
+  "role": "Я фронтенд React разработчик",
   "typingText": "<p>Мне нравится то, что я делаю</p>",
 
   "//SkillsPage": "Страница Навыки",
@@ -25,8 +25,8 @@
   "//MyProjectsPageButtons": "This is MyProjectsPageButtons",
 
   "inProgress": "В разработке",
-  "viewProject": "Посмотреть проект",
-  "viewCode": "Посмотреть код",
+  "viewProject": "Проект",
+  "viewCode": "Код",
   "more": "Больше",
   "less": "Меньше",
   "viewVideo": "Видео",
