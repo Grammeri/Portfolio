@@ -1,70 +1,74 @@
-@import '../common/styles/sass/variables';
-@import '../common/styles/sass/mixins';
+@import "../common/styles/sass/variables";
+@import "../common/styles/sass/mixins";
 
 .mainBlock {
-    min-height: 100vh; /* Use min-height instead of height to prevent overlap */
+  min-height: 100vh;
+  background-color: $mainPagebgColor;
 
-    background-color: $mainPagebgColor;
+  .greeting {
+    width: 800px;
+    padding: 15px;
+    /* Adjust the margin-top value as desired */
+    color: orange;
+    position: relative;
+    z-index: 2; /* Add a higher z-index to ensure text is displayed above the photo */
+  }
 
-    .greeting {
-        width: 300px;
-        padding: 15px;
-        margin-top: 400px;
-        color: orange;
-    }
+  .greeting span {
+    font-size: large;
+  }
 
-    .greeting span {
-        font-size: large;
-    }
+  .photo {
+    width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    border-radius: 50px;
+    top: 0;
+    left: 0;
+    position: relative;
+    z-index: 1; /* Ensure the photo is behind the text elements */
+  }
 
-    .photo {
-        width: 400px;
-        height: 400px;
-        margin-left: 10px;
-        border-radius: 50px;
-        top: 0;
-        left: 0;
-    }
+  .photoWrapper {
+    margin-top: 50px;
+    position: static;
+    padding: 10px;
+    background-color: orange;
+    border-radius: 25px;
+    width: 400px;
+    height: 400px;
+  }
 
-    .photoWrapper {
-        position: static;
-        padding: 10px; // Adjust this to change the thickness of your frame
-        background-color: orange;
-        border-radius: 25px; // Adjust this to match the border-radius of your image
-        width: 400px;
-        height: 400px;
-    }
-
-    .typingEffectText {
-        font-size: large;
-        font-weight: bold;
-        // ... any other styles you want to apply
-    }
+  .typingEffectText {
+    font-size: large;
+    font-weight: bold;
+    /* any other styles you want to apply */
+  }
 }
 
 @media screen and (max-width: 752px) {
-    .mainBlock {
-        min-height: 150vh; /* Use min-height instead of height for mobile devices */
-    }
+  .mainBlock {
+    min-height: 150vh; /* Use min-height instead of height for mobile devices */
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .mainBlock {
-        min-height: auto; /* Use min-height instead of height for mobile devices */
-        padding-bottom: 50px;
-    }
+  .mainBlock {
+    min-height: auto; /* Use min-height instead of height for mobile devices */
+    padding-bottom: 50px;
+  }
 
-    .greeting {
-        width: 100%;
-        padding: 15px;
-        margin-top: 30px;
-        text-align: center;
-    }
+  .greeting {
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    text-align: center;
+  }
 
-    .photo,
-    .photoWrapper {
-        width: 200px;
-        height: 200px;
-        margin: 0 auto;
-    }
+  .photo,
+  .photoWrapper {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
 }

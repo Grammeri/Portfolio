@@ -1,18 +1,18 @@
 @import "./variables";
 
-@mixin text ($fontFamily, $fontSize, $lineHeight){
-  font-family:$fontFamily;
-  font-size:$fontSize;
-  line-height:$lineHeight;
-  color:$textSkills;
+@mixin text($fontFamily, $fontSize, $lineHeight) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  color: $textSkills;
 }
 
-@mixin container(){
+@mixin container() {
   width: 80%;
   margin: 0 auto;
 }
 
-@mixin flex ($direction, $justifyContent, $alignItems, $wrap){
+@mixin flex($direction, $justifyContent, $alignItems, $wrap) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justifyContent;
@@ -20,8 +20,8 @@
   flex-wrap: $wrap;
 }
 
-@mixin bgSettings(){
+@mixin bgSettings() {
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
 }

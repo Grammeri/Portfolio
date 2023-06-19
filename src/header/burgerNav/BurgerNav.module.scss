@@ -1,20 +1,19 @@
-@import '/src/common/styles/sass/variables';
-@import '/src/common/styles/sass/mixins';
+@import "/src/common/styles/sass/variables";
+@import "/src/common/styles/sass/mixins";
 
-.burgerNav{
-    width: 300px;
-    display: flex;
-    align-items: baseline;
-    margin-right: 10px;
+.burgerNav {
+  width: 300px;
+  display: flex;
+  align-items: baseline;
+  margin-right: 10px;
 
-    @include text (titleFontFamily, 16px, 1.2);
-    letter-spacing: 1px;
-    margin:0 0 5px;
+  @include text(titleFontFamily, 16px, 1.2);
+  letter-spacing: 1px;
+  margin: 0 0 5px;
 
-
-    @media screen and (min-width: 400px) {
-        display: none;
-    }
+  @media screen and (min-width: 400px) {
+    display: none;
+  }
 }
 
 /*.burgerNav{
@@ -32,4 +31,3 @@
         color: $primaryColor
     }
 }*/
-

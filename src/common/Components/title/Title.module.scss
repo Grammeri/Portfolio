@@ -1,29 +1,29 @@
-@import '../../styles/sass/variables';
+@import "../../styles/sass/variables";
 
-.title{
-    margin-top: 100px;
-    margin-bottom: 30px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight:300;
-    color:orange;
-    text-transform:capitalize;
-    font-size: 18px;
-    line-height: 1.2;
-    letter-spacing: 5px;
-    position: relative;
+.title {
+  margin-top: 100px;
+  margin-bottom: 30px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  color: orange;
+  text-transform: capitalize;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 5px;
+  position: relative;
 
-    h2 {
-        margin:0;
-    }
+  h2 {
+    margin: 0;
+  }
 
-    &::before{
-        content:"";
-        position:absolute;
-        background: $btnColor;
-        width: 55px;
-        height: 1px;
-        bottom:-30px;
-        transform: translate(-50%, 50%);
-        left:50%;
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    background: $btnColor;
+    width: 55px;
+    height: 1px;
+    bottom: -30px;
+    transform: translate(-50%, 50%);
+    left: 50%;
+  }
 }

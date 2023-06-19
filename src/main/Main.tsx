@@ -25,36 +25,38 @@ export const Main = () => {
   };
 
   return (
-    <div id="Main" className={style.mainBlock} style={{ position: "relative" }}>
-      <Fade>
-        <div className={`${styleContainer.container} ${style.mainContainer}`}>
-          <div className={style.greeting}>
-            <h1>{t("greeting")}</h1>
-            <h1>{t("name")}</h1>
-            <h1>{t("role")}</h1>
-            <span className={style.typingEffectText}>
-              <ReactTypingEffect text={[t("typingText")]} />
-            </span>
-          </div>
-
-          <Tilt options={{}}>
-            <div className={style.photoWrapper}>
-              <div className={style.photo}>
-                <MyPhoto style={dimaPhoto} />
-              </div>
+    <div className={style.container}>
+      <div id="Main" className={style.mainBlock}>
+        <Fade>
+          <div className={`${styleContainer.container} ${style.mainContainer}`}>
+            <div className={style.greeting}>
+              <h1>{t("greeting")}</h1>
+              <h1>{t("name")}</h1>
+              <h1>{t("role")}</h1>
+              <span className={style.typingEffectText}>
+                <ReactTypingEffect text={[t("typingText")]} />
+              </span>
             </div>
-          </Tilt>
 
-          <Canvas
-            camera={{ position: [0, 0, 150], fov: 90, near: 0.1, far: 3000 }}
-            style={{ width: "800px", height: "800px" }}
-          >
-            <ambientLight />
-            <pointLight position={[10, 10, 150]} />
-            <RotatingBox />
-          </Canvas>
-        </div>
-      </Fade>
+            <Tilt options={{}}>
+              <div className={style.photoWrapper}>
+                <div className={style.photo}>
+                  <MyPhoto style={dimaPhoto} />
+                </div>
+              </div>
+            </Tilt>
+
+            <Canvas
+              camera={{ position: [0, 0, 150], fov: 90, near: 0.1, far: 3000 }}
+              style={{ width: "800px", height: "800px" }}
+            >
+              <ambientLight />
+              <pointLight position={[10, 10, 150]} />
+              <RotatingBox />
+            </Canvas>
+          </div>
+        </Fade>
+      </div>
     </div>
   );
 };
