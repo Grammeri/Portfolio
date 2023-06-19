@@ -3,7 +3,7 @@
 
 .myProjectsBlock {
   min-height: 100vh;
-  background-color: $myProjectsbgColor;
+  background-color: gray;
   display: flex;
   flex-wrap: wrap;
 }
@@ -22,7 +22,7 @@
 
     .projectItem {
       width: 100%;
-      background-color: black;
+      background-color: $myProjectsbgColor;
       margin-bottom: 20px;
       border-radius: 40px;
       height: auto; // This will ensure your container height is dynamic

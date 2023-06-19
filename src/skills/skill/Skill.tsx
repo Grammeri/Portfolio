@@ -1,20 +1,17 @@
-import React from 'react'
-import style from "./Skill.module.scss"
+import React from "react";
+import style from "./Skill.module.scss";
 
 type Propstypes = {
-    title: string
-    icon: any
-}
+  title: string;
+  icon: any;
+};
 
 export const Skill = (props: Propstypes) => {
-    return (
-        <div className={style.skill}>
+  return (
+    <div className={style.skill}>
+      <img src={props.icon} />
 
-            <img src={props.icon}/>
-
-            <h3>{props.title}</h3>
-        </div>
-    )
-}
-
-
+      <h3>{props.title}</h3>
+    </div>
+  );
+};

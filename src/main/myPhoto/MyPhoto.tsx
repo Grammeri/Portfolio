@@ -1,16 +1,9 @@
-import React from 'react';
-
+import React from "react";
 
 type MyPhotoPropsType = {
-    style:any
-}
-
-export const MyPhoto = ({style}: MyPhotoPropsType) => {
-    return (
-        <div className={style.photo} style={style}>
-
-        </div>
-    );
+  style: any;
 };
 
-
+export const MyPhoto = ({ style }: MyPhotoPropsType) => {
+  return <div className={style.photo} style={style}></div>;
+};

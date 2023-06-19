@@ -28,7 +28,7 @@ export const MyProjects = () => {
                   codeUrl={project.codeUrl}
                   date={project.date}
                   stack={project.stack}
-                  videoUrl={project.videoUrl} // Add this line
+                  videoUrl={project.videoUrl}
                 />
               </div>
             ))}

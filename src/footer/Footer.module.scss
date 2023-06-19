@@ -1,61 +1,61 @@
-@import '../common/styles/sass/variables';
-@import '../common/styles/sass/mixins';
+@import "../common/styles/sass/variables";
+@import "../common/styles/sass/mixins";
 
 .footer {
-    background-color: orange;
+  background-color: orange;
 
-    .footerContainer {
+  .footerContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+
+    .footerContent {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      .footerText {
+        margin: 0 40px;
+      }
+
+      .socialIcons {
         display: flex;
-        justify-content: space-around;
-        flex-direction: row;
+        justify-content: center;
+
+        .socialIcon {
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .footerContainer {
+      flex-direction: column;
+      align-items: center;
+
+      .footerContent {
+        flex-direction: column;
         align-items: center;
-        width: 100%;
-        padding: 20px 0;
 
-        .footerContent {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
+        .socialIcons {
+          flex-direction: row;
+          justify-content: center;
 
-            .footerText {
-                margin: 0 40px;
-            }
-
-            .socialIcons {
-                display: flex;
-                justify-content: center;
-
-                .socialIcon {
-                    margin: 0 5px;
-                }
-            }
+          .socialIcon {
+            margin: 10px;
+          }
         }
-    }
 
-    @media screen and (max-width:500px){
-        .footerContainer {
-            flex-direction: column;
-            align-items: center;
-
-            .footerContent {
-                flex-direction: column;
-                align-items: center;
-
-                .socialIcons {
-                    flex-direction: row;
-                    justify-content: center;
-
-                    .socialIcon {
-                        margin: 10px;
-                    }
-                }
-
-                .footerText {
-                    margin: 10px 0;
-                    text-align: center;
-                }
-            }
+        .footerText {
+          margin: 10px 0;
+          text-align: center;
         }
+      }
     }
+  }
 }

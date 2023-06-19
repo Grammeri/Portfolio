@@ -32,13 +32,13 @@ export function Nav() {
         >
           {t("home")}
         </a>
-        <a
+        {/*<a
           href="#Skills"
           className={activeLink === t("skills") ? style.active : ""}
           onClick={handleLinkClick}
         >
           {t("skills")}
-        </a>
+        </a>*/}
         <a
           href="#MyProjects"
           className={activeLink === t("projects") ? style.active : ""}

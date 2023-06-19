@@ -9,12 +9,12 @@ import htmlLogo from "./../../assets/3d-logos/html.png";
 import cssLogo from "./../../assets/3d-logos/css.png";
 
 export const RotatingBox = () => {
-  const meshRef1 = useRef();
-  const meshRef2 = useRef();
-  const meshRef3 = useRef();
-  const meshRef4 = useRef();
-  const meshRef5 = useRef();
-  const meshRef6 = useRef();
+  const meshRef1 = useRef<THREE.Mesh>(null);
+  const meshRef2 = useRef<THREE.Mesh>(null);
+  const meshRef3 = useRef<THREE.Mesh>(null);
+  const meshRef4 = useRef<THREE.Mesh>(null);
+  const meshRef5 = useRef<THREE.Mesh>(null);
+  const meshRef6 = useRef<THREE.Mesh>(null);
 
   // Load textures
   const reactTexture = useLoader(TextureLoader, reactLogo);

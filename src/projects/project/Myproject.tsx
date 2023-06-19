@@ -10,7 +10,7 @@ type PropsTypes = {
   projectTitle: string;
   date: string;
   stack: string;
-  videoUrl?: string; // Added this
+  videoUrl?: string;
 };
 
 export const MyProject = (props: PropsTypes) => {
