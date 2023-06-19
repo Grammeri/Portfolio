@@ -7,8 +7,8 @@ import instagram from "./../assets/image/instagram.png";
 import whatsUp from "./../assets/image/whatsUp.png";
 import { TFunction } from "i18next";
 
-export const projectsList = (t: TFunction) => [
-  {
+export const testsList = (t: TFunction) => [
+  /* {
     title: "Currently in progress",
     date: t("inctagramDate"),
     stack: t("inctagramStack"),
@@ -16,8 +16,8 @@ export const projectsList = (t: TFunction) => [
     image: instagram,
     appUrl: "#",
     codeUrl: "https://github.com/Crash2022/Inctagram",
-  },
-  /*{
+  },*/
+  {
     title: "Test WhatsUp",
     date: t("whatsUpDate"),
     stack: t("whatsUpStack"),
@@ -34,8 +34,8 @@ export const projectsList = (t: TFunction) => [
     image: interviewImag,
     appUrl: "https://grammeri.github.io/TestAssignment/",
     codeUrl: "https://github.com/Grammeri/TestAssignment",
-  },*/
-  {
+  },
+  /*{
     title: "Start Up",
     date: t("startUpDate"),
     stack: t("startUpStack"),
@@ -74,5 +74,5 @@ export const projectsList = (t: TFunction) => [
     codeUrl: "https://github.com/grammeri/Todolist",
     videoUrl:
       "https://drive.google.com/file/d/1FdQHPT-zno8CGwebp281kDQXJQvFh1Ac/view?usp=drive_link",
-  },
+  },*/
 ];

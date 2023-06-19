@@ -1,9 +1,9 @@
-import React from "react";
+/*import React from "react";*/
 import { useTranslation } from "react-i18next";
 import style from "./BurgerNav.module.scss";
 import { FlagIcon } from "react-flag-kit";
 
-export function BurgerNav() {
+/*export function BurgerNav() {
   const { t, i18n } = useTranslation();
 
   const changeLanguage = (language: string) => {
@@ -26,4 +26,4 @@ export function BurgerNav() {
       <div>{t("hello")}</div>
     </div>
   );
-}
+}*/

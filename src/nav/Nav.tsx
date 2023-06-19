@@ -8,6 +8,15 @@ export function Nav() {
   const [activeLink, setActiveLink] = useState("");
   const { t, i18n } = useTranslation();
   const currentLanguage = i18n.language;
+  const cvDownloadLink =
+    i18n.language === "ru"
+      ? "https://drive.google.com/file/d/1IDxfUDWHDtF1kAEmlpORUb9IlNor9oi7/view?usp=drive_link"
+      : "https://drive.google.com/file/d/1d9AgnfM4c9Vxnoi5a-_R04A_oFyKFdiW/view?usp=drive_link";
+
+  const handleDownload = (event: any) => {
+    event.preventDefault();
+    window.open(cvDownloadLink, "_blank");
+  };
 
   const changeLanguage = (language: string) => {
     i18n.changeLanguage(language);
@@ -30,7 +39,7 @@ export function Nav() {
           className={activeLink === t("home") ? style.active : ""}
           onClick={handleLinkClick}
         >
-          {t("home")}
+          <u>{t("home")}</u>
         </a>
         {/*<a
           href="#Skills"
@@ -44,29 +53,45 @@ export function Nav() {
           className={activeLink === t("projects") ? style.active : ""}
           onClick={handleLinkClick}
         >
-          {t("projects")}
+          <u>{t("projects")}</u>
         </a>
         <a
+          href="#MyTests"
+          className={activeLink === t("tests") ? style.active : ""}
+          onClick={handleLinkClick}
+        >
+          <u>{t("tests")}</u>
+        </a>
+        {/*<a
           href="#myUpdatedCV"
           className={activeLink === t("cv") ? style.active : ""}
           onClick={handleLinkClick}
         >
           {t("cv")}
-        </a>
+        </a>*/}
         <a
           href="#Contacts"
           className={activeLink === t("contacts") ? style.active : ""}
           onClick={handleLinkClick}
         >
-          {t("contacts")}
+          <u>{t("contacts")}</u>
         </a>
         <a
           href="#Code"
           className={activeLink === t("portfolioCode") ? style.active : ""}
           onClick={handleLinkClick}
         >
-          {t("portfolioCode")}
+          <u>{t("portfolioCode")}</u>
         </a>
+        {/*        <a
+          href={cvDownloadLink}
+          download="My_CV.pdf"
+          onClick={handleDownload}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <u>{t("downloadMyCv")}</u>
+        </a>*/}
       </div>
       <div className={style.flags}>
         <div className={style.flag}>

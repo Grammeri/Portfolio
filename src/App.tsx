@@ -5,8 +5,8 @@ import { MyProjects } from "projects/MyProjects";
 import { Contacts } from "projects/project/contacts/Contacts";
 import { Footer } from "footer/Footer";
 import { Main } from "main/Main";
-import { MyCv } from "myCv";
 import { useTranslation } from "react-i18next";
+import { MyTests } from "test/MyTests";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -21,7 +21,8 @@ function App() {
       <Main />
       {/*<Skills />*/}
       <MyProjects />
-      <MyCv />
+      <MyTests />
+      {/*<MyCv />*/}
       <Contacts />
       <Footer />
     </div>

@@ -10,8 +10,8 @@ export const MyCv = () => {
 
   const cvDownloadLink =
     i18n.language === "ru"
-      ? "https://drive.google.com/file/d/19dSZGZlbKFGJ1d05FcHgjsaunvbOV319/view?usp=drive_link"
-      : "https://drive.google.com/file/d/1N6cxk0_eRhBC6QnlLGI7rUZ0pQamhy6p/view?usp=drive_link";
+      ? "https://drive.google.com/file/d/1IDxfUDWHDtF1kAEmlpORUb9IlNor9oi7/view?usp=drive_link"
+      : "https://drive.google.com/file/d/1d9AgnfM4c9Vxnoi5a-_R04A_oFyKFdiW/view?usp=drive_link";
 
   const handleDownload = (event: any) => {
     event.preventDefault();

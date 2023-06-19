@@ -4,9 +4,11 @@
   "home": "Home",
   "skills": "Skills",
   "projects": "Projects",
+  "tests": "Tests",
   "cv": "CV",
   "contacts": "Contacts",
-  "portfolioCode": "Portfolio code",
+  "portfolioCode": "Portfolio gitHub",
+  "downloadMyCv": "Download my CV",
 
   "//MainPage": "This is MainPage",
 
@@ -24,6 +26,19 @@
   "myProjects": "My Projects",
 
   "//MyProjectsPageButtons": "This is MyProjectsPageButtons",
+
+  "inProgress": "In Progress",
+  "viewProject": "View Project",
+  "viewCode": "View Code",
+  "more": "More",
+  "less": "Less",
+  "viewVideo": "Video",
+
+  "//MyTestsPage": "This is MyTestsPage",
+
+  "myTests": "My Tests",
+
+  "//MyTestsPageButtons": "This is MyTestsPageButtons",
 
   "inProgress": "In Progress",
   "viewProject": "View Project",
@@ -71,7 +86,7 @@
 
   "//contactsPage": "This is Contacts Page",
 
-  "contactsOpenTag": "<div id=\"Contacts\" className={`${style.contactsContainer}`} >",
+  "contactsOpenTag": "<div>",
   "contactsCloseTag": "<div />",
   "letsGetInTouch": "Let's get in touch",
   "formName": "Name*",
@@ -87,6 +102,5 @@
 
   "adoptedForSmartphones": "Adopted for smartphones",
   "copyRight": "© Twentytwentythree",
-  "downloadMyCv": "Download my CV",
-  "portfolioStack": "Stack: React, TypeScript, Material-UI, MUI Icons, EmailJS, Formik, i18next, React Awesome Reveal, React Flag Kit, React Icons, React Tilt, React Toastify, React Typing Effect"
+  "portfolioStack": "Stack: React, TypeScript, Material-UI, Three.js, yMUI Icons, EmailJS, Formik, i18next, React Awesome Reveal, React Flag Kit, React Icons, React Tilt, React Toastify, React Typing Effect"
 }

@@ -9,6 +9,8 @@ import { Canvas } from "@react-three/fiber";
 import { Tilt } from "react-tilt";
 import { RotatingBox } from "main/3d-components/RotatingBox";
 import { useTranslation } from "react-i18next";
+import i18n from "i18next";
+import { BsDownload } from "react-icons/bs";
 
 export const Main = () => {
   const { t } = useTranslation();
@@ -24,6 +26,18 @@ export const Main = () => {
     borderRadius: "20px",
   };
 
+  // CV download link based on selected language
+  const cvDownloadLink =
+    i18n.language === "ru"
+      ? "https://drive.google.com/file/d/1IDxfUDWHDtF1kAEmlpORUb9IlNor9oi7/view?usp=drive_link"
+      : "https://drive.google.com/file/d/1d9AgnfM4c9Vxnoi5a-_R04A_oFyKFdiW/view?usp=drive_link";
+
+  const handleDownload = (event: any) => {
+    // <-- Function to handle download click event
+    event.preventDefault();
+    window.open(cvDownloadLink, "_blank");
+  };
+
   return (
     <div className={style.container}>
       <div id="Main" className={style.mainBlock}>
@@ -36,6 +50,18 @@ export const Main = () => {
               <span className={style.typingEffectText}>
                 <ReactTypingEffect text={[t("typingText")]} />
               </span>
+              <div>
+                <a // <-- Moved this below the moving text
+                  href={cvDownloadLink}
+                  download="My_CV.pdf"
+                  onClick={handleDownload}
+                  className={style.downloadLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("downloadMyCv")}
+                </a>
+              </div>
             </div>
 
             <Tilt options={{}}>

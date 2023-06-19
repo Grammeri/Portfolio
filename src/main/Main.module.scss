@@ -8,10 +8,9 @@
   .greeting {
     width: 800px;
     padding: 15px;
-    /* Adjust the margin-top value as desired */
     color: orange;
     position: relative;
-    z-index: 2; /* Add a higher z-index to ensure text is displayed above the photo */
+    z-index: 2;
   }
 
   .greeting span {
@@ -26,7 +25,22 @@
     top: 0;
     left: 0;
     position: relative;
-    z-index: 1; /* Ensure the photo is behind the text elements */
+    z-index: 1;
+  }
+  .downloadLink {
+    display: inline-block;
+    border: 2px solid black;  // Set the border color to orange
+    background-color: orange;  // Set the background color to orange
+    margin-top: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+    color:  black;  // Set the text color to white so it contrasts with the orange background
+    text-decoration: none;
+    height:30px;
+    padding-top: 5px;
+    font-weight: bold;
+
   }
 
   .photoWrapper {
@@ -37,24 +51,39 @@
     border-radius: 25px;
     width: 400px;
     height: 400px;
+
+    // Styles for download link
+    .downloadLink {
+      position: absolute; // So it doesn't affect layout
+      bottom: 10px; // Add space from the bottom of the wrapper
+      right: 10px; // Add space from the right side of the wrapper
+      display: flex; // To properly align items
+      align-items: center; // Vertically center align items
+      color: #ffffff; // Text and icon color
+      text-decoration: none; // Remove underline
+
+      // Style for download icon
+      .downloadIcon {
+        margin-left: 5px; // Add space between text and icon
+      }
+    }
   }
 
   .typingEffectText {
     font-size: large;
     font-weight: bold;
-    /* any other styles you want to apply */
   }
 }
 
 @media screen and (max-width: 752px) {
   .mainBlock {
-    min-height: 150vh; /* Use min-height instead of height for mobile devices */
+    min-height: 150vh;
   }
 }
 
 @media screen and (max-width: 480px) {
   .mainBlock {
-    min-height: auto; /* Use min-height instead of height for mobile devices */
+    min-height: auto;
     padding-bottom: 50px;
   }
 
