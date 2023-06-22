@@ -3,18 +3,16 @@
   "home": "Главная",
   "skills": "Навыки",
   "projects": "Проекты",
-  "tests": "Тесты",
   "cv": "Резюме",
   "contacts": "Контакты",
-  "portfolioCode": "Портфолио gitHub",
-  "downloadMyCv": "Скачать мое резюме",
+  "portfolioCode": "Код портфолио",
 
   "//MainPage": "Главная страница",
 
   "greeting": "Приветствую!",
   "name": "Меня зовут Дмитрий",
   "role": "Я фронтенд React разработчик",
-  "typingText": "<p>Мне нравится, то что я делаю</p>",
+  "typingText": "<p>Мне нравится то, что я делаю</p>",
 
   "//SkillsPage": "Страница Навыки",
 
@@ -27,23 +25,10 @@
   "//MyProjectsPageButtons": "This is MyProjectsPageButtons",
 
   "inProgress": "В разработке",
-  "viewProject": "Смотри приложение",
+  "viewProject": "Проект",
   "viewCode": "Код",
-  "more": "Подробнее",
-  "less": "Свернуть",
-  "viewVideo": "Видео",
-
-  "//MyTestsPage": "Страница Мои тестовые задания",
-
-  "myTests": "Мои тестовые задания",
-
-  "//MyTestsPageButtons": "This is MyTestsPageButtons",
-
-  "inProgress": "В разработке",
-  "viewProject": "Смотри приложение",
-  "viewCode": "Код",
-  "more": "Подробнее",
-  "less": "Свернуть",
+  "more": "Больше",
+  "less": "Меньше",
   "viewVideo": "Видео",
 
   "//listOfdifferentProjects": "Это перечень различных проектов",
@@ -85,7 +70,7 @@
 
   "//contactsPage": "Это страница Контактов",
 
-  "contactsOpenTag": "<div>",
+  "contactsOpenTag": "<div id=\"Contacts\" className={`${style.contactsContainer}`} >",
   "contactsCloseTag": "<div />",
   "letsGetInTouch": "Отправьте мне сообщение",
   "formName": "Меня зовут Дмитрий",
@@ -101,5 +86,6 @@
 
   "adoptedForSmartphones": "Адаптировано для смартфонов",
   "copyRight": "© ДвадцатьДвадцатьТри",
-  "portfolioStack": "Стэк:React, TypeScript, Three.js, Material-UI, MUI Icons, EmailJS, Formik, i18next, React Awesome Reveal, React Flag Kit, React Icons, React Tilt, React Toastify, React Typing Effect "
+  "downloadMyCv": "Скачать мое резюме",
+  "portfolioStack": "Стэк:React, TypeScript, Material-UI, MUI Icons, EmailJS, Formik, i18next, React Awesome Reveal, React Flag Kit, React Icons, React Tilt, React Toastify, React Typing Effect "
 }
