@@ -2,6 +2,7 @@
   "//Header": "Раздел Header",
   "home": "Главная",
   "skills": "Навыки",
+  "tests": "Тестовые",
   "projects": "Проекты",
   "cv": "Резюме",
   "contacts": "Контакты",
@@ -27,50 +28,75 @@
   "inProgress": "В разработке",
   "viewProject": "Проект",
   "viewCode": "Код",
-  "more": "Больше",
-  "less": "Меньше",
+  "more": "Подробнее",
+  "less": "Свернуть",
   "viewVideo": "Видео",
 
-  "//listOfdifferentProjects": "Это перечень различных проектов",
+  "//list of Projects": "Это перечень проектов",
+
+  "//Тудулист": "Это тудулист",
 
   "todolistTitle": "Список дел",
   "tdlDate": "Декабрь 2021 г.",
   "tdlStack": "Стэк: ReactJS, TypeScript, Redux Toolkit, RestAPI, Axios, Redux-Thunk, Material UI, Yup, Unit testing, Storybook",
   "todolistDescription": "Функционал: валидация формы входа в систему и создания задач, создание/удаление туду листов, добавление/удаление задач, отображение статуса задач /фильтрация по статусу: «все», «в работе», «завершенные», обработка ошибок.\n\nПожалуйста, обратите внимание, что при открытии приложения и проверке его функционала, вы можете увидеть неорганизованные списки дел, так как к серверу есть свободный доступ и другие пользователи могут добавлять и удалять туду листы.\n",
 
+  "//Социальная сеть": "Это социальная сеть",
+
   "socialNetworkStack": "Стэк: React, Redux, React Redux, React Router, Material-UI, Ant Design (Antd), Axios, Formik, Final Form, Yup, UUID, React YouTube, Reselect",
   "socialNetworkDate": "Апрель 2022 г.",
   "socialNetworkTitle": "Социальная сеть",
   "socialNetworkDescription": "Это проект социальной сети, реализованный с использованием классовых компонентов. Приложение позволяет пользователям выполнять различные действия, такие как просмотр зарегистрированных участников, добавление или удаление друзей, обновление своего статуса и добавление/удаление постов.",
+
+  "//СтартАп": "Это стартАп",
 
   "startUpDate": "Сентябрь, 2022",
   "startUpStack": "Стэк: Next.js, React, TypeScript, Axios, Formik, Yup, Sass, Swiper",
   "startUpTitle": "Стартап",
   "startUpDescription": "Стартап веб-студии SILEVANS. Веб сайт, с информацией о компании, с функционалом: заказа звонка, заполнения анкеты, портфолио.",
 
+  "//Карточки": "Это карточки",
+
   "flashCardsDate": "Июнь 2022 г.",
   "flashCardsStack": "Стэк: TypeScript, React, Redux, React-Redux, Redux-Thunk, React-Router-dom, Axios, Material UI, React-Hook-Form, HTML, CSS, ESLint, Prettier",
   "flashCardsTitle": "Карточки",
   "flashCardsDescription": "Функционал: регистрация, логинизация, восстановление пароля, запоминание пользователя “remember me”, поиск колод с карточками, сортировка колод по параметрам: мои / чужие,  количеству карточек, сортировка таблицы по разным параметрам, создание / удаление колод / карточек, использованием модалок, переход в режим обучения. Проект в публичном доступе поэтому отсутствует контроль содержания карточек. Более подробная информация по приложению представлена в Read me при переходе к коду.",
 
-  "sagaAssignmentDate": "Май 2023 г.",
-  "sagaAssignmentStack": "Стэк: React, Redux, React Router, Bootstrap, Axios, Redux Saga ",
-  "sagaAssignmentTitle": "Тестовое задание",
-  "sagaAssignmentDescription": "Подробное описание тестового задания представлено в коде в разделе Read me.",
-
-  "whatsUpDate": "Май 2023 г.",
-  "whatsUpStack": "Стэк: React, React Router DOM, React Redux, React Hook Form, React Toastify, RTK Query",
-  "whatsUpTitle": "Тестовое приложение WhatsUp",
-  "whatsUpDescription": "26 мая 2023 года. Это тестовая версия приложения WhatsUp. Следующий шаг - обеспечить связь с сервером.",
+  "//Инсктогарм": "Это инктограм",
 
   "inctagramDate": "В разработке",
   "inctagramStack": "Стэк: Next.js, React, Redux, RTK Query, Next Redux Wrapper, TypeScript, Sass, Yup,\n•\tnext-i18next, React-i18next, React-Hook-Form, React-Easy-Crop, React-Paginate, React-Select, Notistack, Storybook\n",
   "inctagramTitle": "В разработке",
   "inctagramDescription": "Это командный проект с участием 5 фронтэнд разработчиков и 1 бэкэнд разработчика.",
 
+  "//Angular": "Angular",
+
+  "angularHomesDate": "Июнь 2023 Начальная стадия изучения (в разработке)",
+  "angularHomesStack": "Stack: Angular",
+  "angularHomesTitle": "В процессе изучения",
+  "angularHomesDescription": "Только приступил к изучению фреймворка Angular",
+
+  "//Тестовые задания": "Это тестовые задания",
+
+  "//Тестовое на сагах": "Это тестовое на сагах",
+
+  "sagaAssignmentDate": "Май 2023 г.",
+  "sagaAssignmentStack": "Стэк: React, Redux, React Router, Bootstrap, Axios, Redux Saga ",
+  "sagaAssignmentTitle": "Тестовое задание",
+  "sagaAssignmentDescription": "Подробное описание тестового задания представлено в коде в разделе Read me.",
+
+  "//Вотсап": "Это вотсАп",
+
+  "whatsUpDate": "Май 2023 г.",
+  "whatsUpStack": "Стэк: React, React Router DOM, React Redux, React Hook Form, React Toastify, RTK Query",
+  "whatsUpTitle": "Тестовое приложение WhatsUp",
+  "whatsUpDescription": "26 мая 2023 года. Это тестовая версия приложения WhatsUp. Следующий шаг - обеспечить связь с сервером.",
+
+
+
   "//contactsPage": "Это страница Контактов",
 
-  "contactsOpenTag": "<div id=\"Contacts\" className={`${style.contactsContainer}`} >",
+  "contactsOpenTag": "<div>",
   "contactsCloseTag": "<div />",
   "letsGetInTouch": "Отправьте мне сообщение",
   "formName": "Меня зовут Дмитрий",

@@ -2,9 +2,8 @@ import socialNetWorkImg from "./../assets/image/SocialNetwork.jpg";
 import todoImg from "./../assets/image/Todolist.jpg";
 import startUpImg from "./../assets/image/StartUp.jpg";
 import flashCardsImg from "./../assets/image/FlashCards.jpg";
-import interviewImag from "./../assets/image/interviewImag.webp";
 import instagram from "./../assets/image/instagram.png";
-import whatsUp from "./../assets/image/whatsUp.png";
+import angularHomesImg from "./../assets/image/angular.jpg";
 import { TFunction } from "i18next";
 
 export const projectsList = (t: TFunction) => [
@@ -17,24 +16,17 @@ export const projectsList = (t: TFunction) => [
     appUrl: "#",
     codeUrl: "https://github.com/Crash2022/Inctagram",
   },
-  /*{
-    title: "Test WhatsUp",
-    date: t("whatsUpDate"),
-    stack: t("whatsUpStack"),
-    description: t("whatsUpDescription"),
-    image: whatsUp,
-    appUrl: "https://grammeri.github.io/mockWhatsupTest",
-    codeUrl: "https://github.com/Grammeri/mockWhatsupTest/",
-  },
   {
-    title: "TestAssignment",
-    date: t("sagaAssignmentDate"),
-    stack: t("sagaAssignmentStack"),
-    description: t("sagaAssignmentDescription"),
-    image: interviewImag,
-    appUrl: "https://grammeri.github.io/TestAssignment/",
-    codeUrl: "https://github.com/Grammeri/TestAssignment",
-  },*/
+    title: "Angular Homes",
+    date: t("angularHomesDate"),
+    stack: t("angularHomesStack"),
+    description: t("angularHomesDescription"),
+    image: angularHomesImg,
+    appUrl: "https://my-first-angular-project.vercel.app/",
+    codeUrl: "https://github.com/Grammeri/MyFirstAngularProject",
+    videoUrl:
+      "https://drive.google.com/file/d/1FdQHPT-zno8CGwebp281kDQXJQvFh1Ac/view?usp=drive_link",
+  },
   {
     title: "Start Up",
     date: t("startUpDate"),
