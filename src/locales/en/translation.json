@@ -34,19 +34,6 @@
   "less": "Less",
   "viewVideo": "Video",
 
-  "//MyTestsPage": "MyTestsPage",
-
-  "myTests": "My Tests",
-
-  "//MyTestsPageButtons": "MyTestsPageButtons",
-
-  "inProgress": "In Progress",
-  "viewProject": "View Project",
-  "viewCode": "View Code",
-  "more": "More",
-  "less": "Less",
-  "viewVideo": "Video",
-
   "//list Projects": "List of Projects",
 
   "//TodoList": "TodoList",
@@ -91,7 +78,18 @@
   "angularHomesTitle": "Currently in progress",
   "angularHomesDescription": "Just started to study angular framework",
 
-  "//Tests": "Tests",
+  "//MyTestsPage": "MyTestsPage",
+
+  "myTests": "My Tests",
+
+  "//MyTestsPageButtons": "MyTestsPageButtons",
+
+  "inProgress": "In Progress",
+  "viewProject": "View Project",
+  "viewCode": "View Code",
+  "more": "More",
+  "less": "Less",
+  "viewVideo": "Video",
 
   "//Saga Test": "Saga Test",
 

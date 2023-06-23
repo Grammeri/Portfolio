@@ -34,6 +34,7 @@
 
   "//list of Projects": "Это перечень проектов",
 
+
   "//Тудулист": "Это тудулист",
 
   "todolistTitle": "Список дел",
@@ -50,7 +51,7 @@
 
   "//СтартАп": "Это стартАп",
 
-  "startUpDate": "Сентябрь, 2022",
+  "startUpDate": "Сентябрь, 2022 г.",
   "startUpStack": "Стэк: Next.js, React, TypeScript, Axios, Formik, Yup, Sass, Swiper",
   "startUpTitle": "Стартап",
   "startUpDescription": "Стартап веб-студии SILEVANS. Веб сайт, с информацией о компании, с функционалом: заказа звонка, заполнения анкеты, портфолио.",
@@ -71,12 +72,23 @@
 
   "//Angular": "Angular",
 
-  "angularHomesDate": "Июнь 2023 Начальная стадия изучения (в разработке)",
+  "angularHomesDate": "Июнь 2023 г. Начальная стадия изучения (в разработке)",
   "angularHomesStack": "Stack: Angular",
   "angularHomesTitle": "В процессе изучения",
   "angularHomesDescription": "Только приступил к изучению фреймворка Angular",
 
-  "//Тестовые задания": "Это тестовые задания",
+  "//MyTestsPage": "MyTestsPage",
+
+  "myTests": "Мои тестовые задания",
+
+  "//MyTestsPageButtons": "MyTestsPageButtons",
+
+  "inProgress": "В разработке",
+  "viewProject": "Проект",
+  "viewCode": "Код",
+  "more": "Подробнее",
+  "less": "Свернуть",
+  "viewVideo": "Видео",
 
   "//Тестовое на сагах": "Это тестовое на сагах",
 
