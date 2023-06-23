@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.775ab330.css",
-    "main.js": "/Portfolio/static/js/main.eec46323.js",
+    "main.css": "/Portfolio/static/css/main.b89c96c5.css",
+    "main.js": "/Portfolio/static/js/main.c85c8466.js",
     "static/js/47.fe71ec80.chunk.js": "/Portfolio/static/js/47.fe71ec80.chunk.js",
     "static/media/4Dima.jpg": "/Portfolio/static/media/4Dima.a5d114c0e9e6ae228176.jpg",
     "static/media/instagram.png": "/Portfolio/static/media/instagram.bd3e6b76092ea367c9e5.png",
@@ -10,12 +10,12 @@
     "static/media/SocialNetwork.jpg": "/Portfolio/static/media/SocialNetwork.ca8f4a061ea540f046d2.jpg",
     "static/media/interviewImag.webp": "/Portfolio/static/media/interviewImag.da24ae7d87ee8539ef01.webp",
     "index.html": "/Portfolio/index.html",
-    "main.775ab330.css.map": "/Portfolio/static/css/main.775ab330.css.map",
-    "main.eec46323.js.map": "/Portfolio/static/js/main.eec46323.js.map",
+    "main.b89c96c5.css.map": "/Portfolio/static/css/main.b89c96c5.css.map",
+    "main.c85c8466.js.map": "/Portfolio/static/js/main.c85c8466.js.map",
     "47.fe71ec80.chunk.js.map": "/Portfolio/static/js/47.fe71ec80.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.775ab330.css",
-    "static/js/main.eec46323.js"
+    "static/css/main.b89c96c5.css",
+    "static/js/main.c85c8466.js"
   ]
 }
