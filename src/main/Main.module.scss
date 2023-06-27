@@ -12,6 +12,9 @@
     position: relative;
     z-index: 2;
   }
+  .hi{
+    color:white;
+  }
 
   .greeting span {
     font-size: large;
@@ -72,6 +75,7 @@
   .typingEffectText {
     font-size: large;
     font-weight: bold;
+    color: white;
   }
 }
 

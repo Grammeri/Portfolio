@@ -44,8 +44,11 @@ export const Main = () => {
         <Fade>
           <div className={`${styleContainer.container} ${style.mainContainer}`}>
             <div className={style.greeting}>
-              <h1>{t("greeting")}</h1>
-              <h1>{t("name")}</h1>
+              <div className={style.hi}>
+                <h1>{t("greeting")}</h1>
+
+                <h1>{t("name")}</h1>
+              </div>
               <h1>{t("role")}</h1>
               <span className={style.typingEffectText}>
                 <ReactTypingEffect text={[t("typingText")]} />

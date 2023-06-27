@@ -13,8 +13,10 @@ export const projectsList = (t: TFunction) => [
     stack: t("inctagramStack"),
     description: t("inctagramDescription"),
     image: instagram,
-    appUrl: "#",
+    appUrl: "https://inctagram-grammeri.vercel.app/auth/login",
     codeUrl: "https://github.com/Crash2022/Inctagram",
+    videoUrl:
+      "https://drive.google.com/file/d/1rjp8iRtwNU9D15OQYWN6U0xE2zYZgo_V/view?usp=drive_link",
   },
   {
     title: "Angular Homes",
