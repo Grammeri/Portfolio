@@ -76,7 +76,7 @@ export const Main = () => {
                 </div>
               </Tilt>
             </div>
-            <div className={style.lowerPart}>
+            <div className={`${styleContainer.container} ${style.lowerPart}`}>
               <Canvas
                 camera={{
                   position: [0, 0, 150],

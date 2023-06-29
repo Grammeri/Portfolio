@@ -7,10 +7,13 @@
 .upperPart{
   display: flex;
 }
+.container{
+  width:100% !important;
+}
   .lowerPart{
     margin-top: 100px;
     background-color: #cccccc;
-    width:150%;
+    width:100%;
   }
   .greeting {
     width: 800px;
