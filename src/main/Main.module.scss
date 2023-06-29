@@ -3,12 +3,19 @@
 
 .mainBlock {
   min-height: 100vh;
-  background-color: $mainPagebgColor;
-
+  background-color: #333333 /*$mainPagebgColor*/;
+.upperPart{
+  display: flex;
+}
+  .lowerPart{
+    margin-top: 100px;
+    background-color: #cccccc;
+    width:150%;
+  }
   .greeting {
     width: 800px;
     padding: 15px;
-    color: orange;
+    color: orange; // I am a Front-end React Developer
     position: relative;
     z-index: 2;
   }
@@ -33,7 +40,7 @@
   .downloadLink {
     display: inline-block;
     border: 2px solid black;  // Set the border color to orange
-    background-color: orange;  // Set the background color to orange
+    background-color: orange;  // Download my cv button background color
     margin-top: 50px;
     padding-right: 20px;
     padding-left: 20px;
@@ -50,7 +57,7 @@
     margin-top: 50px;
     position: static;
     padding: 10px;
-    background-color: #336699;
+    background-color: orange;
     border-radius: 25px;
     width: 400px;
     height: 400px;

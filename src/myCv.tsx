@@ -1,3 +1,4 @@
+/*
 import React from "react";
 import myCVen from "./assets/cv/myCV_en.png";
 import myCVru from "./assets/cv/myCV_ru.png";
@@ -50,3 +51,4 @@ export const MyCv = () => {
     );
   }
 };
+*/

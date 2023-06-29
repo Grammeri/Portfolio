@@ -43,46 +43,54 @@ export const Main = () => {
       <div id="Main" className={style.mainBlock}>
         <Fade>
           <div className={`${styleContainer.container} ${style.mainContainer}`}>
-            <div className={style.greeting}>
-              <div className={style.hi}>
-                <h1>{t("greeting")}</h1>
+            <div className={style.upperPart}>
+              <div className={style.greeting}>
+                <div className={style.hi}>
+                  <h1>{t("greeting")}</h1>
 
-                <h1>{t("name")}</h1>
-              </div>
-              <h1>{t("role")}</h1>
-              <span className={style.typingEffectText}>
-                <ReactTypingEffect text={[t("typingText")]} />
-              </span>
-              <div>
-                <a // <-- Moved this below the moving text
-                  href={cvDownloadLink}
-                  download="My_CV.pdf"
-                  onClick={handleDownload}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {t("downloadMyCv")}
-                </a>
-                me={style.downloadLink}
-              </div>
-            </div>
-
-            <Tilt options={{}}>
-              <div className={style.photoWrapper}>
-                <div className={style.photo}>
-                  <MyPhoto style={dimaPhoto} />
+                  <h1>{t("name")}</h1>
+                </div>
+                <h1>{t("role")}</h1>
+                <span className={style.typingEffectText}>
+                  <ReactTypingEffect text={[t("typingText")]} />
+                </span>
+                <div>
+                  <a // <-- Moved this below the moving text
+                    href={cvDownloadLink}
+                    download="My_CV.pdf"
+                    onClick={handleDownload}
+                    className={style.downloadLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t("downloadMyCv")}
+                  </a>
                 </div>
               </div>
-            </Tilt>
 
-            <Canvas
-              camera={{ position: [0, 0, 150], fov: 90, near: 0.1, far: 3000 }}
-              style={{ width: "800px", height: "800px" }}
-            >
-              <ambientLight />
-              <pointLight position={[10, 10, 150]} />
-              <RotatingBox />
-            </Canvas>
+              <Tilt options={{}}>
+                <div className={style.photoWrapper}>
+                  <div className={style.photo}>
+                    <MyPhoto style={dimaPhoto} />
+                  </div>
+                </div>
+              </Tilt>
+            </div>
+            <div className={style.lowerPart}>
+              <Canvas
+                camera={{
+                  position: [0, 0, 150],
+                  fov: 90,
+                  near: 0.1,
+                  far: 3000,
+                }}
+                style={{ width: "800px", height: "800px" }}
+              >
+                <ambientLight />
+                <pointLight position={[10, 10, 150]} />
+                <RotatingBox />
+              </Canvas>
+            </div>
           </div>
         </Fade>
       </div>

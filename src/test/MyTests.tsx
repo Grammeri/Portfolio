@@ -14,6 +14,7 @@ export const MyTests = () => {
     <div id="MyTests" className={style.myTestsBlock}>
       <div className={`${styleContainer.container} ${style.myTestsContainer}`}>
         <Title header={t("myTests")} />
+
         <div className={style.tests}>
           <div className={style.testsInner}>
             {tests.map((test, index) => (
