@@ -2,7 +2,7 @@
 @import "../common/styles/sass/mixins";
 
 .footer {
-  background-color: orange;
+  background-color: black;
 
   .footerContainer {
     display: flex;
@@ -10,18 +10,27 @@
     flex-direction: row;
     align-items: center;
     width: 100%;
+    height: 140px;
     padding: 20px 0;
+    color:white;
 
     .footerContent {
-      display: flex;
-      align-items: center;
+      /*display: flex;
+      align-items: center;*/
       justify-content: space-between;
       width: 100%;
 
       .footerText {
         margin: 0 40px;
+        color: white;
+        margin-bottom: 20px;
+        text-align: center;
       }
-
+.adoptedForPhonesAndIconsAllRights {
+display:flex;
+  justify-content: center;
+  align-items: flex-end;
+}
       .socialIcons {
         display: flex;
         justify-content: center;

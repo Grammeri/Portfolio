@@ -33,6 +33,7 @@
   .languageLabel {
     @include text(titleFontFamily, 16px, 1.2);
     margin-top: 5px;
+    color:white;
   }
 
   .languageLabelHidden {
@@ -43,7 +44,7 @@
 
   a {
     @include text(titleFontFamily, 20px, 1.2);
-    color: black;
+    color: white;
     text-decoration: none;
     margin-right: 10px;
     white-space: nowrap;

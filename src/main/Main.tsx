@@ -58,12 +58,12 @@ export const Main = () => {
                   href={cvDownloadLink}
                   download="My_CV.pdf"
                   onClick={handleDownload}
-                  className={style.downloadLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   {t("downloadMyCv")}
                 </a>
+                me={style.downloadLink}
               </div>
             </div>
 
