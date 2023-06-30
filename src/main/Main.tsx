@@ -93,12 +93,12 @@ export const Main = () => {
             <RotatingBox />
           </Canvas>
           <div className={style.caption}>
-            <h3>React</h3>
-            <h3>Redux</h3>
-            <h3>JavaScript</h3>
-            <h3>TypeScript</h3>
-            <h3>HTML</h3>
-            <h3>CSS</h3>
+            <h4>React</h4>
+            <h4>Redux</h4>
+            <h4>JavaScript</h4>
+            <h4>TypeScript</h4>
+            <h4>HTML</h4>
+            <h4>CSS</h4>
           </div>
         </div>
       </section>
