@@ -54,32 +54,32 @@ export const RotatingBox = () => {
 
   return (
     <>
-      <mesh ref={meshRef1} position={[-70, 70, 55]}>
+      <mesh ref={meshRef1} position={[-70, 40, 55]}>
         <boxBufferGeometry args={[13, 13, 13]} />
         <meshStandardMaterial color={"lightblue"} map={reactTexture} />
       </mesh>
 
-      <mesh ref={meshRef2} position={[-40, 70, 55]}>
+      <mesh ref={meshRef2} position={[-40, 40, 55]}>
         <boxBufferGeometry args={[13, 13, 13]} />
         <meshStandardMaterial color={"violet"} map={reduxTexture} />
       </mesh>
 
-      <mesh ref={meshRef3} position={[-10, 70, 55]}>
+      <mesh ref={meshRef3} position={[-10, 40, 55]}>
         <boxBufferGeometry args={[13, 13, 13]} />
         <meshStandardMaterial color={"violet"} map={jsTexture} />
       </mesh>
 
-      <mesh ref={meshRef4} position={[20, 70, 55]}>
+      <mesh ref={meshRef4} position={[20, 40, 55]}>
         <boxBufferGeometry args={[13, 13, 13]} />
         <meshStandardMaterial color={"lightblue"} map={tsTexture} />
       </mesh>
 
-      <mesh ref={meshRef5} position={[50, 70, 55]}>
+      <mesh ref={meshRef5} position={[50, 40, 55]}>
         <boxBufferGeometry args={[13, 13, 13]} />
         <meshStandardMaterial color={"lightblue"} map={htmlTexture} />
       </mesh>
 
-      <mesh ref={meshRef6} position={[80, 70, 55]}>
+      <mesh ref={meshRef6} position={[80, 40, 55]}>
         <boxBufferGeometry args={[13, 13, 13]} />
         <meshStandardMaterial color={"lightblue"} map={cssTexture} />
       </mesh>

@@ -46,7 +46,7 @@ export const Main = () => {
           <div className={styleContainer.container}>
             <div className={style.greeting}>
               <div className={style.hi}>
-                <h1>{t("greeting")}</h1>
+                <h3>{t("greeting")}</h3>
 
                 <h1>{t("name")}</h1>
               </div>
@@ -92,6 +92,14 @@ export const Main = () => {
             <pointLight position={[10, 10, 150]} />
             <RotatingBox />
           </Canvas>
+          <div className={style.caption}>
+            <h3>React</h3>
+            <h3>Redux</h3>
+            <h3>JavaScript</h3>
+            <h3>TypeScript</h3>
+            <h3>HTML</h3>
+            <h3>CSS</h3>
+          </div>
         </div>
       </section>
     </>
