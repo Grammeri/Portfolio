@@ -1,9 +1,9 @@
 .contactsBlock {
-  min-height: 100vh;
+  min-height: calc(100vh - 140px);
   background-color: #333333 /*#1f1f20*/;
 
   .contactsContainer {
-    min-height: calc(100vh - 200px); // Subtract the footer height if it's fixed
+   /* min-height: calc(100vh - 140px);*/ // Subtract the footer height if it's fixed
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,20 +1,10 @@
 @import "../common/styles/sass/variables";
 @import "../common/styles/sass/mixins";
 
-.mainBlock {
-  min-height: 100vh;
+.greetingCvPhoto {
+  min-height: 60vh;
   background-color: #333333 /*$mainPagebgColor*/;
-.upperPart{
-  display: flex;
-}
-.container{
-  width:100% !important;
-}
-  .lowerPart{
-    margin-top: 100px;
-    background-color: #cccccc;
-    width:100%;
-  }
+
   .greeting {
     width: 800px;
     padding: 15px;
@@ -53,7 +43,10 @@
     height:30px;
     padding-top: 5px;
     font-weight: bold;
-
+&:hover{
+  background-color:gray;
+  color:orange;
+}
   }
 
   .photoWrapper {
@@ -64,22 +57,6 @@
     border-radius: 25px;
     width: 400px;
     height: 400px;
-
-    // Styles for download link
-    .downloadLink {
-      position: absolute; // So it doesn't affect layout
-      bottom: 10px; // Add space from the bottom of the wrapper
-      right: 10px; // Add space from the right side of the wrapper
-      display: flex; // To properly align items
-      align-items: center; // Vertically center align items
-      color: #ffffff; // Text and icon color
-      text-decoration: none; // Remove underline
-
-      // Style for download icon
-      .downloadIcon {
-        margin-left: 5px; // Add space between text and icon
-      }
-    }
   }
 
   .typingEffectText {
@@ -89,6 +66,14 @@
   }
 }
 
+.rotatingCubes {
+  // Your existing styles...
+  position: relative;
+}
+.rotatingCubes{
+  background-color: #cccccc;
+  min-height: 30vh;
+}
 @media screen and (max-width: 752px) {
   .mainBlock {
     min-height: 150vh;

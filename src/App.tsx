@@ -20,6 +20,7 @@ function App() {
       <Header />
       <Main />
       {/*<Skills />*/}
+      {/* <AboutMe />*/}
       <MyProjects />
       <MyTests />
       {/*<MyCv />*/}

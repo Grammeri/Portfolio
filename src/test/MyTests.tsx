@@ -25,7 +25,7 @@ export const MyTests = () => {
                   projectDescription={test.description}
                   appUrl={test.appUrl}
                   codeUrl={test.codeUrl}
-                  date={test.date}
+                  // date={test.date}
                   stack={test.stack}
                   //videoUrl={test.videoUrl}
                 />

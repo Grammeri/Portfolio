@@ -9,8 +9,9 @@ import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
   const { t } = useTranslation();
+
   return (
-    <div className={style.footer}>
+    <section className={style.footer}>
       <div className={`${styleContainer.container} ${style.footerContainer}`}>
         <div className={style.footerContent}>
           <div className={style.footerText}>{t("portfolioStack")}</div>
@@ -46,6 +47,6 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

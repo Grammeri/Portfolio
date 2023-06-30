@@ -11,7 +11,7 @@ export const Contacts = () => {
   const { t } = useTranslation();
 
   return (
-    <div id="Contacts" className={style.contactsBlock}>
+    <section id="Contacts" className={style.contactsBlock}>
       <h2
         style={{
           color: "orange",
@@ -69,6 +69,6 @@ export const Contacts = () => {
         {t("contactsCloseTag")}
       </h2>
       <ToastContainer position={"bottom-center"} />
-    </div>
+    </section>
   );
 };

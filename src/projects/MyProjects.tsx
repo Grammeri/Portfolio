@@ -11,7 +11,7 @@ export const MyProjects = () => {
   const projects = projectsList(t);
 
   return (
-    <div id="MyProjects" className={style.myProjectsBlock}>
+    <section id="MyProjects" className={style.myProjectsBlock}>
       <div
         className={`${styleContainer.container} ${style.myProjectsContainer}`}
       >
@@ -26,7 +26,7 @@ export const MyProjects = () => {
                   projectDescription={project.description}
                   appUrl={project.appUrl}
                   codeUrl={project.codeUrl}
-                  date={project.date}
+                  // date={project.date}
                   stack={project.stack}
                   videoUrl={project.videoUrl}
                 />
@@ -35,6 +35,6 @@ export const MyProjects = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

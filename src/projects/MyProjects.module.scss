@@ -16,12 +16,13 @@
 }
 
 .myProjectsContainer {
+  z-index: 10; //За счет этого не закрываются кнопки у проектов
   .projects {
     display: flex;
     flex-wrap: wrap;
 
     .projectItem {
-      width: 300px;
+      width: 100px;
       background-color: #333333; //Project box color
       margin-bottom: 20px;
       border-radius: 40px;

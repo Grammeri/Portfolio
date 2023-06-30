@@ -39,61 +39,61 @@ export const Main = () => {
   };
 
   return (
-    <div className={style.container}>
-      <div id="Main" className={style.mainBlock}>
+    /*<div className={style.container}>*/
+    <>
+      <section id="Main" className={style.greetingCvPhoto}>
         <Fade>
-          <div className={`${styleContainer.container} ${style.mainContainer}`}>
-            <div className={style.upperPart}>
-              <div className={style.greeting}>
-                <div className={style.hi}>
-                  <h1>{t("greeting")}</h1>
+          <div className={styleContainer.container}>
+            <div className={style.greeting}>
+              <div className={style.hi}>
+                <h1>{t("greeting")}</h1>
 
-                  <h1>{t("name")}</h1>
-                </div>
-                <h1>{t("role")}</h1>
-                <span className={style.typingEffectText}>
-                  <ReactTypingEffect text={[t("typingText")]} />
-                </span>
-                <div>
-                  <a // <-- Moved this below the moving text
-                    href={cvDownloadLink}
-                    download="My_CV.pdf"
-                    onClick={handleDownload}
-                    className={style.downloadLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {t("downloadMyCv")}
-                  </a>
+                <h1>{t("name")}</h1>
+              </div>
+              <h1>{t("role")}</h1>
+              <span className={style.typingEffectText}>
+                <ReactTypingEffect text={[t("typingText")]} />
+              </span>
+              <div>
+                <a
+                  href={cvDownloadLink}
+                  download="My_CV.pdf"
+                  onClick={handleDownload}
+                  className={style.downloadLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("downloadMyCv")}
+                </a>
+              </div>
+            </div>
+            <Tilt options={{}}>
+              <div className={style.photoWrapper}>
+                <div className={style.photo}>
+                  <MyPhoto style={dimaPhoto} />
                 </div>
               </div>
-
-              <Tilt options={{}}>
-                <div className={style.photoWrapper}>
-                  <div className={style.photo}>
-                    <MyPhoto style={dimaPhoto} />
-                  </div>
-                </div>
-              </Tilt>
-            </div>
-            <div className={`${styleContainer.container} ${style.lowerPart}`}>
-              <Canvas
-                camera={{
-                  position: [0, 0, 150],
-                  fov: 90,
-                  near: 0.1,
-                  far: 3000,
-                }}
-                style={{ width: "800px", height: "800px" }}
-              >
-                <ambientLight />
-                <pointLight position={[10, 10, 150]} />
-                <RotatingBox />
-              </Canvas>
-            </div>
+            </Tilt>
           </div>
         </Fade>
-      </div>
-    </div>
+      </section>
+      <section className={style.rotatingCubes}>
+        <div className={styleContainer.container}>
+          <Canvas
+            camera={{
+              position: [0, 0, 150],
+              fov: 90,
+              near: 0.1,
+              far: 3000,
+            }}
+            style={{ width: "800px", height: "800px", marginBottom: "-50%" }}
+          >
+            <ambientLight />
+            <pointLight position={[10, 10, 150]} />
+            <RotatingBox />
+          </Canvas>
+        </div>
+      </section>
+    </>
   );
 };

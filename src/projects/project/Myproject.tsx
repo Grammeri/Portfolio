@@ -8,7 +8,7 @@ type PropsTypes = {
   appUrl: string;
   codeUrl: string;
   projectTitle: string;
-  date: string;
+  /*date: string;*/
   stack: string;
   videoUrl?: string;
 };
@@ -32,7 +32,7 @@ export const MyProject = (props: PropsTypes) => {
         />
         <div>
           <div style={{ marginLeft: "140px", color: "white" }}>
-            {props.date}
+            {/*{props.date}*/}
           </div>
           <div style={{ marginLeft: "5px", color: "white" }}>{props.stack}</div>
         </div>
