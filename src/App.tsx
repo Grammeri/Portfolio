@@ -6,7 +6,7 @@ import { Contacts } from "projects/project/contacts/Contacts";
 import { Footer } from "footer/Footer";
 import { Main } from "main/Main";
 import { useTranslation } from "react-i18next";
-import { MyTests } from "test/MyTests";
+import { AboutMe } from "aboutMe/aboutMe";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -20,7 +20,7 @@ function App() {
       <Header />
       <Main />
       {/*<Skills />*/}
-      {/* <AboutMe />*/}
+      <AboutMe />
       <MyProjects />
       {/*<MyTests />*/}
       {/*<MyCv />*/}

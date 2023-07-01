@@ -17,6 +17,9 @@
   "role": " I am a Front-end React Developer",
   "typingText": "<p>Committed to coding</p>",
 
+  "//AboutMePage": "AboutMe",
+  "aboutMe": "About Me",
+
   "//SkillsPage": "SkillsPage",
 
   "skills": "Skills",
