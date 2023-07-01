@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import style from "./MyProject.module.scss";
 import { useTranslation } from "react-i18next";
+import FlashOnIcon from "@mui/icons-material/FlashOn";
 
 type PropsTypes = {
   projectDescription: string;
@@ -24,6 +25,20 @@ export const MyProject = (props: PropsTypes) => {
   return (
     <div className={style.myProject}>
       <div className={style.imageData}>
+        {props.projectTitle === t("Currently in progress") && (
+          <div
+            className={style.lightning}
+            /*style={{
+              color: "red",
+              marginTop: "-35px",
+              position: "absolute",
+              marginLeft: "250px",
+            }}*/
+          >
+            <FlashOnIcon />
+            <span>{t("UnderDevelopment")}</span>
+          </div>
+        )}
         <img
           className={style.image}
           src={props.image}

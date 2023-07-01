@@ -41,6 +41,7 @@ export const Main = () => {
   return (
     /*<div className={style.container}>*/
     <>
+      <div id="Main" className="offset-anchor"></div>
       <section id="Main" className={style.greetingCvPhoto}>
         <Fade>
           <div className={styleContainer.container}>

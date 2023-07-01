@@ -88,15 +88,23 @@
   justify-content: space-between;
   flex-wrap: wrap; /* add this line to allow the items to wrap onto multiple lines */
   position: relative;
-  margin-right: 200px; /* reduce this from 400px to 200px */
-  margin-top: 200px;
-  margin-left: 200px; /* reduce this from 400px to 200px */
+  margin-right: 100px;
+  margin-top: 100px;
+  margin-left: 100px;
   padding:25px;
 }
 
 .caption h4 {
-  margin: 0 35px; /* this will add a 10px margin to the left and right of each h3 element */
+  margin: 0 35px;
   color: gray;
+  margin-top: 30px
+}
+
+.offset-anchor {
+  display: block;
+  height: 400px; /* adjust as needed */
+  margin-top: -400px; /* should be negative value of height */
+  visibility: hidden;
 }
 
 
