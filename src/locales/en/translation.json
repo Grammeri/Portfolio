@@ -77,12 +77,16 @@
 
   "angularHomesDate": "June 2023 Initial stage of study (under development)",
   "angularHomesStack": "STACK: Angular",
-  "angularHomesTitle": "Currently in progress",
+  "angularHomesTitle": "Angular Homes",
   "angularHomesDescription": "Just started to study angular framework",
+
+  "MoreProjects": "More projects",
+  "LessProjects": "Less projects",
 
   "//MyTestsPage": "MyTestsPage",
 
   "myTests": "My Tests",
+  "StartedToStudy": "Just started to study",
 
   "//MyTestsPageButtons": "MyTestsPageButtons",
 

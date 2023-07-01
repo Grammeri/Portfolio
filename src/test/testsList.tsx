@@ -6,6 +6,7 @@ import interviewImag from "./../assets/image/interviewImag.webp";
 import instagram from "./../assets/image/instagram.png";
 import whatsUp from "./../assets/image/whatsUp.png";
 import { TFunction } from "i18next";
+import angularHomesImg from "./../assets/image/angular.jpg";
 
 export const testsList = (t: TFunction) => [
   /* {
@@ -35,7 +36,7 @@ export const testsList = (t: TFunction) => [
     appUrl: "https://grammeri.github.io/TestAssignment/",
     codeUrl: "https://github.com/Grammeri/TestAssignment",
   },
-  /*{
+  {
     title: "Start Up",
     date: t("startUpDate"),
     stack: t("startUpStack"),
@@ -45,6 +46,17 @@ export const testsList = (t: TFunction) => [
     codeUrl: "https://github.com/Dmitry-Klyuev/silevans",
   },
   {
+    title: "Angular Homes",
+    date: t("angularHomesDate"),
+    stack: t("angularHomesStack"),
+    description: t("angularHomesDescription"),
+    image: angularHomesImg,
+    appUrl: "https://my-first-angular-project.vercel.app/",
+    codeUrl: "https://github.com/Grammeri/MyFirstAngularProject",
+    videoUrl:
+      "https://drive.google.com/file/d/1FdQHPT-zno8CGwebp281kDQXJQvFh1Ac/view?usp=drive_link",
+  },
+  /* {
     title: "FlashCards",
     date: t("flashCardsDate"),
     stack: t("flashCardsStack"),

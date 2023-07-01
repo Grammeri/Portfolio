@@ -8,7 +8,7 @@ import { TFunction } from "i18next";
 
 export const projectsList = (t: TFunction) => [
   {
-    title: "Currently in progress",
+    title: t("Currently in progress"),
     date: t("inctagramDate"),
     stack: t("inctagramStack"),
     description: t("inctagramDescription"),
@@ -51,7 +51,7 @@ export const projectsList = (t: TFunction) => [
     videoUrl:
       "https://drive.google.com/file/d/1FdQHPT-zno8CGwebp281kDQXJQvFh1Ac/view?usp=drive_link",
   },
-  {
+  /*{
     title: "Start Up",
     date: t("startUpDate"),
     stack: t("startUpStack"),
@@ -70,5 +70,5 @@ export const projectsList = (t: TFunction) => [
     codeUrl: "https://github.com/Grammeri/MyFirstAngularProject",
     videoUrl:
       "https://drive.google.com/file/d/1FdQHPT-zno8CGwebp281kDQXJQvFh1Ac/view?usp=drive_link",
-  },
+  },*/
 ];

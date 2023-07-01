@@ -79,9 +79,14 @@
   "angularHomesTitle": "В процессе изучения",
   "angularHomesDescription": "Только приступил к изучению фреймворка Angular",
 
+  "MoreProjects": "Больше проектов",
+  "LessProjects": "Свернуть",
+
   "//MyTestsPage": "MyTestsPage",
 
   "myTests": "Тестовые задания",
+
+  "StartedToStudy": "Только приступил к изучению",
 
   "//MyTestsPageButtons": "MyTestsPageButtons",
 

@@ -22,7 +22,7 @@ function App() {
       {/*<Skills />*/}
       {/* <AboutMe />*/}
       <MyProjects />
-      <MyTests />
+      {/*<MyTests />*/}
       {/*<MyCv />*/}
       <Contacts />
       <Footer />

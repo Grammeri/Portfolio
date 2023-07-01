@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import style from "./MyTest.module.scss";
 import { useTranslation } from "react-i18next";
+import FlashOnIcon from "@mui/icons-material/FlashOn";
 
 type PropsTypes = {
   projectDescription: string;
@@ -24,6 +25,20 @@ export const MyTest = (props: PropsTypes) => {
   return (
     <div className={style.myTest}>
       <div className={style.imageData}>
+        {props.testTitle === t("Angular Homes") && (
+          <div
+            className={style.lightning}
+            style={{
+              color: "red",
+              marginTop: "-35px",
+              position: "absolute",
+              marginLeft: "250px",
+            }}
+          >
+            <FlashOnIcon />
+            <span>{t("StartedToStudy")}</span>
+          </div>
+        )}
         <img
           className={style.image}
           src={props.image}
