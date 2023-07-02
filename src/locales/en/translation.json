@@ -1,6 +1,5 @@
 {
   "//Header": "Header Section",
-
   "home": "Home",
   "skills": "Skills",
   "projects": "Projects",
@@ -9,113 +8,84 @@
   "contacts": "Contacts",
   "portfolioCode": "Portfolio gitHub",
   "downloadMyCv": "Download CV",
-
   "//MainPage": "MainPage",
-
   "greeting": "Hi there!",
   "name": "My name is Dmitry",
   "role": " I am a Front-end React Developer",
   "typingText": "<p>Committed to coding</p>",
-
   "//AboutMePage": "AboutMe",
   "aboutMe": "About Me",
 
+  "InfoAboutMe": "My name is Dmitry & I am a front-end React developer. Here is my quick story:\nIn my previous life I worked as a technical translator for Exxon in Houston, on Sakhalin projects. My responsibilities included interpreting meetings and translating technical documentation. During that career I developed such valuable skills as teamwork, respect for corporate ethics, ability to work with large amount of information, attention to details, which help me in my new career path.\nNow I am a front-end React developer. In the last few years I have been working hard to acquire knowledge and practice in programming and website development. As a developer I am focusing on clean, readable and maintainable code.\nI am excited to work on new projects, because I learn something new every time. I am excited for the next challenge!\n",
+  "mySkills": "•\tDevelopment of applications using React, Redux, JavaScript, TypeScript, HTML, CSS\n(Redux-Thunk, RTK, RTK-Query, and Next.js)\n•\tCreating and configuring React components, ensuring modularity and code reusability \n•\tPassing props between components\n•\tUtilizing React hooks for state management\n•\tUsing React Router for navigation and routing in web applications\n•\tConfiguring RESTful API with Axios \n•\tWorking with various libraries, including Material-UI\n•\tApplying principles of responsive design\n•\tDebugging and refactoring somebody else’s  code\n•\tFamiliar with unit testing\n•\tConfident gitHub user\n",
+ "Personal": "When I am not in front of a computer, I am most likely playing guitar, biking, playing soccer. If I have to describe myself in one work the OPTIMIST would be the right one.",
+
   "//SkillsPage": "SkillsPage",
-
   "skills": "Skills",
-
   "//MyProjectsPage": "MyProjectsPage",
-
   "myProjects": "My Projects",
-
   "UnderDevelopment": "Under development",
-
   "//MyProjectsPageButtons": "MyProjectsPageButtons",
-
   "inProgress": "In Progress",
   "viewProject": "View Project",
   "viewCode": "View Code",
   "more": "More",
   "less": "Less",
   "viewVideo": "Video",
-
   "//list Projects": "List of Projects",
-
   "//TodoList": "TodoList",
-
   "todolistTitle": "Todolist",
   "tdlDate": "December, 2021",
   "tdlStack": "STACK: ReactJS, TypeScript, Redux Toolkit, RestAPI, Axios, Redux-Thunk, Material UI, Yup, Unit testing, Storybook",
   "todolistDescription": "Features: login functionality, form validation for login and task creation, creation/removal of to-do lists, adding/removing tasks, displaying task status/filtering by status: all, in progress, completed,\nerror handling.\nPlease note that when opening the application and testing its functionality, you may see disorganized to-do lists as the server has unrestricted access and other users can add and remove todo lists.\n",
-
   "//Social Network": "Social Network",
-
   "socialNetworkStack": "STACK: React, Redux, React Redux, React Router, Material-UI, Ant Design (Antd), Axios, Formik, Final Form, Yup, UUID, React YouTube, Reselect",
   "socialNetworkDate": "April, 2022",
   "socialNetworkTitle": "Social Network",
   "socialNetworkDescription": "This is a social networking project implemented using class components. The application allows users to perform various actions, such as viewing registered members, adding or removing friends, updating their status, and adding/removing posts.",
-
   "//Startup Selivans": "Startup Selivans",
-
   "startUpDate": "September, 2022",
   "startUpStack": "STACK: Next.js, React, TypeScript, Axios, Formik, Yup, Sass, Swiper",
   "startUpTitle": "Start Up",
   "startUpDescription": "Web studio SILEVANS startup. A website with company information and functionality including call ordering, questionnaire filling, and portfolio display.",
-
   "//FlashCards": "FlashCards",
-
   "flashCardsDate": "June 2022",
   "flashCardsStack": "STACK: TypeScript, React, Redux, React-Redux, Redux-Thunk, React-Router-dom, Axios, Material UI, React-Hook-Form, HTML, CSS, ESLint, Prettier",
   "flashCardsTitle": "FlashCards",
   "flashCardsDescription": "Features: registration, login, password recovery, \"remember me\" user session persistence, search for decks with cards, sorting decks by parameters: \"my\" / \"others\", number of cards, sorting tables by different parameters, creating/deleting decks/cards using modals, switching to study mode. The project is publicly accessible, so there is no content control for the cards. More detailed information about the application is provided in the Readme when accessing the code.",
-
   "//Inctagram": "Inctagram",
-
   "inctagramDate": "Under development",
   "inctagramStack": "STACK: Next.js, React, Redux, RTK Query, Next Redux Wrapper, TypeScript, Sass, Yup,\n•\tnext-i18next, React-i18next, React-Hook-Form, React-Easy-Crop, React-Paginate, React-Select, Notistack, Storybook\n",
   "inctagramTitle": "Currently in progress",
   "inctagramDescription": "This is a mock Instagram team project involving 5 frontend developers, 1 backend developer",
-
   "//Angular": "Angular",
-
   "angularHomesDate": "June 2023 Initial stage of study (under development)",
   "angularHomesStack": "STACK: Angular",
   "angularHomesTitle": "Angular Homes",
   "angularHomesDescription": "Just started to study angular framework",
-
   "MoreProjects": "More projects",
   "LessProjects": "Less projects",
-
   "//MyTestsPage": "MyTestsPage",
-
   "myTests": "My Tests",
   "StartedToStudy": "Just started to study",
-
   "//MyTestsPageButtons": "MyTestsPageButtons",
-
   "inProgress": "In Progress",
   "viewProject": "View Project",
   "viewCode": "View Code",
   "more": "More",
   "less": "Less",
   "viewVideo": "Video",
-
   "//Saga Test": "Saga Test",
-
   "sagaAssignmentDate": "May, 2023",
   "sagaAssignmentStack": "STACK: React, Redux, React Router, Bootstrap, Axios, Redux Saga ",
   "sagaAssignmentTitle": "Test Assignment",
   "sagaAssignmentDescription": "Detailed description of the test assignment is provided in the code in the Readme section",
-
   "//WhatsUp Test": "WhatsUp Test",
-
   "whatsUpDate": "May, 2023",
   "whatsUpStack": "STACK: React, React Router DOM, React Redux, React Hook Form, React Toastify, RTK Query",
   "whatsUpTitle": "Test WhatsUp",
   "whatsUpDescription": "May 26, 2023. It is a test assignment Mockup version, The next step is to provide connection with Server",
-
   "//contactsPage": "Contacts Page",
-
   "contactsOpenTag": "<div>",
   "contactsCloseTag": "<div />",
   "letsGetInTouch": "Let's get in touch",
@@ -127,9 +97,7 @@
   "yourMessage": "Your message",
   "send": "Send",
   "formNote": "I am a working form configured with emailjs, please send your messages to Dmitry!",
-
   "//footerPage": "Footer Page",
-
   "adoptedForSmartphones": "Adopted for smartphones",
   "copyRight": "© Twentytwentythree",
   "portfolioStack": "Portfolio STACK: React, TypeScript, Material-UI, Three.js, MUI Icons, EmailJS, Formik, i18next, React Awesome Reveal, React Flag Kit, React Icons, React Tilt, React Toastify, React Typing Effect"

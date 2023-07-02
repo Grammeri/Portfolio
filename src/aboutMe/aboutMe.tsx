@@ -10,6 +10,56 @@ export const AboutMe = (props: any) => {
       <section id="AboutMe" className={style.abutMeBlock}>
         <div className={style.aboutMeContainer}>
           <Title header={t("aboutMe")} />
+          <div
+            style={{
+              marginTop: "25px",
+              width: "500px",
+              height: "280px",
+              border: "1px solid black",
+              padding: "10px",
+              backgroundColor: "white",
+            }}
+          >
+            {t("InfoAboutMe")}
+          </div>
+          <div
+            style={{
+              marginTop: "25px",
+              width: "500px",
+              height: "280px",
+              border: "1px solid black",
+              padding: "10px",
+              color: "white",
+              backgroundColor: "black",
+            }}
+          >
+            {t("mySkills")}
+          </div>
+          <div
+            style={{
+              marginTop: "25px",
+              width: "500px",
+              height: "280px",
+              border: "1px solid black",
+              padding: "10px",
+              backgroundColor: "white",
+            }}
+          >
+            {t("Personal")}
+          </div>
+          <div
+            style={{
+              marginTop: "25px",
+              width: "500px",
+              height: "280px",
+              border: "1px solid black",
+              padding: "10px",
+              color: "white",
+              backgroundColor: "black",
+            }}
+          >
+            {t("myGoal")}
+          </div>
         </div>
       </section>
     </div>
