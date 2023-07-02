@@ -14,7 +14,7 @@
   "role": " I am a Front-end React Developer",
   "typingText": "<p>Committed to coding</p>",
   "//AboutMePage": "AboutMe",
-  "aboutMe": "About Me",
+  "aboutMe": "About me",
 
   "InfoAboutMe": "My name is Dmitry & I am a front-end React developer. Here is my quick story:\nIn my previous life I worked as a technical translator for Exxon in Houston, on Sakhalin projects. My responsibilities included interpreting meetings and translating technical documentation. During that career I developed such valuable skills as teamwork, respect for corporate ethics, ability to work with large amount of information, attention to details, which help me in my new career path.\nNow I am a front-end React developer. In the last few years I have been working hard to acquire knowledge and practice in programming and website development. As a developer I am focusing on clean, readable and maintainable code.\nI am excited to work on new projects, because I learn something new every time. I am excited for the next challenge!\n",
   "mySkills": "•\tDevelopment of applications using React, Redux, JavaScript, TypeScript, HTML, CSS\n(Redux-Thunk, RTK, RTK-Query, and Next.js)\n•\tCreating and configuring React components, ensuring modularity and code reusability \n•\tPassing props between components\n•\tUtilizing React hooks for state management\n•\tUsing React Router for navigation and routing in web applications\n•\tConfiguring RESTful API with Axios \n•\tWorking with various libraries, including Material-UI\n•\tApplying principles of responsive design\n•\tDebugging and refactoring somebody else’s  code\n•\tFamiliar with unit testing\n•\tConfident gitHub user\n",

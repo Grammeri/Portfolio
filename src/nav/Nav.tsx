@@ -49,6 +49,13 @@ export function Nav() {
           {t("skills")}
         </a>*/}
         <a
+          href="#AboutMe"
+          className={activeLink === t("aboutMe") ? style.active : ""}
+          onClick={handleLinkClick}
+        >
+          <u>{t("aboutMe")}</u>
+        </a>
+        <a
           href="#MyProjects"
           className={activeLink === t("projects") ? style.active : ""}
           onClick={handleLinkClick}
