@@ -11,7 +11,7 @@ export const Contacts = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="Contacts" className={style.contactsBlock}>
+    <div id="Contacts" className={style.contactsBlock}>
       <h2
         style={{
           color: "orange",
@@ -25,9 +25,7 @@ export const Contacts = () => {
       </h2>
 
       <div id="Contacts" className={`${style.contactsContainer}`}>
-        <div className={`${style.title} ${style.contactsTitle}`}>
-          <Title header={t("letsGetInTouch")} />
-        </div>
+        <Title header={t("letsGetInTouch")} />
 
         <form ref={form} className={style.contactForm}>
           <label htmlFor="name">{t("name")}</label>
@@ -71,6 +69,6 @@ export const Contacts = () => {
         {t("contactsCloseTag")}
       </h2>
       <ToastContainer position={"bottom-center"} />
-    </section>
+    </div>
   );
 };
