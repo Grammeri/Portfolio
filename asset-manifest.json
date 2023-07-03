@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.b89c96c5.css",
-    "main.js": "/Portfolio/static/js/main.2dd67ab6.js",
-    "static/js/47.fe71ec80.chunk.js": "/Portfolio/static/js/47.fe71ec80.chunk.js",
-    "static/media/4Dima.jpg": "/Portfolio/static/media/4Dima.a5d114c0e9e6ae228176.jpg",
+    "main.css": "/Portfolio/static/css/main.231dd5d5.css",
+    "main.js": "/Portfolio/static/js/main.339d2002.js",
+    "static/js/47.d57c7ac2.chunk.js": "/Portfolio/static/js/47.d57c7ac2.chunk.js",
+    "static/media/new-photo.jpg": "/Portfolio/static/media/new-photo.006b5cf5044f900015e4.jpg",
     "static/media/instagram.png": "/Portfolio/static/media/instagram.bd3e6b76092ea367c9e5.png",
     "static/media/Todolist.jpg": "/Portfolio/static/media/Todolist.9bcddb0f11d4a380161e.jpg",
     "static/media/BritishFlag.jpg": "/Portfolio/static/media/BritishFlag.6f602f3ba7a5e14c8991.jpg",
     "static/media/SocialNetwork.jpg": "/Portfolio/static/media/SocialNetwork.ca8f4a061ea540f046d2.jpg",
     "static/media/interviewImag.webp": "/Portfolio/static/media/interviewImag.da24ae7d87ee8539ef01.webp",
     "index.html": "/Portfolio/index.html",
-    "main.b89c96c5.css.map": "/Portfolio/static/css/main.b89c96c5.css.map",
-    "main.2dd67ab6.js.map": "/Portfolio/static/js/main.2dd67ab6.js.map",
-    "47.fe71ec80.chunk.js.map": "/Portfolio/static/js/47.fe71ec80.chunk.js.map"
+    "main.231dd5d5.css.map": "/Portfolio/static/css/main.231dd5d5.css.map",
+    "main.339d2002.js.map": "/Portfolio/static/js/main.339d2002.js.map",
+    "47.d57c7ac2.chunk.js.map": "/Portfolio/static/js/47.d57c7ac2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b89c96c5.css",
-    "static/js/main.2dd67ab6.js"
+    "static/css/main.231dd5d5.css",
+    "static/js/main.339d2002.js"
   ]
 }
