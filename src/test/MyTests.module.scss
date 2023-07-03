@@ -4,21 +4,21 @@
 .myTestsBlock {
   min-height: 100vh;
   background-color: #cccccc;
-  display: flex;
-  flex-wrap: wrap;
+  /*display: flex;
+  flex-wrap: wrap;*/
 }
 
 .testsInner {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex; //responsible for placing projects in two colomns
+  flex-wrap: wrap; //responsible for placing projects in two colomns
   gap: 30px;
   margin-top: 60px;
 }
 
 .myTestsContainer {
   .tests {
-    display: flex;
-    flex-wrap: wrap;
+   /* display: flex;
+    flex-wrap: wrap;*/
 
     .testItem {
       width: 100px;

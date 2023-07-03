@@ -11,14 +11,14 @@ export const MyTests = () => {
   const tests = testsList(t);
 
   return (
-    <div id="MyTests" className={style.myTestsBlock}>
+    <section id="MyTests" className={style.myTestsBlock}>
       <div className={`${styleContainer.container} ${style.myTestsContainer}`}>
-        <Title header={t("myTests")} />
+        <Title header={t("moreProjects")} />
 
         <div className={style.tests}>
           <div className={style.testsInner}>
             {tests.map((test, index) => (
-              <div key={index} className={`${style.testItem} testItem`}>
+              <div key={index} className={`${style.testItem}`}>
                 <MyTest
                   testTitle={test.title}
                   image={test.image}
@@ -34,6 +34,6 @@ export const MyTests = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

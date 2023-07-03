@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./Main.module.scss";
 import styleContainer from "./../common/styles/Container.module.css";
-import myPhoto from "../assets/image/4Dima.jpg";
+import myPhoto from "../assets/image/photo_3.jpg";
 import { MyPhoto } from "./myPhoto/MyPhoto";
 import ReactTypingEffect from "react-typing-effect";
 import Fade from "react-awesome-reveal";
@@ -41,68 +41,69 @@ export const Main = () => {
   return (
     /*<div className={style.container}>*/
     <>
-      <div id="Main" className="offset-anchor"></div>
-      <section id="Main" className={style.greetingCvPhoto}>
-        <Fade>
-          <div className={styleContainer.container}>
-            <div className={style.greeting}>
-              <div className={style.hi}>
-                <h3>{t("greeting")}</h3>
+      <div id="Main" className="offset-anchor">
+        <section id="Main" className={style.greetingCvPhoto}>
+          <Fade>
+            <div className={styleContainer.container}>
+              <div className={style.greeting}>
+                <div className={style.hi}>
+                  <h3>{t("greeting")}</h3>
 
-                <h1>{t("name")}</h1>
-              </div>
-              <h1>{t("role")}</h1>
-              <span className={style.typingEffectText}>
-                <ReactTypingEffect text={[t("typingText")]} />
-              </span>
-              <div>
-                <a
-                  href={cvDownloadLink}
-                  download="My_CV.pdf"
-                  onClick={handleDownload}
-                  className={style.downloadLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {t("downloadMyCv")}
-                </a>
-              </div>
-            </div>
-            <Tilt options={{}}>
-              <div className={style.photoWrapper}>
-                <div className={style.photo}>
-                  <MyPhoto style={dimaPhoto} />
+                  <h1>{t("name")}</h1>
+                </div>
+                <h1>{t("role")}</h1>
+                <span className={style.typingEffectText}>
+                  <ReactTypingEffect text={[t("typingText")]} />
+                </span>
+                <div>
+                  <a
+                    href={cvDownloadLink}
+                    download="My_CV.pdf"
+                    onClick={handleDownload}
+                    className={style.downloadLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t("downloadMyCv")}
+                  </a>
                 </div>
               </div>
-            </Tilt>
+              <Tilt options={{}}>
+                <div className={style.photoWrapper}>
+                  <div className={style.photo}>
+                    <MyPhoto style={dimaPhoto} />
+                  </div>
+                </div>
+              </Tilt>
+            </div>
+          </Fade>
+        </section>
+        <section className={style.rotatingCubes}>
+          <div className={styleContainer.container}>
+            <Canvas
+              camera={{
+                position: [0, 0, 150],
+                fov: 90,
+                near: 0.1,
+                far: 3000,
+              }}
+              style={{ width: "800px", height: "800px", marginBottom: "-50%" }}
+            >
+              <ambientLight />
+              <pointLight position={[10, 10, 150]} />
+              <RotatingBox />
+            </Canvas>
+            <div className={style.caption}>
+              <h4>React</h4>
+              <h4>Redux</h4>
+              <h4>JavaScript</h4>
+              <h4>TypeScript</h4>
+              <h4>HTML</h4>
+              <h4>CSS</h4>
+            </div>
           </div>
-        </Fade>
-      </section>
-      <section className={style.rotatingCubes}>
-        <div className={styleContainer.container}>
-          <Canvas
-            camera={{
-              position: [0, 0, 150],
-              fov: 90,
-              near: 0.1,
-              far: 3000,
-            }}
-            style={{ width: "800px", height: "800px", marginBottom: "-50%" }}
-          >
-            <ambientLight />
-            <pointLight position={[10, 10, 150]} />
-            <RotatingBox />
-          </Canvas>
-          <div className={style.caption}>
-            <h4>React</h4>
-            <h4>Redux</h4>
-            <h4>JavaScript</h4>
-            <h4>TypeScript</h4>
-            <h4>HTML</h4>
-            <h4>CSS</h4>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 };

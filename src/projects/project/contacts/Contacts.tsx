@@ -25,7 +25,9 @@ export const Contacts = () => {
       </h2>
 
       <div id="Contacts" className={`${style.contactsContainer}`}>
-        <Title header={t("letsGetInTouch")} />
+        <div className={`${style.title} ${style.contactsTitle}`}>
+          <Title header={t("letsGetInTouch")} />
+        </div>
 
         <form ref={form} className={style.contactForm}>
           <label htmlFor="name">{t("name")}</label>

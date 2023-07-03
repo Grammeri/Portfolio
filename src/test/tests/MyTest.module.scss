@@ -9,6 +9,16 @@
   justify-content: space-between; // Space out items
   margin-bottom: 15px;
 
+  .image{
+    width:100px;
+    height: 100px;
+  }
+/*.lightning{
+  color: red;
+  marginTop: -35px;
+  position: absolute;
+  marginLeft: 250px;
+}*/
   .imageData {
     display: flex;
     justify-content: start;

@@ -20,10 +20,8 @@ export const MyTest = (props: PropsTypes) => {
 
   const toggleShowMore = () => setShowMore(!showMore);
 
-  const imageSize = "100px";
-
   return (
-    <div className={style.myTest}>
+    <section className={style.myTest}>
       <div className={style.imageData}>
         {props.testTitle === t("Angular Homes") && (
           <div
@@ -32,19 +30,14 @@ export const MyTest = (props: PropsTypes) => {
               color: "red",
               marginTop: "-35px",
               position: "absolute",
-              marginLeft: "250px",
+              marginLeft: "180px",
             }}
           >
             <FlashOnIcon />
             <span>{t("StartedToStudy")}</span>
           </div>
         )}
-        <img
-          className={style.image}
-          src={props.image}
-          alt={props.testTitle}
-          style={{ width: imageSize, height: imageSize }}
-        />
+        <img className={style.image} src={props.image} alt={props.testTitle} />
         <div>
           <div style={{ marginLeft: "140px", color: "white" }}>
             {/*{props.date}*/}
@@ -88,6 +81,6 @@ export const MyTest = (props: PropsTypes) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
