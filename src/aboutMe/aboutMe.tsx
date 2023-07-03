@@ -30,44 +30,52 @@ export const AboutMe = (props: any) => {
               marginTop: "0px",
               width: "700px",
               minHeight: "370px",
-              border: "1px solid black",
+              border: "1px solid white",
               padding: "10px",
               backgroundColor: "white",
               overflow: "auto",
             }}
           >
             <h3>{t("asDeveloper")}</h3>
-            <h4>{t("InfoAboutMe1")}</h4>
-            {isTextVisible ? (
-              <>
-                <div>{t("InfoAboutMe2")}</div>
-                <br />
-                <div>{t("InfoAboutMe3")}</div>
-                <br />
-                <a href="#" onClick={hideText}>
-                  Less
-                </a>
-              </>
-            ) : (
-              <a href="#" onClick={showText}>
-                More of my stories
-              </a>
-            )}
+            <div className={style.textJustified}>
+              <span>{t("InfoAboutMe1")}</span>
+              <span style={{ fontWeight: "bold" }}>{t("InfoAboutMe2")}</span>
+              <span>{t("InfoAboutMe3")}</span>
+              {isTextVisible ? (
+                <>
+                  <p>{t("InfoAboutMe4")}</p>
+                  <p>{t("InfoAboutMe5")}</p>
+                  <p>{t("InfoAboutMe6")}</p>
+
+                  <div>
+                    <a href="#" onClick={hideText}>
+                      {t("Less")}
+                    </a>
+                  </div>
+                </>
+              ) : (
+                <div>
+                  <a href="#" onClick={showText}>
+                    {t("More of my stories")}
+                  </a>
+                </div>
+              )}
+            </div>
           </div>
           <div
             style={{
               marginTop: "0px",
               width: "700px",
               height: "370px",
-              border: "1px solid black",
+              border: "2px solid black",
               padding: "10px",
               color: "white",
               backgroundColor: "black",
             }}
           >
             <h3>{t("aboutMeSkills")}</h3>
-            <div>{t("mySkills1")}</div>
-            <div>{t("mySkills2")}</div>
+            <span>{t("mySkills1")}</span>
+            <span style={{ fontWeight: "bold" }}>{t("mySkills2")}</span>
             <div>{t("mySkills3")}</div>
             <div>{t("mySkills4")}</div>
             <div>{t("mySkills5")}</div>
@@ -77,13 +85,14 @@ export const AboutMe = (props: any) => {
             <div>{t("mySkills9")}</div>
             <div>{t("mySkills10")}</div>
             <div>{t("mySkills11")}</div>
+            <div>{t("mySkills12")}</div>
           </div>
           <div
             style={{
               marginTop: "0px",
               width: "700px",
               height: "370px",
-              border: "1px solid black",
+              border: "2px solid black",
               padding: "10px",
               color: "white",
               backgroundColor: "black",
@@ -97,7 +106,7 @@ export const AboutMe = (props: any) => {
               marginTop: "0px",
               width: "700px",
               height: "370px",
-              border: "1px solid black",
+              border: "1px solid white",
               padding: "10px",
               backgroundColor: "white",
             }}

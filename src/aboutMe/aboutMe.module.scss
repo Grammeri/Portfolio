@@ -30,8 +30,12 @@
   flex-wrap:wrap;
   gap:20px;
 }
+
+.textJustified{
+  text-align: justify;
+}
 a {
-  color: black;
+  color: navy;
   transition: color 0.3s ease;
 
   &:hover {

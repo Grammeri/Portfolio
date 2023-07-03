@@ -9,32 +9,39 @@ type PropsTypes = {
   appUrl: string;
   codeUrl: string;
   projectTitle: string;
-  /*date: string;*/
   stack: string;
   videoUrl?: string;
 };
 
 export const MyProject = (props: PropsTypes) => {
   const { t } = useTranslation();
-  const [showMore, setShowMore] = useState(false);
-
-  const toggleShowMore = () => setShowMore(!showMore);
 
   const imageSize = "100px";
 
+  // Calculate word limit
+  const wordLimit = 20;
+
+  // Split description into words
+  const descriptionWords = props.projectDescription.split(" ");
+
+  // Check if description exceeds word limit
+  const longDescription = descriptionWords.length > wordLimit;
+
+  // Create preview (first 'wordLimit' words of description) and hidden (the rest of the description) parts
+  const previewDescription = descriptionWords.slice(0, wordLimit).join(" ");
+  const hiddenDescription = descriptionWords.slice(wordLimit).join(" ");
+
+  // State to manage whether to show more or less
+  const [showMore, setShowMore] = useState(false);
+
+  // Function to toggle 'showMore' state
+  const toggleShowMore = () => setShowMore(!showMore);
+
   return (
-    <div className={style.myProject}>
+    <section className={style.myProject}>
       <div className={style.imageData}>
         {props.projectTitle === t("Currently in progress") && (
-          <div
-            className={style.lightning}
-            /*style={{
-              color: "red",
-              marginTop: "-35px",
-              position: "absolute",
-              marginLeft: "250px",
-            }}*/
-          >
+          <div className={style.lightning}>
             <FlashOnIcon />
             <span>{t("UnderDevelopment")}</span>
           </div>
@@ -46,24 +53,25 @@ export const MyProject = (props: PropsTypes) => {
           style={{ width: imageSize, height: imageSize }}
         />
         <div>
-          <div style={{ marginLeft: "140px", color: "white" }}>
-            {/*{props.date}*/}
+          <div style={{ marginLeft: "140px", color: "white" }}></div>
+          <div style={{ marginLeft: "5px", color: "white" }}>
+            <p>{props.stack}</p>
+            <span className={!showMore ? style.truncate : ""}>
+              {showMore
+                ? props.projectDescription
+                : `${previewDescription}${longDescription ? "..." : ""}`}
+            </span>
+            {longDescription && (
+              <span className={style.moreLess} onClick={toggleShowMore}>
+                {showMore ? t("less") : t("more")}
+              </span>
+            )}
           </div>
-          <div style={{ marginLeft: "5px", color: "white" }}>{props.stack}</div>
         </div>
       </div>
-
       <div className={style.overlay}>
         <div className={style.projectInfo}>
-          {showMore && (
-            <span className={style.description}>
-              {props.projectDescription}
-            </span>
-          )}
           <div className={style.buttonsContainer}>
-            <button className={style.button} onClick={toggleShowMore}>
-              {showMore ? t("less") : t("more")}
-            </button>
             <button
               className={style.button}
               onClick={() => window.open(props.appUrl, "_blank")}
@@ -88,6 +96,6 @@ export const MyProject = (props: PropsTypes) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

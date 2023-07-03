@@ -4,11 +4,30 @@ import "react-toastify/dist/ReactToastify.css";
 import style from "./Contacts.module.scss";
 import { Title } from "common/Components/title/Title";
 import { useTranslation } from "react-i18next";
+import emailjs from "@emailjs/browser";
 
 export const Contacts = () => {
-  const form: any = useRef();
-  const hasAttachedListener = useRef(false); // create a new ref
   const { t } = useTranslation();
+  const form = useRef<HTMLFormElement>(null);
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID || "",
+        process.env.REACT_APP_TEMPLATE_ID || "",
+        form.current || "",
+        process.env.REACT_APP_PUBLIC_KEY
+      )
+      .then(
+        (result: any) => {
+          alert("Your message has been sent successfully!");
+          form.current && form.current.reset();
+        },
+        (error) => {
+          alert("Error occured! Please try again.");
+        }
+      );
+  };
 
   return (
     <div id="Contacts" className={style.contactsBlock}>
@@ -27,7 +46,7 @@ export const Contacts = () => {
       <div id="Contacts" className={`${style.contactsContainer}`}>
         <Title header={t("letsGetInTouch")} />
 
-        <form ref={form} className={style.contactForm}>
+        <form ref={form} className={style.contactForm} onSubmit={sendEmail}>
           <label htmlFor="name">{t("name")}</label>
           <input
             type="text"
