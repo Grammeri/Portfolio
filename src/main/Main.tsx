@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./Main.module.scss";
 import styleContainer from "./../common/styles/Container.module.css";
-import myPhoto from "../assets/image/photo_3.jpg";
+import myPhoto from "../assets/image/new-photo.jpg";
 import { MyPhoto } from "./myPhoto/MyPhoto";
 import ReactTypingEffect from "react-typing-effect";
 import Fade from "react-awesome-reveal";
