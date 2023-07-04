@@ -27,13 +27,7 @@ export const MyProjects = () => {
         <div className={style.projects}>
           <div className={style.projectsInner}>
             {projects.map((project, index) => (
-              <div
-                key={index}
-                className={`${style.projectItem} projectItem`}
-                style={{
-                  marginLeft: index % 2 === 0 ? "0px" : "50%",
-                }}
-              >
+              <div key={index} className={`${style.projectItem} projectItem`}>
                 <MyProject
                   projectTitle={project.title}
                   image={project.image}

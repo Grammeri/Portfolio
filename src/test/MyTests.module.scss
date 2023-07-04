@@ -1,35 +1,35 @@
+// Styles
 @import "../common/styles/sass/variables";
 @import "../common/styles/sass/mixins";
 
 .myTestsBlock {
   min-height: 100vh;
   background-color: #cccccc;
-  /*display: flex;
-  flex-wrap: wrap;*/
 }
 
 .testsInner {
-  display: flex; //responsible for placing projects in two colomns
-  flex-wrap: wrap; //responsible for placing projects in two colomns
+  display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   margin-top: 60px;
 }
 
 .myTestsContainer {
   .tests {
-   /* display: flex;
-    flex-wrap: wrap;*/
-
     .testItem {
       width: 100px;
-      background-color: gray/*$myProjectsbgColor*/; //test rectangle
+      background-color: gray;
       margin-bottom: 20px;
       border-radius: 40px;
-      height: auto; // This will ensure your container height is dynamic
-      transition: height 0.5s; // For smooth height transition
+      height: auto;
+      transition: height 0.5s;
 
       @media screen and (min-width: 768px) {
         width: calc(50% - 15px);
+      }
+
+      @media screen and (max-width: 767px) {
+        width: 100%;
       }
 
       &:hover {

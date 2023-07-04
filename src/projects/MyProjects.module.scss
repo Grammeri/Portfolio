@@ -29,23 +29,33 @@ a{
 }
 
 .myProjectsContainer {
-  z-index: 10; //За счет этого не закрываются кнопки у проектов
+  z-index: 10;
+
   .projects {
     display: flex;
     flex-wrap: wrap;
 
     .projectItem {
       width: 100%;
-      background-color: #333333; //Project box color
+      background-color: #333333;
       margin-bottom: 20px;
       border-radius: 40px;
-      height: auto; // This will ensure your container height is dynamic
-      transition: height 0.5s; // For smooth height transition
+      height: auto;
+      transition: height 0.5s;
       margin-left: auto;
       margin-right: auto;
 
-           @media screen and (min-width: 768px) {
+      @media screen and (min-width: 768px) {
+        &:nth-child(odd) {
+          margin-right: 30px;
+        }
         width: calc(50% - 15px);
+      }
+
+      @media screen and (max-width: 767px) {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
       }
 
       &:hover {
@@ -54,7 +64,5 @@ a{
         }
       }
     }
-
-
   }
 }
