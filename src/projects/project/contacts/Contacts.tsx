@@ -44,7 +44,10 @@ export const Contacts = () => {
       </h2>
 
       <div id="Contacts" className={`${style.contactsContainer}`}>
-        <Title header={t("letsGetInTouch")} />
+        <Title
+          header={t("letsGetInTouch")}
+          alternativeColor={style.whiteTitle}
+        />
 
         <form ref={form} className={style.contactForm} onSubmit={sendEmail}>
           <label htmlFor="name">{t("name")}</label>
