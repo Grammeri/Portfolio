@@ -10,7 +10,6 @@ import { Tilt } from "react-tilt";
 import { RotatingBox } from "main/3d-components/RotatingBox";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
-import { BsDownload } from "react-icons/bs";
 
 export const Main = () => {
   const { t } = useTranslation();
@@ -41,6 +40,7 @@ export const Main = () => {
   return (
     /*<div className={style.container}>*/
     <>
+      <div className="spacer"></div>
       <div id="Main" className="offset-anchor">
         <section id="Main" className={style.greetingCvPhoto}>
           <Fade>

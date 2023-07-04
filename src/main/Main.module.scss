@@ -1,17 +1,35 @@
 @import "../common/styles/sass/variables";
 @import "../common/styles/sass/mixins";
 
+.spacer {
+  height: 200px; /* Set this to your header's height */
+}
+
+/*.header {
+  height: 90px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}*/
+
 .greetingCvPhoto {
   min-height: 60vh;
-  background-color: #333333 /*$mainPagebgColor*/;
+  background-color: #333333;
 
   .greeting {
     width: 800px;
     padding: 15px;
-    color: orange; // I am a Front-end React Developer
+    color: orange;
     position: relative;
     z-index: 2;
   }
+
   .hi{
     color:white;
   }
@@ -30,23 +48,25 @@
     position: relative;
     z-index: 1;
   }
+
   .downloadLink {
     display: inline-block;
-    border: 2px solid black;  // border color
-    background-color: orange;  // Download my cv button background color
+    border: 2px solid #333333;
+    background-color: orange;
     margin-top: 50px;
     padding-right: 20px;
     padding-left: 20px;
     text-align: center;
-    color:  black;  // text color
+    color:  black;
     text-decoration: none;
     height:30px;
     padding-top: 5px;
     font-weight: bold;
-&:hover{
-  background-color:gray;
-  color:orange;
-}
+
+    &:hover{
+      background-color:gray;
+      color:orange;
+    }
   }
 
   .photoWrapper {
@@ -65,6 +85,7 @@
     color: white;
   }
 }
+
 .rotatingCubes {
   background-color: #333333;
   min-height: 30vh;
@@ -78,15 +99,15 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Adjust this value to control the maximum height of the curve */
+  height: 100%;
   background: #cccccc;
-  clip-path: ellipse(65% 70% at 50% 100%); /* Adjust the ellipse values to control the curvature */
+  clip-path: ellipse(65% 70% at 50% 100%);
 }
 
 .caption {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; /* add this line to allow the items to wrap onto multiple lines */
+  flex-wrap: wrap;
   position: relative;
   margin-right: 100px;
   margin-top: 100px;
@@ -97,24 +118,32 @@
 .caption h4 {
   margin: 0 35px;
   color: gray;
-  margin-top: 30px
+  margin-top: 30px;
 }
-
-.offset-anchor {
-  display: block;
-  height: 400px; /* adjust as needed */
-  margin-top: -400px; /* should be negative value of height */
-  visibility: hidden;
-}
-
 
 @media screen and (max-width: 752px) {
+  .spacer {
+    height: 100px;
+  }
+
+  .header {
+    height: 100px;
+  }
+
   .mainBlock {
     min-height: 150vh;
   }
 }
 
 @media screen and (max-width: 480px) {
+  .spacer {
+    height: 100px;
+  }
+
+  .header {
+    height: 100px;
+  }
+
   .mainBlock {
     min-height: auto;
     padding-bottom: 50px;
@@ -133,5 +162,4 @@
     height: 200px;
     margin: 0 auto;
   }
-
 }

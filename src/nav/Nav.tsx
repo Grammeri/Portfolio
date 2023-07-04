@@ -8,15 +8,6 @@ export function Nav() {
   const [activeLink, setActiveLink] = useState("");
   const { t, i18n } = useTranslation();
   const currentLanguage = i18n.language;
-  /*  const cvDownloadLink =
-    i18n.language === "ru"
-      ? "https://drive.google.com/file/d/1IDxfUDWHDtF1kAEmlpORUb9IlNor9oi7/view?usp=drive_link"
-      : "https://drive.google.com/file/d/1d9AgnfM4c9Vxnoi5a-_R04A_oFyKFdiW/view?usp=drive_link";*/
-
-  /*  const handleDownload = (event: any) => {
-    event.preventDefault();
-    window.open(cvDownloadLink, "_blank");
-  };*/
 
   const changeLanguage = (language: string) => {
     i18n.changeLanguage(language);
@@ -41,13 +32,6 @@ export function Nav() {
         >
           <u>{t("home")}</u>
         </a>
-        {/*<a
-          href="#Skills"
-          className={activeLink === t("skills") ? style.active : ""}
-          onClick={handleLinkClick}
-        >
-          {t("skills")}
-        </a>*/}
         <a
           href="#AboutMe"
           className={activeLink === t("aboutMe") ? style.active : ""}
@@ -62,20 +46,6 @@ export function Nav() {
         >
           <u>{t("projects")}</u>
         </a>
-        {/*        <a
-          href="#MyTests"
-          className={activeLink === t("tests") ? style.active : ""}
-          onClick={handleLinkClick}
-        >
-          <u>{t("tests")}</u>
-        </a>*/}
-        {/*<a
-          href="#myUpdatedCV"
-          className={activeLink === t("cv") ? style.active : ""}
-          onClick={handleLinkClick}
-        >
-          {t("cv")}
-        </a>*/}
         <a
           href="#Contacts"
           className={activeLink === t("contacts") ? style.active : ""}
@@ -90,15 +60,6 @@ export function Nav() {
         >
           <u>{t("portfolioCode")}</u>
         </a>
-        {/*        <a
-          href={cvDownloadLink}
-          download="My_CV.pdf"
-          onClick={handleDownload}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <u>{t("downloadMyCv")}</u>
-        </a>*/}
       </div>
       <div className={style.flags}>
         <div className={style.flag}>

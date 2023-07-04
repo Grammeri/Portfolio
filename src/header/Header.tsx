@@ -6,7 +6,6 @@ const Header = () => {
   return (
     <div className={style.header}>
       <Nav />
-      {/* <BurgerNav />*/}
     </div>
   );
 };
