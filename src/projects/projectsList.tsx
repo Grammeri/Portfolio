@@ -2,7 +2,7 @@ import socialNetWorkImg from "./../assets/image/SocialNetwork.jpg";
 import todoImg from "./../assets/image/Todolist.jpg";
 import startUpImg from "./../assets/image/StartUp.jpg";
 import flashCardsImg from "./../assets/image/FlashCards.jpg";
-import instagram from "./../assets/image/inctagram.jpg";
+import instagram from "./../assets/image/inctagram.png";
 import angularHomesImg from "./../assets/image/angular.jpg";
 import { TFunction } from "i18next";
 
