@@ -2,67 +2,66 @@
 @import "../common/styles/sass/mixins";
 
 .myProjectsBlock {
-  min-height: 100vh;
+  min-height: 80vh;
   background-color: #cccccc;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-bottom-left-radius: 110% 10%;
   border-bottom-right-radius: 110% 10%;
   transform: scaleY(1.1);
   overflow: hidden;
 }
 
-.projectsInner {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 60px;
-}
-
-.moreProjects{
-  margin: 50px;
-  font-size: x-large;
-}
-
-a{
-  color: black;
-}
-
 .myProjectsContainer {
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .projects {
-    display: flex;
-    flex-wrap: wrap;
+.projectsInner {
+  display: flex;
+  gap: 30px;
+  margin-top: 60px;
+  overflow-x: auto;
+}
 
-    .projectItem {
-      width: 100%;
-      background-color: #333333;
-      margin-bottom: 20px;
-      border-radius: 40px;
-      height: auto;
-      transition: height 0.5s;
-      margin-left: auto;
-      margin-right: auto;
+.projects {
+  display: grid;  // updated line
+  justify-content: center;  // new line
+  gap: 30px;  // new line
+}
 
-      @media screen and (min-width: 768px) {
-        &:nth-child(odd) {
-          margin-right: 30px;
-        }
-        width: calc(50% - 15px);
-      }
+.projectItem {
+  width: 400px; // Twice as wide
+  background-color: #333333;
+  margin-bottom: 20px;
+  border-radius: 40px;
+  height: 800px; // Twice as long
+  transition: height 0.5s;
+  min-height: 250px;
 
-      @media screen and (max-width: 767px) {
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
-      }
+  @media screen and (max-width: 767px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
-      &:hover {
-        .projectInfo {
-          opacity: 1;
-        }
-      }
+  &:hover {
+    .projectInfo {
+      opacity: 1;
     }
+  }
+}
+
+.moreProjects {
+  margin: 50px;
+  font-size: x-large;
+
+  a {
+    color: black;
+    font-size: smaller;
   }
 }

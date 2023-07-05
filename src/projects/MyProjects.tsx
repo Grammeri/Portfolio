@@ -13,8 +13,7 @@ export const MyProjects = () => {
   const [showTests, setShowTests] = useState(false);
 
   const handleShowTests = (event: any) => {
-    // Pass in event object
-    event.preventDefault(); // Prevent default action (scroll to top)
+    event.preventDefault();
     setShowTests(!showTests);
   };
 

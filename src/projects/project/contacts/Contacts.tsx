@@ -31,19 +31,10 @@ export const Contacts = () => {
 
   return (
     <div id="Contacts" className={style.contactsBlock}>
-      <h2
-        style={{
-          color: "orange",
-          position: "absolute",
-          margin: "auto",
-          marginLeft: "20px",
-          marginTop: "90px",
-        }}
+      <div
+        id="Contacts"
+        className={`${style.contactsContainer} ${style.title}`}
       >
-        {t("contactsOpenTag")}
-      </h2>
-
-      <div id="Contacts" className={`${style.contactsContainer}`}>
         <Title
           header={t("letsGetInTouch")}
           alternativeColor={style.whiteTitle}
@@ -79,17 +70,6 @@ export const Contacts = () => {
           <div>{t("formNote")}</div>
         </form>
       </div>
-      <h2
-        style={{
-          color: "orange",
-          position: "absolute",
-          margin: "auto",
-          marginLeft: "20px",
-          marginTop: "-100px",
-        }}
-      >
-        {t("contactsCloseTag")}
-      </h2>
       <ToastContainer position={"bottom-center"} />
     </div>
   );

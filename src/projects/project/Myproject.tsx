@@ -39,61 +39,47 @@ export const MyProject = (props: PropsTypes) => {
 
   return (
     <section className={style.myProject}>
-      <div className={style.imageData}>
-        {props.projectTitle === t("Currently in progress") && (
-          <div className={style.lightning}>
-            <FlashOnIcon />
-            <span>{t("UnderDevelopment")}</span>
-          </div>
-        )}
-        <img
-          className={style.image}
-          src={props.image}
-          alt={props.projectTitle}
-          style={{ width: imageSize, height: imageSize }}
-        />
-        <div>
-          <div style={{ marginLeft: "140px", color: "white" }}></div>
-          <div style={{ marginLeft: "5px", color: "white" }}>
-            <p>{props.stack}</p>
-            <span className={!showMore ? style.truncate : ""}>
-              {showMore
-                ? props.projectDescription
-                : `${previewDescription}${longDescription ? "..." : ""}`}
-            </span>
-            {longDescription && (
-              <span className={style.moreLess} onClick={toggleShowMore}>
-                {showMore ? t("less") : t("more")}
-              </span>
-            )}
-          </div>
+      {props.projectTitle === t("Currently in progress") && (
+        <div className={style.lightning}>
+          <FlashOnIcon />
+          <span>{t("UnderDevelopment")}</span>
         </div>
-      </div>
-      <div className={style.overlay}>
-        <div className={style.projectInfo}>
-          <div className={style.buttonsContainer}>
+      )}
+      <img className={style.image} src={props.image} alt={props.projectTitle} />
+      <div className={style.content}>
+        <div>{props.stack}</div>
+        <p className={!showMore ? style.truncate : ""}>
+          {showMore
+            ? props.projectDescription
+            : `${previewDescription}${longDescription ? "..." : ""}`}
+        </p>
+        {longDescription && (
+          <p className={style.moreLess} onClick={toggleShowMore}>
+            {showMore ? t("less") : t("more")}
+          </p>
+        )}
+        <div className={style.buttonsContainer}>
+          <button
+            className={style.button}
+            onClick={() => window.open(props.appUrl, "_blank")}
+            disabled={props.appUrl === "#"}
+          >
+            {props.appUrl === "#" ? t("inProgress") : t("viewProject")}
+          </button>
+          <button
+            className={`${style.button} ${style.codeButton}`}
+            onClick={() => window.open(props.codeUrl, "_blank")}
+          >
+            {t("viewCode")}
+          </button>
+          {props.videoUrl && (
             <button
-              className={style.button}
-              onClick={() => window.open(props.appUrl, "_blank")}
-              disabled={props.appUrl === "#"}
+              className={`${style.button} ${style.videoButton}`}
+              onClick={() => window.open(props.videoUrl, "_blank")}
             >
-              {props.appUrl === "#" ? t("inProgress") : t("viewProject")}
+              {t("viewVideo")}
             </button>
-            <button
-              className={`${style.button} ${style.codeButton}`}
-              onClick={() => window.open(props.codeUrl, "_blank")}
-            >
-              {t("viewCode")}
-            </button>
-            {props.videoUrl && (
-              <button
-                className={`${style.button} ${style.videoButton}`}
-                onClick={() => window.open(props.videoUrl, "_blank")}
-              >
-                {t("viewVideo")}
-              </button>
-            )}
-          </div>
+          )}
         </div>
       </div>
     </section>

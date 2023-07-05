@@ -1,30 +1,14 @@
 @import "../common/styles/sass/variables";
 @import "../common/styles/sass/mixins";
 
-.spacer {
-  height: 200px; /* Set this to your header's height */
-}
-
-/*.header {
-  height: 90px;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999;
-}*/
 
 .greetingCvPhoto {
   min-height: 60vh;
+  padding-top:90px;
   background-color: #333333;
 
   .greeting {
-    width: 800px;
-    padding: 15px;
+    width: 750px; //photo location control
     color: orange;
     position: relative;
     z-index: 2;
@@ -87,38 +71,37 @@
 }
 
 .rotatingCubes {
-  background-color: #333333;
+  background-color: #333333 !important;
   min-height: 30vh;
   position: relative;
   margin-top: -100px;
 }
 
-.rotatingCubes::before {
+/*.rotatingCubes::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #cccccc;
-  clip-path: ellipse(65% 70% at 50% 100%);
-}
-
+  background: #333333;
+  !*clip-path: ellipse(65% 70% at 50% 100%);*!
+}*/
 .caption {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   position: relative;
   margin-right: 100px;
-  margin-top: 100px;
   margin-left: 100px;
   padding:25px;
 }
 
 .caption h4 {
-  margin: 0 35px;
-  color: gray;
-  margin-top: 30px;
+  margin: 0px 33px;
+  color: white;
+  position: relative;
+  top: -100px
 }
 
 @media screen and (max-width: 752px) {

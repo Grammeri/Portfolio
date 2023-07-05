@@ -149,8 +149,7 @@
 
   "//contactsPage": "Контакты",
 
-  "contactsOpenTag": "<div>",
-  "contactsCloseTag": "<div />",
+
   "letsGetInTouch": "Отправьте мне сообщение",
   "formName": "Меня зовут Дмитрий",
   "yourName": "Ваше имя",

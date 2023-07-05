@@ -109,8 +109,7 @@
   "whatsUpTitle": "Test WhatsUp",
   "whatsUpDescription": "May 26, 2023. It is a test assignment Mockup version, The next step is to provide connection with Server",
   "//contactsPage": "Contacts Page",
-  "contactsOpenTag": "<div>",
-  "contactsCloseTag": "<div />",
+
   "letsGetInTouch": "Let's get in touch",
   "formName": "Name*",
   "yourName": "Your name",
