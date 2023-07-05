@@ -1,6 +1,5 @@
 import React from "react";
 import style from "./Footer.module.scss";
-import styleContainer from "./../../src/common/styles/Container.module.css";
 import GithubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import TelegramIcon from "@material-ui/icons/Telegram";
@@ -12,14 +11,14 @@ export const Footer = () => {
 
   return (
     <section className={style.footer}>
-      <div className={`${styleContainer.container} ${style.footerContainer}`}>
+      <div className={style.footerContainer}>
         <div className={style.footerContent}>
           <div className={style.footerText}>{t("portfolioStack")}</div>
           <div className={style.adoptedForPhonesAndIconsAllRights}>
             <span className={style.footerText}>
               {t("adoptedForSmartphones")}
             </span>
-            <span className={style.socialIcons}>
+            <div className={style.socialIcons}>
               <span className={style.socialIcon}>
                 <a href="https://github.com/Grammeri">
                   <GithubIcon style={{ color: "white", fontSize: "33px" }} />
@@ -42,7 +41,7 @@ export const Footer = () => {
                   />
                 </a>
               </span>
-            </span>
+            </div>
             <span className={style.footerText}>{t("copyRight")}</span>
           </div>
         </div>
