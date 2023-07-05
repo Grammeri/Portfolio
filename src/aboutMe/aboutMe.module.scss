@@ -4,7 +4,7 @@
 .abutMeBlock {
   min-height: 125vh;
 
-  background-color:#cccccc;
+  background-color:$aboutMeBgColor;
   display: flex;
   flex-direction: column;
 /*  border-bottom-left-radius: 110% 10%;
@@ -21,15 +21,6 @@
   padding: 2em 0;
 }
 
-.rectangle{
-  marginTop: 50px;
-  width: 600px;
-  height: 350px;
-  border: 1px solid black;
-  padding: 10px;
-  backgroundColor: white;
-
-}
 .rectanglesContainer{
   width:100%;
   display:flex;
@@ -42,10 +33,10 @@
   text-align: justify;
 }
 a {
-  color: navy;
+  color: $moreOfMyStoryColor;
   transition: color 0.3s ease;
 
   &:hover {
-    color: grey;
+    color: $moreOfMyStoryHoverColor;
   }
 }

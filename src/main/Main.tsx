@@ -45,7 +45,7 @@ export const Main = () => {
             <Fade>
               <div className={styleContainer.container}>
                 <div className={style.greeting}>
-                  <div className={style.hi}>
+                  <div className={style.gretingFirstSecondLine}>
                     <h3>{t("greeting")}</h3>
                     <h1>{t("name")}</h1>
                   </div>

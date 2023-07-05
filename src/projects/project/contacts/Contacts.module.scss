@@ -3,7 +3,7 @@
 
 .contactsBlock {
   min-height: calc(100vh - 140px);
-  background-color: $contactsBgColor /*#1f1f20*/;
+  background-color: $contactsBgColor;
 
   .contactsContainer {
     /* min-height: calc(100vh - 140px);*/ // Subtract the footer height if it's fixed
@@ -14,13 +14,13 @@
 
     .contactForm {
       width: 40%;
-      background-color: orange;
+      background-color: $contactsFormColor;
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-top: 100px;
       padding: 30px;
-      border: 1px solid orange;
+      border: 1px solid;
 
       .submitBtn {
         width: 20%;
@@ -43,13 +43,13 @@
     }
 
     .whiteTitle {
-      color: white;
+      color: $contactsTitleColor;
       position: relative;
 
       &:before {
         content: "";
         position: absolute;
-        background: white;
+        background: $contactsUnderscoreColor;
         width: 55px;
         height: 1px;
         left: 50%;

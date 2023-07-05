@@ -8,28 +8,33 @@
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 15px;
+  transition: height 0.3s ease-in-out;
 
   .lightning {
-    color: red;
+    color: $lightningColor;
     margin-top: -35px;
     position: absolute;
     margin-left: 110px;
+
+    @media screen and (max-width: 767px) {
+      margin-left: 30px;
+    }
   }
 
   .image {
-    width: 90%;  // Almost the full width of the project
+    width: 95%;
     height: 300px;
     object-fit: cover;
-    margin: 0 auto 0;  // center the image horizontally
+    margin: 0 auto 0;
+
+    @media screen and (max-width: 767px) {
+      height: 200px;
+    }
   }
 
   .content {
-    color: white;
+    color: $cardTextColor;
     padding: 10px;
-
-    p {
-      margin-bottom: 0px;
-    }
 
     .truncate {
       display: -webkit-box;
@@ -39,13 +44,13 @@
     }
 
     .moreLess {
-      color: orange;
+      color: $moreLessColor;
       text-decoration: underline;
       cursor: pointer;
       padding-left: 10px;
 
       &:hover {
-        color: gray;
+        color: $moreLessHoverColor;
       }
     }
 
@@ -55,9 +60,9 @@
       margin-top: 10px;
 
       .button {
-        background-color: orange;
+        background-color: $btnBgColor;
         border-radius: 10px;
-        color: black;
+        color: $btnTextColor;
         padding: 8px 20px;
         text-align: center;
         text-decoration: none;
@@ -66,9 +71,9 @@
         cursor: pointer;
 
         &:hover {
-          background-color: #1f1f20;
-          color: orange;
-          border: 2px solid orange;
+          background-color: $btnHoverColor;
+          color: $btnTextHoverColor;
+          border: 2px solid $btnBorderColor;
         }
       }
     }

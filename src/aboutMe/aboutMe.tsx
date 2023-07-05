@@ -33,8 +33,7 @@ export const AboutMe = (props: any) => {
               style={{
                 marginTop: "0px",
                 width: "500px",
-                minHeight: "370px",
-                border: "1px solid white",
+                minHeight: "500px",
                 padding: "10px",
                 backgroundColor: "white",
                 overflow: "auto",
@@ -70,8 +69,7 @@ export const AboutMe = (props: any) => {
               style={{
                 marginTop: "0px",
                 width: "500px",
-                height: "370px",
-                border: "2px solid black",
+                height: "500px",
                 padding: "10px",
                 color: "white",
                 backgroundColor: "black",
@@ -95,8 +93,7 @@ export const AboutMe = (props: any) => {
               style={{
                 marginTop: "0px",
                 width: "500px",
-                height: "370px",
-                border: "2px solid black",
+                height: "500px",
                 padding: "10px",
                 color: "white",
                 backgroundColor: "black",
@@ -109,8 +106,7 @@ export const AboutMe = (props: any) => {
               style={{
                 marginTop: "0px",
                 width: "500px",
-                height: "370px",
-                border: "1px solid white",
+                height: "500px",
                 padding: "10px",
                 backgroundColor: "white",
               }}
