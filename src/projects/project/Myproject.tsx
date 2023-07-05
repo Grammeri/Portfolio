@@ -19,7 +19,7 @@ export const MyProject = (props: PropsTypes) => {
   const imageSize = "100px";
 
   // Calculate word limit
-  const wordLimit = 20;
+  const wordLimit = 10;
 
   // Split description into words
   const descriptionWords = props.projectDescription.split(" ");
@@ -48,16 +48,18 @@ export const MyProject = (props: PropsTypes) => {
       <img className={style.image} src={props.image} alt={props.projectTitle} />
       <div className={style.content}>
         <div>{props.stack}</div>
-        <p className={!showMore ? style.truncate : ""}>
-          {showMore
-            ? props.projectDescription
-            : `${previewDescription}${longDescription ? "..." : ""}`}
-        </p>
-        {longDescription && (
-          <p className={style.moreLess} onClick={toggleShowMore}>
-            {showMore ? t("less") : t("more")}
+        <div className={style.description}>
+          <p className={!showMore ? style.truncate : ""}>
+            {showMore
+                ? props.projectDescription
+                : `${previewDescription}${longDescription ? "..." : ""}`}
           </p>
-        )}
+          {longDescription && (
+              <p className={style.moreLess} onClick={toggleShowMore}>
+                {showMore ? t("less") : t("more")}
+              </p>
+          )}
+        </div>
         <div className={style.buttonsContainer}>
           <button
             className={style.button}

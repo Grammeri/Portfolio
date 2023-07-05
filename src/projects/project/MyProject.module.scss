@@ -9,14 +9,12 @@
   justify-items: center; // Centers child items horizontally
   margin-bottom: 15px;
   transition: height 0.3s ease-in-out;
-  margin-bottom: 15px;
-  transition: height 0.3s ease-in-out;
 
   .lightning {
     color: $lightningColor;
     margin-top: -35px;
     position: absolute;
-    margin-left: 110px;
+
 
     @media screen and (max-width: 767px) {
       margin-left: 30px;
@@ -35,12 +33,20 @@
   }
 
   .content {
+    display: flex; // Added display: flex;
+    flex-direction: column; // Added flex-direction: column;
+    justify-content: space-between; // Added justify-content: space-between;
     color: $cardTextColor;
     padding: 10px;
+    height: 100%; // Added height: 100%; to occupy remaining space in the container
+
+.description {
+  margin-bottom: -10px;
+}
 
     .truncate {
       display: -webkit-box;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
@@ -60,6 +66,7 @@
       display: flex;
       justify-content: center;
       margin-top: 10px;
+      margin-bottom: 10px;
 
       .button {
         background-color: $btnBgColor;
