@@ -32,8 +32,8 @@ export const AboutMe = (props: any) => {
               className={style.rectangle}
               style={{
                 marginTop: "0px",
-                width: "500px",
-                minHeight: "500px",
+                width: "400px",
+                height: "400px",
                 padding: "10px",
                 backgroundColor: "white",
                 overflow: "auto",
@@ -68,8 +68,8 @@ export const AboutMe = (props: any) => {
             <div
               style={{
                 marginTop: "0px",
-                width: "500px",
-                height: "500px",
+                width: "400px",
+                height: "400px",
                 padding: "10px",
                 color: "white",
                 backgroundColor: "black",
@@ -92,8 +92,8 @@ export const AboutMe = (props: any) => {
             <div
               style={{
                 marginTop: "0px",
-                width: "500px",
-                height: "500px",
+                width: "400px",
+                height: "400px",
                 padding: "10px",
                 color: "white",
                 backgroundColor: "black",
@@ -105,8 +105,8 @@ export const AboutMe = (props: any) => {
             <div
               style={{
                 marginTop: "0px",
-                width: "500px",
-                height: "500px",
+                width: "400px",
+                height: "400px",
                 padding: "10px",
                 backgroundColor: "white",
               }}

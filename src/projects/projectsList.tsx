@@ -10,7 +10,8 @@ export const projectsList = (t: TFunction) => [
   {
     title: t("Currently in progress"),
     date: t("inctagramDate"),
-    stack: t("inctagramStack"),
+    stackBold: t("stackBold"),
+    stackContent: t("inctagramStack"),
     description: t("inctagramDescription"),
     image: instagram,
     appUrl: "https://inctagram-grammeri.vercel.app/auth/login",
@@ -21,7 +22,8 @@ export const projectsList = (t: TFunction) => [
   {
     title: "Social Network",
     date: t("socialNetworkDate"),
-    stack: t("socialNetworkStack"),
+    stackBold: t("stackBold"),
+    stackContent: t("socialNetworkStack"),
     description: t("socialNetworkDescription"),
     image: socialNetWorkImg,
     appUrl: "https://grammeri.github.io/Samurai_23/",
@@ -31,7 +33,8 @@ export const projectsList = (t: TFunction) => [
   {
     title: "FlashCards",
     date: t("flashCardsDate"),
-    stack: t("flashCardsStack"),
+    stackBold: t("stackBold"),
+    stackContent: t("flashCardsStack"),
     description: t("flashCardsDescription"),
     image: flashCardsImg,
     appUrl: "https://grammeri.github.io/flashcards",
@@ -43,7 +46,8 @@ export const projectsList = (t: TFunction) => [
   {
     title: "Todolist",
     date: t("tdlDate"),
-    stack: t("tdlStack"),
+    stackBold: t("stackBold"),
+    stackContent: t("tdlStack"),
     description: t("todolistDescription"),
     image: todoImg,
     appUrl: "https://grammeri.github.io/Todolist/",

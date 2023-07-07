@@ -5,8 +5,8 @@
   width: 100%;
   height: 70%;
   display: grid;
-  grid-template-rows: auto 1fr; // New row setup to account for image and content
-  justify-items: center; // Centers child items horizontally
+  grid-template-rows: auto 1fr;
+  justify-items: center;
   margin-bottom: 15px;
   transition: height 0.3s ease-in-out;
 
@@ -15,17 +15,16 @@
     margin-top: -35px;
     position: absolute;
 
-
     @media screen and (max-width: 767px) {
       margin-left: 30px;
     }
   }
 
   .image {
-    width: 250px; // To ensure image does not exceed container width
-    max-height: 150px; // Set max-height to ensure all images are the same height
-    object-fit: cover; // Ensures image maintains aspect ratio
-    margin-bottom: 15px; // Spacing between the image and the content
+    width: 250px;
+    max-height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
 
     @media screen and (max-width: 767px) {
       height: 200px;
@@ -33,51 +32,62 @@
   }
 
   .content {
-    display: flex; // Added display: flex;
-    flex-direction: column; // Added flex-direction: column;
-    justify-content: space-between; // Added justify-content: space-between;
+    display: grid;
+    grid-template-rows: auto auto auto;
+
     color: $cardTextColor;
     padding: 10px;
-    height: 100%; // Added height: 100%; to occupy remaining space in the container
+    height: 100%;
 
-.description {
-  margin-bottom: -10px;
-}
-
-    .truncate {
-      display: -webkit-box;
-      -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+    .stack {
+      grid-row: 1;
+      span{
+        font-weight:bold;
+      }
     }
 
-    .moreLess {
-      color: $moreLessColor;
-      text-decoration: underline;
-      cursor: pointer;
-      padding-left: 10px;
+    .description {
+      grid-row: 2;
+      margin-bottom: -30px;
 
-      &:hover {
-        color: $moreLessHoverColor;
+      .truncate {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .moreLess {
+        color: $moreLessColor;
+        text-decoration: underline;
+        cursor: pointer;
+        padding-left: 10px;
+
+        &:hover {
+          color: $moreLessHoverColor;
+        }
       }
     }
 
     .buttonsContainer {
+      grid-row: 3;
       display: flex;
       justify-content: center;
-      margin-top: 10px;
+      margin-top: 20px;
       margin-bottom: 10px;
 
       .button {
         background-color: $btnBgColor;
         border-radius: 10px;
         color: $btnTextColor;
-        padding: 8px 20px;
+        padding: 4px 20px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         transition-duration: 0.4s;
         cursor: pointer;
+        margin-bottom: 10px;
+
 
         &:hover {
           background-color: $btnHoverColor;

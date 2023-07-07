@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, forwardRef } from "react";
 import style from "./MyProject.module.scss";
 import { useTranslation } from "react-i18next";
 import FlashOnIcon from "@mui/icons-material/FlashOn";
@@ -9,11 +9,12 @@ type PropsTypes = {
   appUrl: string;
   codeUrl: string;
   projectTitle: string;
-  stack: string;
+  stackBold?: string;
+  stackContent: string;
   videoUrl?: string;
 };
 
-export const MyProject = (props: PropsTypes) => {
+export const MyProject = forwardRef<HTMLDivElement, PropsTypes>((props, ref) => {
   const { t } = useTranslation();
 
   const imageSize = "100px";
@@ -38,52 +39,52 @@ export const MyProject = (props: PropsTypes) => {
   const toggleShowMore = () => setShowMore(!showMore);
 
   return (
-    <section className={style.myProject}>
-      {props.projectTitle === t("Currently in progress") && (
-        <div className={style.lightning}>
-          <FlashOnIcon />
-          <span>{t("UnderDevelopment")}</span>
-        </div>
-      )}
-      <img className={style.image} src={props.image} alt={props.projectTitle} />
-      <div className={style.content}>
-        <div>{props.stack}</div>
-        <div className={style.description}>
-          <p className={!showMore ? style.truncate : ""}>
-            {showMore
-                ? props.projectDescription
-                : `${previewDescription}${longDescription ? "..." : ""}`}
-          </p>
-          {longDescription && (
-              <p className={style.moreLess} onClick={toggleShowMore}>
-                {showMore ? t("less") : t("more")}
-              </p>
-          )}
-        </div>
-        <div className={style.buttonsContainer}>
-          <button
-            className={style.button}
-            onClick={() => window.open(props.appUrl, "_blank")}
-            disabled={props.appUrl === "#"}
-          >
-            {props.appUrl === "#" ? t("inProgress") : t("viewProject")}
-          </button>
-          <button
-            className={`${style.button} ${style.codeButton}`}
-            onClick={() => window.open(props.codeUrl, "_blank")}
-          >
-            {t("viewCode")}
-          </button>
-          {props.videoUrl && (
+      <section className={style.myProject}>
+        {props.projectTitle === t("Currently in progress") && (
+            <div className={style.lightning}>
+              <FlashOnIcon />
+              <span>{t("UnderDevelopment")}</span>
+            </div>
+        )}
+        <img className={style.image} src={props.image} alt={props.projectTitle} />
+        <div className={style.content}>
+          <div ref={ref} className={style.stack}><span>{props.stackBold}</span>{props.stackContent}</div>
+          <div className={style.description}>
+            <p className={!showMore ? style.truncate : ""}>
+              {showMore
+                  ? props.projectDescription
+                  : `${previewDescription}${longDescription ? "..." : ""}`}
+            </p>
+            {longDescription && (
+                <p className={style.moreLess} onClick={toggleShowMore}>
+                  {showMore ? t("less") : t("more")}
+                </p>
+            )}
+          </div>
+          <div className={style.buttonsContainer}>
             <button
-              className={`${style.button} ${style.videoButton}`}
-              onClick={() => window.open(props.videoUrl, "_blank")}
+                className={style.button}
+                onClick={() => window.open(props.appUrl, "_blank")}
+                disabled={props.appUrl === "#"}
             >
-              {t("viewVideo")}
+              {props.appUrl === "#" ? t("inProgress") : t("viewProject")}
             </button>
-          )}
+            <button
+                className={`${style.button} ${style.codeButton}`}
+                onClick={() => window.open(props.codeUrl, "_blank")}
+            >
+              {t("viewCode")}
+            </button>
+            {props.videoUrl && (
+                <button
+                    className={`${style.button} ${style.videoButton}`}
+                    onClick={() => window.open(props.videoUrl, "_blank")}
+                >
+                  {t("viewVideo")}
+                </button>
+            )}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
-};
+});
