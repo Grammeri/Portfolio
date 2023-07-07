@@ -7,10 +7,6 @@
   background-color:$aboutMeBgColor;
   display: flex;
   flex-direction: column;
-/*  border-bottom-left-radius: 110% 10%;
-  border-bottom-right-radius: 110% 10%;
-  transform: scaleY(1.1);*/
- /* overflow: hidden;*/
   align-items: center;
 }
 
@@ -24,7 +20,7 @@
 
 .rectanglesContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Updated to have two columns */
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   gap:10px;
 
