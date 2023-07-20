@@ -46,7 +46,7 @@ export const MyProjects = () => {
               {projects.map((project, index) => (
                   <div key={index} className={`${style.projectItem} projectItem`}>
                     <MyProject
-                        ref={stackRefs[index]} // Add this line
+                        ref={stackRefs[index]}
                         projectTitle={project.title}
                         image={project.image}
                         projectDescription={project.description}

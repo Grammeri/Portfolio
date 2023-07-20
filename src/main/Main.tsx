@@ -51,7 +51,7 @@ export const Main = () => {
                   </div>
                   <h1>{t("role")}</h1>
                   <span className={style.typingEffectText}>
-                    <ReactTypingEffect text={[t("typingText")]} />
+                    <ReactTypingEffect text={[t("typingText")]} speed={20}/>
                   </span>
                   <div>
                     <a

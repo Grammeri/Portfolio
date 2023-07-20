@@ -10,6 +10,8 @@
   margin-bottom: 15px;
   transition: height 0.3s ease-in-out;
 
+
+
   .lightning {
     color: $lightningColor;
     margin-top: -35px;
@@ -38,7 +40,6 @@
     color: $cardTextColor;
     padding: 10px;
     height: 100%;
-
     .stack {
       grid-row: 1;
       span{
