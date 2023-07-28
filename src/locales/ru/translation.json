@@ -146,6 +146,10 @@
   "whatsUpTitle": "Тестовое приложение WhatsUp",
   "whatsUpDescription": "26 мая 2023 года. Это тестовая версия приложения WhatsUp. Следующий шаг - обеспечить связь с сервером.",
 
+  "//Route mapping test": "Прокладка маршрутов",
+  "routeMappingStack": "СТЭК: React, ReduxSaga, Ant Design, Leaflet, Axios, Sass, @mapbox/polyline",
+  "routeMappingTitle": "Прокладка маршрутов по координатам точек",
+  "routeMappingDescription": "Проект включает 3 маршрута, проложенных по заданным координатам (широта, долгота)",
 
 
   "//contactsPage": "Контакты",

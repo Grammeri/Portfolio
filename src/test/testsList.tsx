@@ -1,23 +1,21 @@
-import socialNetWorkImg from "./../assets/image/SocialNetwork.jpg";
-import todoImg from "./../assets/image/Todolist.jpg";
 import startUpImg from "./../assets/image/StartUp.jpg";
 import flashCardsImg from "./../assets/image/FlashCards.jpg";
 import interviewImag from "./../assets/image/interviewImag.webp";
-import instagram from "./../assets/image/instagram.png";
 import whatsUp from "./../assets/image/whatsUp.png";
-import { TFunction } from "i18next";
+import map from "./../assets/image/map.jpg";
+import {TFunction} from "i18next";
 import angularHomesImg from "./../assets/image/angular.jpg";
 
 export const testsList = (t: TFunction) => [
-  /* {
-    title: "Currently in progress",
-    date: t("inctagramDate"),
-    stack: t("inctagramStack"),
-    description: t("inctagramDescription"),
-    image: instagram,
-    appUrl: "#",
-    codeUrl: "https://github.com/Crash2022/Inctagram",
-  },*/
+  {
+    title: "Route mapping",
+    date: t("routeMappingDate"),
+    stack: t("routeMappingStack"),
+    description: t("routeMappingDescription"),
+    image: map,
+    appUrl: "https://ils-test-iota.vercel.app/",
+    codeUrl: "https://github.com/Grammeri/ils_test",
+  },
   {
     title: "Test WhatsUp",
     date: t("whatsUpDate"),
@@ -56,18 +54,8 @@ export const testsList = (t: TFunction) => [
     videoUrl:
       "https://drive.google.com/file/d/1FdQHPT-zno8CGwebp281kDQXJQvFh1Ac/view?usp=drive_link",
   },
-  /* {
-    title: "FlashCards",
-    date: t("flashCardsDate"),
-    stack: t("flashCardsStack"),
-    description: t("flashCardsDescription"),
-    image: flashCardsImg,
-    appUrl: "https://grammeri.github.io/flashcards",
-    codeUrl: "https://github.com/Grammeri/flashcards",
-    videoUrl:
-      "https://drive.google.com/file/d/1irko1p7DIFxTiKf2S2HzpRK31iWYCrQV/view?usp=drive_link",
-  },
-  {
+
+ /* {
     title: "Social Network",
     date: t("socialNetworkDate"),
     stack: t("socialNetworkStack"),

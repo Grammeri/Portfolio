@@ -109,6 +109,15 @@
   "whatsUpStack": "STACK: React, React Router DOM, React Redux, React Hook Form, React Toastify, RTK Query",
   "whatsUpTitle": "Test WhatsUp",
   "whatsUpDescription": "May 26, 2023. It is a test assignment Mockup version, The next step is to provide connection with Server",
+
+  "//Route mapping test": "Route mapping test",
+  "routeMappingStack": "STACK: React, ReduxSaga, Ant Design, Leaflet, Axios, Sass, @mapbox/polyline",
+  "routeMappingTitle": "Route mapping test",
+  "routeMappingDescription": "The project includes 3 routes mapped based on provided coordinates (latitude, longitude)",
+
+
+
+
   "//contactsPage": "Contacts Page",
 
   "letsGetInTouch": "Let's get in touch",
