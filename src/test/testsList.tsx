@@ -1,5 +1,4 @@
 import startUpImg from "./../assets/image/StartUp.jpg";
-import flashCardsImg from "./../assets/image/FlashCards.jpg";
 import interviewImag from "./../assets/image/interviewImag.webp";
 import whatsUp from "./../assets/image/whatsUp.png";
 import map from "./../assets/image/map.jpg";
