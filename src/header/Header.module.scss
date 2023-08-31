@@ -2,7 +2,7 @@
 @import "../common/styles/sass/mixins";
 
 .header {
-  height: 90px;
+  height: 100px;
   background-color: black;
   display: flex;
   justify-content: center;
@@ -12,13 +12,4 @@
   left: 0;
   width: 100%;
   z-index: 9999;
-
-  @media screen and (max-width: 525px) {
-    height: 100px; /* Change the height for smaller screens */
-    width: 100%; /* Allow the header to take the full available width */
-  }
-
-  @media screen and (max-width: 266px) {
-    height: 100px; /* Change the height for even smaller screens */
-  }
 }

@@ -30,7 +30,7 @@ export const MyTest = (props: PropsTypes) => {
               color: "red",
               marginTop: "-35px",
               position: "absolute",
-              marginLeft: "180px",
+              marginLeft: "100px",
             }}
           >
             <FlashOnIcon />

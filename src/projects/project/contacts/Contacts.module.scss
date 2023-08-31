@@ -63,11 +63,27 @@
 @media screen and (max-width: 500px) {
   .contactsContainer {
     min-height: calc(100vh - 100px);
-    padding-bottom: 100px;
+    padding-bottom: 100px
   }
 
   .contactForm {
-    width: 100%;
+    width: 100% !important; // Increasing the width for mobile
     margin-top: 50px;
+    padding: 20px 15px; // Additional padding for better visual separation
+    margin-bottom: 0 !important;
+
+    input, textarea {
+      width: 90%; // Making the input fields and textarea occupy more space
+      margin-bottom: 15px; // Extra spacing between fields for touch targets
+    }
+
+    .submitBtn {
+      width: 90%; // Button width to match inputs
+      margin: 20px 0; // Consistent vertical margin
+    }
+    .formNote{
+      padding: 5px;
+    }
   }
 }
+
