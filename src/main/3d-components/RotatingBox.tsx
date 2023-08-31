@@ -1,6 +1,8 @@
-import { useFrame, useLoader } from "@react-three/fiber";
-import { TextureLoader } from "three";
-import React, { useRef } from "react";
+import React, {useRef, useState, useEffect} from "react";
+import {useFrame, useLoader} from "@react-three/fiber";
+import {TextureLoader, Mesh} from "three";
+import {Text} from "@react-three/drei";
+
 import reactLogo from "./../../assets/3d-logos/react.png";
 import reduxLogo from "./../../assets/3d-logos/redux.png";
 import jsLogo from "./../../assets/3d-logos/javascript.png";
@@ -8,81 +10,74 @@ import tsLogo from "./../../assets/3d-logos/typescript.jpg";
 import htmlLogo from "./../../assets/3d-logos/html.png";
 import cssLogo from "./../../assets/3d-logos/css.png";
 
+
 export const RotatingBox = () => {
-  const meshRef1 = useRef<THREE.Mesh>(null);
-  const meshRef2 = useRef<THREE.Mesh>(null);
-  const meshRef3 = useRef<THREE.Mesh>(null);
-  const meshRef4 = useRef<THREE.Mesh>(null);
-  const meshRef5 = useRef<THREE.Mesh>(null);
-  const meshRef6 = useRef<THREE.Mesh>(null);
+    const meshRefs = [
+        useRef<Mesh>(null),
+        useRef<Mesh>(null),
+        useRef<Mesh>(null),
+        useRef<Mesh>(null),
+        useRef<Mesh>(null),
+        useRef<Mesh>(null),
+    ];
 
-  // Load textures
-  const reactTexture = useLoader(TextureLoader, reactLogo);
-  const reduxTexture = useLoader(TextureLoader, reduxLogo);
-  const jsTexture = useLoader(TextureLoader, jsLogo);
-  const tsTexture = useLoader(TextureLoader, tsLogo);
-  const htmlTexture = useLoader(TextureLoader, htmlLogo);
-  const cssTexture = useLoader(TextureLoader, cssLogo);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
 
-  // Rotation logic
-  useFrame(() => {
-    if (meshRef1.current) {
-      meshRef1.current.rotation.x += 0.01;
-      meshRef1.current.rotation.y += 0.01;
-    }
-    if (meshRef2.current) {
-      meshRef2.current.rotation.x -= 0.01;
-      meshRef2.current.rotation.y -= 0.01;
-    }
-    if (meshRef3.current) {
-      meshRef3.current.rotation.x += 0.01;
-      meshRef3.current.rotation.y += 0.01;
-    }
-    if (meshRef4.current) {
-      meshRef4.current.rotation.x -= 0.01;
-      meshRef4.current.rotation.y -= 0.01;
-    }
-    if (meshRef5.current) {
-      meshRef5.current.rotation.x += 0.01;
-      meshRef5.current.rotation.y += 0.01;
-    }
-    if (meshRef6.current) {
-      meshRef6.current.rotation.x -= 0.01;
-      meshRef6.current.rotation.y -= 0.01;
-    }
-  });
 
-  return (
-    <>
-      <mesh ref={meshRef1} position={[-70, 60, 55]}>
-        <boxBufferGeometry args={[13, 13, 13]} />
-        <meshStandardMaterial color={"lightblue"} map={reactTexture} />
-      </mesh>
+    const reactTexture = useLoader(TextureLoader, reactLogo);
+    const reduxTexture = useLoader(TextureLoader, reduxLogo);
+    const jsTexture = useLoader(TextureLoader, jsLogo);
+    const tsTexture = useLoader(TextureLoader, tsLogo);
+    const htmlTexture = useLoader(TextureLoader, htmlLogo);
+    const cssTexture = useLoader(TextureLoader, cssLogo);
 
-      <mesh ref={meshRef2} position={[-40, 60, 55]}>
-        <boxBufferGeometry args={[13, 13, 13]} />
-        <meshStandardMaterial color={"violet"} map={reduxTexture} />
-      </mesh>
+    useFrame(() => {
+        meshRefs.forEach((meshRef, index) => {
+            const modifier = index % 2 === 0 ? 0.01 : -0.01;
+            if (meshRef.current) {
+                meshRef.current.rotation.x += modifier;
+                meshRef.current.rotation.y += modifier;
+            }
+        });
+    });
 
-      <mesh ref={meshRef3} position={[-10, 60, 55]}>
-        <boxBufferGeometry args={[13, 13, 13]} />
-        <meshStandardMaterial color={"violet"} map={jsTexture} />
-      </mesh>
+    const desktopPositions: [number, number, number][] = [
+        [-70, 60, 55],
+        [-40, 60, 55],
+        [-10, 60, 55],
+        [20, 60, 55],
+        [50, 60, 55],
+        [80, 60, 55],
+    ];
 
-      <mesh ref={meshRef4} position={[20, 60, 55]}>
-        <boxBufferGeometry args={[13, 13, 13]} />
-        <meshStandardMaterial color={"lightblue"} map={tsTexture} />
-      </mesh>
+    const mobilePositions: [number, number, number][] = [
+        [-40, 50, 0],
+        [0, 50, 0],
+        [40, 50, 0],
+        [-40, 10, 0],
+        [0, 10, 0],
+        [40, 10, 0],
+    ];
 
-      <mesh ref={meshRef5} position={[50, 60, 55]}>
-        <boxBufferGeometry args={[13, 13, 13]} />
-        <meshStandardMaterial color={"lightblue"} map={htmlTexture} />
-      </mesh>
+    const positions = isMobile ? mobilePositions : desktopPositions;
 
-      <mesh ref={meshRef6} position={[80, 60, 55]}>
-        <boxBufferGeometry args={[13, 13, 13]} />
-        <meshStandardMaterial color={"lightblue"} map={cssTexture} />
-      </mesh>
-    </>
-  );
+    const textures = [reactTexture, reduxTexture, jsTexture, tsTexture, htmlTexture, cssTexture];
+    const colors = ["lightblue", "violet", "violet", "lightblue", "lightblue", "lightblue"];
+    const labels = ["React", "Redux", "JavaScript", "TypeScript", "HTML", "CSS"];
+
+    return (
+        <>
+            {positions.map((position, index) => (
+                <group position={position} key={index}>
+                    <mesh ref={meshRefs[index]}>
+                        <boxBufferGeometry args={[13, 13, 13]}/>
+                        <meshStandardMaterial color={colors[index]} map={textures[index]}/>
+                    </mesh>
+                    <Text position={[0, isMobile ? -20 : -20, 0]} fontSize={5} anchorX="center" anchorY="middle">
+                        {labels[index]}
+                    </Text>
+                </group>
+            ))}
+        </>
+    );
 };

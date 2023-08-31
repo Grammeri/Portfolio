@@ -9,7 +9,7 @@ export type TitleProps = {
 export const Title = (props: TitleProps) => {
   return (
     <div className={`${style.title} ${props.alternativeColor}`}>
-      <h2 style={{ marginTop: "50px" }}>{props.header}</h2>
+      <h2 >{props.header}</h2>
     </div>
   );
 };

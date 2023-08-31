@@ -67,7 +67,7 @@ export const Contacts = () => {
           <button type="submit" className={style.submitBtn}>
             {t("send")}
           </button>
-          <div>{t("formNote")}</div>
+          <div className={style.formNote}>{t("formNote")}</div>
         </form>
       </div>
       <ToastContainer position={"bottom-center"} />

@@ -1,21 +1,21 @@
 @import "../common/styles/sass/variables";
 @import "../common/styles/sass/mixins";
 
-
+// Greeting and Photo Styles
 .greetingCvPhoto {
   min-height: 60vh;
-  padding-top:60px;
+  padding-top: 60px;
   background-color: $mainPageBgColor;
 
   .greeting {
-    width: 850px; //photo location control
+    width: 850px; // Photo location control
     color: $mainPageRoleColor;
     position: relative;
     z-index: 2;
   }
 
-  .gretingFirstSecondLine{
-    color:$mainPageHiThereMyNameIsDmitryColor;
+  .gretingFirstSecondLine {
+    color: $mainPageHiThereMyNameIsDmitryColor;
   }
 
   .greeting span {
@@ -27,8 +27,6 @@
     height: 300px;
     margin-left: 10px;
     border-radius: 50px;
-    top: 0;
-    left: 0;
     position: relative;
     z-index: 1;
   }
@@ -37,24 +35,22 @@
     display: inline-block;
     background-color: $mainPageCvDownloadBtnBgColor;
     margin-top: 50px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 0 20px;
     text-align: center;
-    color:  $mainPageCvDownloadBtnTextColor;
+    color: $mainPageCvDownloadBtnTextColor;
     text-decoration: none;
-    height:30px;
+    height: 30px;
     padding-top: 5px;
     font-weight: bold;
 
-    &:hover{
-      background-color:$mainPageCvDownloadBtnBgHoverColor;
-      color:$mainPageCvDownloadBtnTextHoverColor;
+    &:hover {
+      background-color: $mainPageCvDownloadBtnBgHoverColor;
+      color: $mainPageCvDownloadBtnTextHoverColor;
     }
   }
 
   .photoWrapper {
     margin-top: 50px;
-    position: static;
     padding: 10px;
     background-color: $photoWrapperColor;
     border-radius: 25px;
@@ -69,11 +65,18 @@
   }
 }
 
+// Rotating Cubes Styles
 .rotatingCubes {
   background-color: $rotatingCubesBgColor;
   min-height: 30vh;
+  min-width: 30vh;
   position: relative;
   margin-top: -100px;
+
+  canvas {
+    max-width: 100%;  // Делаем так, чтобы canvas адаптировался к ширине родителя
+    height: auto;    // Поддерживаем пропорции
+  }
 }
 
 .caption {
@@ -81,20 +84,18 @@
   justify-content: space-between;
   flex-wrap: wrap;
   position: relative;
-  margin-right: 100px;
-  margin-left: 100px;
-  padding:25px;
+  margin: 0 100px;
+  padding: 25px;
 
   h4 {
-    margin: 0px 33px;
+    margin: 0 33px;
     color: $rotatingCubesCaptionsColor;
     position: relative;
-    top: -200px
+    top: -200px;
   }
 }
 
-
-
+// Responsive Styles
 @media screen and (max-width: 752px) {
   .spacer {
     height: 100px;
@@ -135,5 +136,10 @@
     width: 200px;
     height: 200px;
     margin: 0 auto;
+  }
+
+  .rotatingCubes canvas {
+    width: 400px !important;
+    height: 400px !important;
   }
 }

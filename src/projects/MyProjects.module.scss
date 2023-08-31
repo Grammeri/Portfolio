@@ -8,14 +8,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom-left-radius: 110% 10%;
-  border-bottom-right-radius: 110% 10%;
-  transform: scaleY(1.1);
-  overflow: hidden;
+ /* border-bottom-left-radius: 110% 5%;
+  border-bottom-right-radius: 110% 5%;*/
+  transform: scaleY(1);
+  //overflow: hidden;
 
   @media screen and (max-width: 767px) {
-    border-bottom-left-radius: 50% 10%;
-    border-bottom-right-radius: 50% 10%;
+    border-bottom-left-radius: 0;  // Убираем эффект эллипса
+    border-bottom-right-radius: 0;  // Убираем эффект эллипса
     min-height: auto;
     padding-bottom: 20px;
   }
@@ -28,15 +28,16 @@
   justify-content: center;
   align-items: center;
 }
+
 .projectsInner {
   display: flex;
-  align-items: stretch; // Add this
+  align-items: stretch;
   gap: 30px;
   margin-top: 60px;
   overflow-x: auto;
 
   @media screen and (max-width: 767px) {
-    flex-direction: column;
+
     align-items: center;
     gap: 20px;
     margin-top: 30px;
@@ -59,7 +60,7 @@
   min-height: 250px;
 
   @media screen and (max-width: 767px) {
-    width: 90%;
+    width: 110%;
     height: auto;
     margin: 0 auto 20px;
   }
@@ -80,3 +81,5 @@
     font-size: smaller;
   }
 }
+
+
