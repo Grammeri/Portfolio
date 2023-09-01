@@ -37,7 +37,7 @@ export const AboutMe = () => {
                 </div>
                 <div className={`${styleContainer.container} ${style.myProjectsContainer}`}>
                     {isMobile ? (
-                        <Swiper pagination={true} spaceBetween={50} slidesPerView={1} touchAngle={1}>
+                        <Swiper pagination={true} spaceBetween={50} slidesPerView={1} touchRatio={1}>
                             <SwiperSlide>
                                 <div className={style.rectangle}
                                      style={{marginTop: "0px", width: "300px", height: "400px", padding: "10px", backgroundColor: "white", overflow: "auto"}}>
