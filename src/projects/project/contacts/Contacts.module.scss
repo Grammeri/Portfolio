@@ -67,7 +67,7 @@
   }
 
   .contactForm {
-    width: 100% !important; // Increasing the width for mobile
+    width: 80% !important; // Increasing the width for mobile
     margin-top: 50px;
     padding: 20px 15px; // Additional padding for better visual separation
     margin-bottom: 0 !important;
@@ -78,12 +78,20 @@
     }
 
     .submitBtn {
-      width: 90%; // Button width to match inputs
+      width: 100%; // Button width to match inputs
       margin: 20px 0; // Consistent vertical margin
     }
     .formNote{
       padding: 5px;
     }
   }
+}
+@media (max-width: 768px) {
+  .blockTitle {
+    text-align: center;
+  }
+.submitBtn{
+  width: 150px !important;
+}
 }
 
