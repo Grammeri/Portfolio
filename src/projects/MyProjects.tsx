@@ -10,6 +10,7 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
 import useResponsive from "hooks/useResponsive";
 
 
@@ -24,10 +25,7 @@ export const MyProjects = () => {
     setIsMobile(responsive.isMobile);
   }, [responsive]);
 
-  // Create a ref for each project stack
   const stackRefs = projects.map(() => createRef<HTMLDivElement>());
-
-  // Run a function after the DOM updates
 
 
   const handleShowTests = (event: any) => {
@@ -43,7 +41,7 @@ export const MyProjects = () => {
           <div className={style.projects}>
             <div className={style.projectsInner}>
               {isMobile ? (
-                  <Swiper pagination={true} spaceBetween={50} slidesPerView={1.1}>
+                  <Swiper className={style.swiperPagination} pagination={true} modules={[Pagination]} spaceBetween={50} slidesPerView={1.1}>
                     {projects.map((project, index) => (
                         <SwiperSlide key={index}>
                           <div className={`${style.projectItem} projectItem`}>

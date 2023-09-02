@@ -7,9 +7,8 @@ import styleContainer from "common/styles/Container.module.css";
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import useResponsive from "hooks/useResponsive";
-
+import { Pagination } from 'swiper/modules';
 
 export const AboutMe = () => {
     const {t} = useTranslation();
@@ -37,10 +36,16 @@ export const AboutMe = () => {
                 </div>
                 <div className={`${styleContainer.container} ${style.myProjectsContainer}`}>
                     {isMobile ? (
-                        <Swiper pagination={true} spaceBetween={50} slidesPerView={1} touchRatio={1}>
+                        <Swiper className={style.swiperPagination}
+                                pagination={true}
+                                modules={[Pagination]}
+                                spaceBetween={50}
+                                slidesPerView={1}
+                                touchRatio={1}
+                        >
                             <SwiperSlide>
                                 <div className={style.rectangle}
-                                     style={{marginTop: "0px", width: "300px", height: "400px", padding: "10px", backgroundColor: "white", overflow: "auto"}}>
+                                     style={{marginTop: 0, width: "300px", height: "400px", padding: "10px", backgroundColor: "white", overflow: "auto"}}>
                                     <h3>{t("asDeveloper")}</h3>
                                     <div className={style.textJustified}>
                                         <span>{t("InfoAboutMe1")}</span>

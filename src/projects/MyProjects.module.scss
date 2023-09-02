@@ -44,6 +44,14 @@
   }
 }
 
+.swiperPagination {
+  --swiper-pagination-color: black;
+  --swiper-pagination-bullet-inactive-color: #999999;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-size: 16px;
+  --swiper-pagination-bullet-horizontal-gap: 10px;
+}
+
 .projects {
   display: grid;
   justify-content: center;
