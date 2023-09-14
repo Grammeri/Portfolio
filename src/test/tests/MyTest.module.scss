@@ -3,22 +3,16 @@
 
 .myTest {
   width: 100%;
-  height: 100%; // Ensure it takes full height
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; // Space out items
+  justify-content: space-between;
   margin-bottom: 15px;
 
   .image{
     width:100px;
     height: 100px;
   }
-/*.lightning{
-  color: red;
-  marginTop: -35px;
-  position: absolute;
-  marginLeft: 250px;
-}*/
   .imageData {
     display: flex;
     justify-content: flex-start;
@@ -31,13 +25,13 @@
     }
 
     p {
-      margin-left: 10px; // to give some space between the image and the text
+      margin-left: 10px;
     }
   }
 
   .overlay {
     width: 100%;
-    height: 100%; // Ensure overlay takes up full height
+    height: 100%;
     padding: 20px;
     box-sizing: border-box;
     text-align: left;
@@ -66,5 +60,12 @@
         }
       }
     }
+  }
+}
+@media screen and (max-width: 752px) {
+  .lightning{
+ width: 100%;
+    margin-right: 10px;
+    margin-left: 0 !important;
   }
 }

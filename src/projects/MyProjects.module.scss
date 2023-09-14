@@ -8,14 +8,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
- /* border-bottom-left-radius: 110% 5%;
-  border-bottom-right-radius: 110% 5%;*/
   transform: scaleY(1);
-  //overflow: hidden;
 
   @media screen and (max-width: 767px) {
-    border-bottom-left-radius: 0;  // Убираем эффект эллипса
-    border-bottom-right-radius: 0;  // Убираем эффект эллипса
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     min-height: auto;
     padding-bottom: 20px;
   }
@@ -31,7 +28,7 @@
 
 .projectsInner {
   display: flex;
-  align-items: stretch;
+  align-items: flex-end;
   gap: 30px;
   margin-top: 60px;
   overflow-x: auto;
@@ -51,6 +48,7 @@
   --swiper-pagination-bullet-size: 16px;
   --swiper-pagination-bullet-horizontal-gap: 10px;
 }
+
 
 .projects {
   display: grid;
@@ -89,5 +87,3 @@
     font-size: smaller;
   }
 }
-
-

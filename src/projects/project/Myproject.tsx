@@ -62,26 +62,26 @@ export const MyProject = forwardRef<HTMLDivElement, PropsTypes>((props, ref) => 
             )}
           </div>
           <div className={style.buttonsContainer}>
-            <button
+            <div
                 className={style.button}
                 onClick={() => window.open(props.appUrl, "_blank")}
-                disabled={props.appUrl === "#"}
+
             >
               {props.appUrl === "#" ? t("inProgress") : t("viewProject")}
-            </button>
-            <button
+            </div>
+            <div
                 className={`${style.button} ${style.codeButton}`}
                 onClick={() => window.open(props.codeUrl, "_blank")}
             >
               {t("viewCode")}
-            </button>
+            </div>
             {props.videoUrl && (
-                <button
+                <div
                     className={`${style.button} ${style.videoButton}`}
                     onClick={() => window.open(props.videoUrl, "_blank")}
                 >
                   {t("viewVideo")}
-                </button>
+                </div>
             )}
           </div>
         </div>

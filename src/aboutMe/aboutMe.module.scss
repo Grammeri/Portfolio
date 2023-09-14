@@ -12,7 +12,6 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    padding-top: 1em;
     padding: 2em 0;
   }
 
@@ -21,6 +20,7 @@
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     gap: 10px;
+    padding: 40px;
   }
 
   .textJustified {
@@ -37,23 +37,8 @@
   }
 
   .rectangle {
-    overflow: auto;
-
-    &:nth-child(odd) {
-      background-color: white;
-      color: black;
-    }
-
-    &:nth-child(even) {
-      background-color: black;
-      color: white;
-    }
-
-    span, p, div {
-      overflow-wrap: break-word;
-      word-wrap: break-word;
-      word-break: break-word;
-    }
+    padding-right: 30px !important;
+    padding-left: 30px !important;
   }
 }
 
@@ -63,29 +48,18 @@
   --swiper-pagination-bullet-inactive-opacity: 1;
   --swiper-pagination-bullet-size: 16px;
   --swiper-pagination-bullet-horizontal-gap: 10px;
-}
+ }
 
 
 
 @media (max-width: 768px) {
   .abutMeBlock {
+    top: 10px;
+    bottom: auto;
     min-height: auto;
-
-    .rectanglesContainer {
-      grid-template-columns: 1fr;
-    }
-
-    .rectangle {
-      width: 200px;
-      height: auto;
-      padding: 10px;
-      box-sizing: border-box;
-      overflow: hidden;
-
-      span, p, div {
-        width: 100%;
-        box-sizing: border-box;
-      }
-    }
+  }
+  .contentMarginBottom {
+    margin-bottom: 40px;
   }
 }
+

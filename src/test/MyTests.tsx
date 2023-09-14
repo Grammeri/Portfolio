@@ -1,7 +1,7 @@
 import React from "react";
 import style from "test/MyTests.module.scss";
 import styleContainer from "../common/styles/Container.module.css";
-import { Title } from "../common/Components/title/Title";
+import { Title } from "common/Components/title/Title";
 import { useTranslation } from "react-i18next";
 import { testsList } from "test/testsList";
 import { MyTest } from "test/tests/MyTest";

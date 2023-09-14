@@ -41,7 +41,8 @@ export const MyProjects = () => {
           <div className={style.projects}>
             <div className={style.projectsInner}>
               {isMobile ? (
-                  <Swiper className={style.swiperPagination} pagination={true} modules={[Pagination]} spaceBetween={50} slidesPerView={1.1}>
+                  <Swiper className={style.swiperPagination} pagination={true} modules={[Pagination]} spaceBetween={50} slidesPerView={1.1}
+                  >
                     {projects.map((project, index) => (
                         <SwiperSlide key={index}>
                           <div className={`${style.projectItem} projectItem`}>

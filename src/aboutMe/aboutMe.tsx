@@ -42,10 +42,10 @@ export const AboutMe = () => {
                                 spaceBetween={50}
                                 slidesPerView={1}
                                 touchRatio={1}
-                        >
+                        resistanceRatio={0}>
                             <SwiperSlide>
-                                <div className={style.rectangle}
-                                     style={{marginTop: 0, width: "300px", height: "400px", padding: "10px", backgroundColor: "white", overflow: "auto"}}>
+                                <div className={`${style.rectangle} ${style.contentMarginBottom}`}
+                                     style={{marginTop: 0, width: "300px", height: "700px", padding: "10px", backgroundColor: "white", overflow: "auto"}}>
                                     <h3>{t("asDeveloper")}</h3>
                                     <div className={style.textJustified}>
                                         <span>{t("InfoAboutMe1")}</span>
@@ -74,7 +74,7 @@ export const AboutMe = () => {
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div
-                                    style={{marginTop: "0px", width: "300px", height: "auto", padding: "10px", color: "black", backgroundColor: "white"}}>
+                                    style={{marginTop: "0px", width: "300px", height: "700px", padding: "10px", color: "black", backgroundColor: "white"}}>
                                     <h3>{t("aboutMeSkills")}</h3>
                                     <span>{t("mySkills1")}</span>
                                     <span style={{fontWeight: "bold"}}>{t("mySkills2")}</span>
@@ -92,14 +92,14 @@ export const AboutMe = () => {
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div
-                                    style={{marginTop: "0px", width: "300px", height: "400px", padding: "10px", color: "black", backgroundColor: "white"}}>
+                                    style={{marginTop: "0px", width: "300px", height: "700px", padding: "10px", color: "black", backgroundColor: "white"}}>
                                     <h3>{t("asPerson")}</h3>
                                     <div>{t("Personal")}</div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div
-                                    style={{marginTop: "0px", width: "300px", height: "400px", padding: "10px", color: "black", backgroundColor: "white"}}>
+                                    style={{marginTop: "0px", width: "300px", height: "700px", padding: "10px", color: "black", backgroundColor: "white"}}>
                                     <h3>{t("aboutMeGoals")}</h3>
                                     {t("goals")}
                                 </div>
@@ -135,7 +135,7 @@ export const AboutMe = () => {
                                 </div>
                             </div>
                             <div
-                                style={{marginTop: "0px", width: "400px", height: "400px", padding: "10px", color: "white", backgroundColor: "black"}}>
+                                style={{boxSizing: "border-box", marginTop: "0px", width: "400px", height: "400px", padding: "10px", color: "white", backgroundColor: "black", overflow: "auto"}}>
                                 <h3>{t("aboutMeSkills")}</h3>
                                 <span>{t("mySkills1")}</span>
                                 <span style={{fontWeight: "bold"}}>{t("mySkills2")}</span>

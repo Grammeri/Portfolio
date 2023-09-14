@@ -7,6 +7,7 @@ import { Footer } from "footer/Footer";
 import { Main } from "main/Main";
 import { useTranslation } from "react-i18next";
 import { AboutMe } from "aboutMe/aboutMe";
+import "./reset.css";
 
 function App() {
   const { t, i18n } = useTranslation();

@@ -53,25 +53,4 @@ export const testsList = (t: TFunction) => [
     videoUrl:
       "https://drive.google.com/file/d/1FdQHPT-zno8CGwebp281kDQXJQvFh1Ac/view?usp=drive_link",
   },
-
- /* {
-    title: "Social Network",
-    date: t("socialNetworkDate"),
-    stack: t("socialNetworkStack"),
-    description: t("socialNetworkDescription"),
-    image: socialNetWorkImg,
-    appUrl: "https://grammeri.github.io/Samurai_23/",
-    codeUrl: "https://github.com/grammeri/Samurai_23",
-  },
-  {
-    title: "Todolist",
-    date: t("tdlDate"),
-    stack: t("tdlStack"),
-    description: t("todolistDescription"),
-    image: todoImg,
-    appUrl: "https://grammeri.github.io/Todolist/",
-    codeUrl: "https://github.com/grammeri/Todolist",
-    videoUrl:
-      "https://drive.google.com/file/d/1FdQHPT-zno8CGwebp281kDQXJQvFh1Ac/view?usp=drive_link",
-  },*/
 ];

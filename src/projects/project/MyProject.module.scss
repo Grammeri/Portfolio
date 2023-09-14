@@ -3,23 +3,17 @@
 
 .myProject {
   width: 100%;
-  height: 70%;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  justify-items: center;
-  margin-bottom: 15px;
+  min-height: 450px;  // минимальная высота
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transition: height 0.3s ease-in-out;
-
-
+  flex-grow: 1;
 
   .lightning {
     color: $lightningColor;
     margin-top: -35px;
-    position: absolute;
-
-    @media screen and (max-width: 767px) {
-      margin-left: 30px;
-    }
+    position: absolute
   }
 
   .image {
@@ -35,21 +29,22 @@
 
   .content {
     display: grid;
-    grid-template-rows: auto auto auto;
-
+    grid-template-rows: auto auto auto; // указывает на то, что у нас есть 3 строки
+    align-items: flex-end;
     color: $cardTextColor;
     padding: 10px;
-    height: 100%;
+
     .stack {
       grid-row: 1;
-      span{
-        font-weight:bold;
+      span {
+        font-weight: bold;
       }
     }
 
     .description {
       grid-row: 2;
       margin-bottom: -30px;
+      flex: 1;
 
       .truncate {
         display: -webkit-box;
@@ -63,6 +58,7 @@
         text-decoration: underline;
         cursor: pointer;
         padding-left: 10px;
+        padding-bottom: 20px;
 
         &:hover {
           color: $moreLessHoverColor;
@@ -78,9 +74,9 @@
       margin-bottom: 10px;
 
       .button {
-        background-color: $btnBgColor;
-        border-radius: 10px;
-        color: $btnTextColor;
+        font-variant: small-caps;
+        font-style: italic;
+        color: orange;
         padding: 4px 20px;
         text-align: center;
         text-decoration: none;
@@ -88,7 +84,6 @@
         transition-duration: 0.4s;
         cursor: pointer;
         margin-bottom: 10px;
-
 
         &:hover {
           background-color: $btnHoverColor;
@@ -98,4 +93,10 @@
       }
     }
   }
+}
+@media screen and (max-width: 767px) {
+  .myProject{
+    margin-bottom: 40px;
+  }
+
 }
