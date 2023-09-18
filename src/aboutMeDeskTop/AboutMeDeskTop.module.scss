@@ -1,0 +1,103 @@
+@import "../common/styles/sass/variables";
+@import "../common/styles/sass/mixins";
+
+
+
+  .rectanglesContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 10px;
+    padding: 40px;
+  }
+
+  .textJustified {
+    text-align: justify;
+  }
+
+  a {
+    color: $moreOfMyStoryColor;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $moreOfMyStoryHoverColor;
+    }
+  }
+
+  .rectangle {
+    padding-right: 30px !important;
+    padding-left: 30px !important;
+  }
+
+.swiper-pagination-bullet {
+  background-color: black;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $moreOfMyStoryHoverColor;
+}
+
+.swiperPagination {
+  --swiper-pagination-color: black;
+  --swiper-pagination-bullet-inactive-color: #999999;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-size: 16px;
+  --swiper-pagination-bullet-horizontal-gap: 10px;
+}
+
+.waterAnimation {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  height: 0%;
+  background-color: white;
+  animation: fillWater 3s forwards;
+}
+
+.removeWaterAnimation {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  height: 50%;
+  background-color: orange;
+  animation: removeWater 3s forwards;
+}
+
+@keyframes fillWater {
+  to {
+    height: 50%;
+  }
+}
+
+@keyframes removeWater {
+  to {
+    height: 0%;
+  }
+}
+
+.credoText {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+  width: 80%;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+  font-size: 20px;
+  background-color: transparent;
+  padding: 10px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.roundedBottom {
+  background-color: orange;
+  border-bottom-left-radius: 170px;
+  border-bottom-right-radius: 170px;
+}
+
+
+
