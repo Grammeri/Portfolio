@@ -15,51 +15,20 @@
     padding: 2em 0;
   }
 
-  .rectanglesContainer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    gap: 10px;
-    padding: 40px;
-  }
-
   .textJustified {
     text-align: justify;
   }
 
-  a {
-    color: $moreOfMyStoryColor;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: $moreOfMyStoryHoverColor;
+  @media (max-width: 768px) {
+    .abutMeBlock {
+      top: 10px;
+      bottom: auto;
+      min-height: auto;
     }
-  }
 
-  .rectangle {
-    padding-right: 30px !important;
-    padding-left: 30px !important;
-  }
-}
-
-.swiperPagination {
-  --swiper-pagination-color: black;
-  --swiper-pagination-bullet-inactive-color: #999999;
-  --swiper-pagination-bullet-inactive-opacity: 1;
-  --swiper-pagination-bullet-size: 16px;
-  --swiper-pagination-bullet-horizontal-gap: 10px;
- }
-
-
-
-@media (max-width: 768px) {
-  .abutMeBlock {
-    top: 10px;
-    bottom: auto;
-    min-height: auto;
-  }
-  .contentMarginBottom {
-    margin-bottom: 40px;
+    .contentMarginBottom {
+      margin-bottom: 40px;
+    }
   }
 }
 

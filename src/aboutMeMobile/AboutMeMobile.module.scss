@@ -1,0 +1,84 @@
+@import "../common/styles/sass/variables";
+@import "../common/styles/sass/mixins";
+
+.rectanglesContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 10px;
+  padding: 40px;
+}
+
+.textJustified {
+  text-align: justify;
+}
+
+a {
+  color: $moreOfMyStoryColor;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $moreOfMyStoryHoverColor;
+  }
+}
+
+.rectangle {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.swiper-pagination-bullet {
+  background-color: black;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $moreOfMyStoryHoverColor;
+}
+
+.swiperPagination {
+  --swiper-pagination-color: black;
+  --swiper-pagination-bullet-inactive-color: #999999;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-size: 16px;
+  --swiper-pagination-bullet-horizontal-gap: 10px;
+}
+
+.abutMeBlock {
+  top: 10px;
+  bottom: auto;
+  min-height: auto;
+}
+
+.contentMarginBottom {
+  margin-bottom: 40px;
+}
+
+.waterAnimation, .removeWaterAnimation {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  background-color: blue;
+}
+
+.waterAnimation {
+  height: 0%;
+  animation: fillWater 3s forwards;
+}
+
+.removeWaterAnimation {
+  height: 50%;
+  animation: removeWater 3s forwards;
+}
+
+@keyframes fillWater {
+  to {
+    height: 50%;
+  }
+}
+
+@keyframes removeWater {
+  to {
+    height: 0%;
+  }
+}
