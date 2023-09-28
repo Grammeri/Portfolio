@@ -34,14 +34,17 @@
   .downloadLink {
     display: inline-block;
     background-color: $mainPageCvDownloadBtnBgColor;
-    margin-top: 50px;
-    padding: 0 20px;
+    margin-top: 40px;
+    padding-top: 1px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     text-align: center;
     color: $mainPageCvDownloadBtnTextColor;
     text-decoration: none;
     height: 30px;
-    padding-top: 5px;
     font-weight: bold;
+    border-radius: 5px;
 
     &:hover {
       background-color: $mainPageCvDownloadBtnBgHoverColor;
