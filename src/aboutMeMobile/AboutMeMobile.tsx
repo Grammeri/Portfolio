@@ -150,8 +150,8 @@ export const AboutMeMobile = () => {
       className={style.swiperPagination}
       pagination={true}
       modules={[Pagination]}
-      spaceBetween={30}
-      slidesPerView={1.1}
+      spaceBetween={50}
+      slidesPerView={1}
       touchRatio={1}
       resistanceRatio={0}
       onSlideChange={handleSlideChange}
