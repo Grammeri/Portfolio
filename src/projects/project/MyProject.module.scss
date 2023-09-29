@@ -1,9 +1,9 @@
-@import "../../common/styles/sass/variables";
-@import "../../common/styles/sass/mixins";
+@import "/src/common/styles/sass/variables";
+@import "/src/common/styles/sass/mixins";
 
 .myProject {
   width: 100%;
-  min-height: 450px;  // минимальная высота
+  min-height: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +13,7 @@
   .lightning {
     color: $lightningColor;
     margin-top: -35px;
-    position: absolute
+    position: absolute;
   }
 
   .image {
@@ -29,7 +29,7 @@
 
   .content {
     display: grid;
-    grid-template-rows: auto auto auto; // указывает на то, что у нас есть 3 строки
+    grid-template-rows: auto auto auto;
     align-items: flex-end;
     color: $cardTextColor;
     padding: 10px;
@@ -95,8 +95,7 @@
   }
 }
 @media screen and (max-width: 767px) {
-  .myProject{
+  .myProject {
     margin-bottom: 40px;
   }
-
 }

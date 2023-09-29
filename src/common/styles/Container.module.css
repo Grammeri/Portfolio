@@ -5,6 +5,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap; /*for phone version*/
-  padding:0;
+  flex-wrap: wrap;
+  padding: 0;
 }

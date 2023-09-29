@@ -1,16 +1,14 @@
-@import "../../../common/styles/sass/variables";
-@import "../../../common/styles/sass/mixins";
+@import "/src/common/styles/sass/variables";
+@import "/src/common/styles/sass/mixins";
 
 .contactsBlock {
   min-height: calc(100vh - 140px);
   background-color: $contactsBgColor;
 
   .contactsContainer {
-    /* min-height: calc(100vh - 140px);*/ // Subtract the footer height if it's fixed
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*padding-bottom: 200px; // Padding instead of margin in toastContainer*/
 
     .contactForm {
       width: 40%;
@@ -63,25 +61,26 @@
 @media screen and (max-width: 500px) {
   .contactsContainer {
     min-height: calc(100vh - 100px);
-    padding-bottom: 100px
+    padding-bottom: 100px;
   }
 
   .contactForm {
-    width: 80% !important; // Increasing the width for mobile
+    width: 80% !important;
     margin-top: 50px;
-    padding: 20px 15px; // Additional padding for better visual separation
+    padding: 20px 15px;
     margin-bottom: 0 !important;
 
-    input, textarea {
-      width: 90%; // Making the input fields and textarea occupy more space
-      margin-bottom: 15px; // Extra spacing between fields for touch targets
+    input,
+    textarea {
+      width: 90%;
+      margin-bottom: 15px;
     }
 
     .submitBtn {
-      width: 100%; // Button width to match inputs
-      margin: 20px 0; // Consistent vertical margin
+      width: 100%;
+      margin: 20px 0;
     }
-    .formNote{
+    .formNote {
       padding: 5px;
     }
   }
@@ -90,8 +89,7 @@
   .blockTitle {
     text-align: center;
   }
-.submitBtn{
-  width: 150px !important;
+  .submitBtn {
+    width: 150px !important;
+  }
 }
-}
-

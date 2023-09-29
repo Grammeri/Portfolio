@@ -1,33 +1,31 @@
-@import "../common/styles/sass/variables";
+@import "/src/common/styles/sass/variables";
 @import "../common/styles/sass/mixins";
 
+.rectanglesContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 10px;
+  padding: 40px;
+}
 
+.textJustified {
+  text-align: justify;
+}
 
-  .rectanglesContainer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    gap: 10px;
-    padding: 40px;
+a {
+  color: $moreOfMyStoryColor;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $moreOfMyStoryHoverColor;
   }
+}
 
-  .textJustified {
-    text-align: justify;
-  }
-
-  a {
-    color: $moreOfMyStoryColor;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: $moreOfMyStoryHoverColor;
-    }
-  }
-
-  .rectangle {
-    padding-right: 30px !important;
-    padding-left: 30px !important;
-  }
+.rectangle {
+  padding-right: 30px !important;
+  padding-left: 30px !important;
+}
 
 .swiper-pagination-bullet {
   background-color: black;
@@ -50,7 +48,7 @@
   bottom: 10px;
   left: 10px;
   right: 10px;
-  height: 0%;
+  height: 0;
   background-color: white;
   animation: fillWater 3s forwards;
 }
@@ -73,7 +71,7 @@
 
 @keyframes removeWater {
   to {
-    height: 0%;
+    height: 0;
   }
 }
 
@@ -97,6 +95,3 @@
   border-bottom-left-radius: 170px;
   border-bottom-right-radius: 170px;
 }
-
-
-

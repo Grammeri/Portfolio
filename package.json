@@ -48,6 +48,8 @@
     "react-typing-effect": "^2.0.5",
     "src": "^1.1.2",
     "styled-components": "^6.0.0-rc.3",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0",
     "swiper": "^10.2.0",
     "three": "^0.153.0",
     "tsparticles": "^2.9.3",

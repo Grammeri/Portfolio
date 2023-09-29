@@ -8,7 +8,7 @@ import "./i18n";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as Element | DocumentFragment
-); // Use type assertion to resolve the type error
+);
 root.render(
   <Suspense fallback={<div>Loading...</div>}>
     <App />

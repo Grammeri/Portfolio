@@ -37,11 +37,10 @@ export const Contacts = () => {
       >
         <div className={style.blockTitle}>
           <Title
-              header={t("letsGetInTouch")}
-              alternativeColor={style.whiteTitle}
+            header={t("letsGetInTouch")}
+            alternativeColor={style.whiteTitle}
           />
         </div>
-
 
         <form ref={form} className={style.contactForm} onSubmit={sendEmail}>
           <label htmlFor="name">{t("name")}</label>

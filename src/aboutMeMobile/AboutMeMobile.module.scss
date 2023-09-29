@@ -1,5 +1,5 @@
-@import "../common/styles/sass/variables";
-@import "../common/styles/sass/mixins";
+@import "/src/common/styles/sass/variables";
+@import "/src/common/styles/sass/mixins";
 
 .swiper-pagination-bullet {
   background-color: black;
@@ -18,14 +18,13 @@
 }
 
 .rectangle {
-  width: 100%;
+  width: 110%;
   max-width: 600px;
   margin: 0 auto;
   height: 700px;
   padding: 25px;
   background-color: white;
   overflow: auto;
-
 }
 
 .textJustified {
@@ -56,18 +55,18 @@ a {
 .waterAnimation {
   position: absolute;
   bottom: 150px;
-  left: 15px;
-  right: 15px;
+  left: 13px;
+
   background-color: blue;
   border-radius: 0 0 100px 100px;
   animation: fillWater 5s forwards;
-  width: 90%;
+  width: 100%;
   margin-top: 550px;
 }
 
 @keyframes fillWater {
   from {
-    height: 0%;
+    height: 0;
   }
   to {
     height: 30%;
@@ -81,14 +80,14 @@ a {
 
 @keyframes removeWater {
   to {
-    height: 0%;
+    height: 0;
   }
 }
 
 .credoText {
   position: absolute;
   bottom: 40%;
-  left: 50%;
+  left: 55%;
   transform: translate(-50%, 50%);
   font-weight: bold;
   font-size: 32px;

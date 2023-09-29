@@ -1,5 +1,5 @@
-@import "../common/styles/sass/variables";
-@import "../common/styles/sass/mixins";
+@import "/src/common/styles/sass/variables";
+@import "/src/common/styles/sass/mixins";
 
 .myProjectsBlock {
   min-height: 80vh;
@@ -34,7 +34,6 @@
   overflow-x: auto;
 
   @media screen and (max-width: 767px) {
-
     align-items: center;
     gap: 20px;
     margin-top: 30px;
@@ -48,7 +47,6 @@
   --swiper-pagination-bullet-size: 16px;
   --swiper-pagination-bullet-horizontal-gap: 10px;
 }
-
 
 .projects {
   display: grid;

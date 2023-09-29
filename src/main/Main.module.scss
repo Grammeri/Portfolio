@@ -1,7 +1,6 @@
 @import "../common/styles/sass/variables";
 @import "../common/styles/sass/mixins";
 
-// Greeting and Photo Styles
 .greetingCvPhoto {
   min-height: 60vh;
 
@@ -68,7 +67,6 @@
   }
 }
 
-// Rotating Cubes Styles
 .rotatingCubes {
   background-color: $rotatingCubesBgColor;
   min-height: 30vh;
@@ -77,8 +75,8 @@
   margin-top: -100px;
 
   canvas {
-    max-width: 100%;  // Делаем так, чтобы canvas адаптировался к ширине родителя
-    height: auto;    // Поддерживаем пропорции
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -98,7 +96,6 @@
   }
 }
 
-// Responsive Styles
 @media screen and (max-width: 752px) {
   .spacer {
     height: 100px;
