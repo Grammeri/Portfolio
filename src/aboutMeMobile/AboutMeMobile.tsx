@@ -1,10 +1,10 @@
 import React, {useEffect, useRef, useState} from "react";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 import style from "./AboutMeMobile.module.scss";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
+import {Pagination} from 'swiper/modules';
 
 export const AboutMeMobile = () => {
     const { t } = useTranslation();
@@ -25,7 +25,6 @@ export const AboutMeMobile = () => {
         return '';
     };
 
-
     const showText = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         console.log('showText was clicked');
         event.preventDefault();
@@ -33,7 +32,7 @@ export const AboutMeMobile = () => {
         setIsTextVisible(true);
     };
 
-    const hideText = (event: React.MouseEvent) => {
+    const hideText = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         event.preventDefault();
         event.stopPropagation();
         setIsTextVisible(false);
@@ -52,30 +51,30 @@ export const AboutMeMobile = () => {
         setIsInViewport(visible);
 
         if (visible && !isWaterFilled) {
-            setStartAnimation(true);
-            setTimeout(() => {
-                setIsWaterFilled(true);
-            }, 2000);
+            // Вода становится filled сразу после возвращения белого прямоугольника на экран
+            setIsWaterFilled(true);
+            setStartAnimation(true); // Запуск анимации текста
         } else if (!visible) {
+            // Если белый прямоугольник не виден, сразу сбрасываем анимацию и текст
             setIsWaterFilled(false);
             setStartAnimation(false);
             setDisplayText(false);
         }
     };
 
-    const handleSlideChange = (swiper:any) => {
-        // Добавьте вашу логику здесь
-        // Например, проверка текущего слайда:
-        if (swiper.activeIndex === 2) {
-            handleScroll(); // Если этот слайд с чашкой, то выполните логику handleScroll
-        } else {
-            // Если это другой слайд, возможно, вы захотите сбросить анимацию
-            setIsWaterFilled(false);
-            setStartAnimation(false);
-            setDisplayText(false);
+
+    const handleSlideChange = () => {
+        if (Swiper) {
+            const swiperInstance = Swiper as any; // Попробуйте привести swiper к any, если это необходимо
+            if (swiperInstance.realIndex === 2) {
+                handleScroll();
+            } else {
+                setIsWaterFilled(false);
+                setStartAnimation(false);
+                setDisplayText(false);
+            }
         }
     };
-
 
     useEffect(() => {
         if (isWaterFilled) {
@@ -143,7 +142,6 @@ export const AboutMeMobile = () => {
         }
     }, [displayText, t]);
 
-
     return (
         <Swiper className={style.swiperPagination}
                 pagination={true}
@@ -152,10 +150,9 @@ export const AboutMeMobile = () => {
                 slidesPerView={1}
                 touchRatio={2}
                 resistanceRatio={0}
-                onSlideChange={(swiper) => handleSlideChange(swiper)}>
+                onSlideChange={handleSlideChange}>
             <SwiperSlide>
-                <div className={`${style.rectangle} ${style.contentMarginBottom}`}
-                     style={{ marginTop: 0, width: "300px", height: "700px", padding: "25px", backgroundColor: "white", overflow: "auto" }}>
+                <div className={style.rectangle}>
                     <h3>{t("asDeveloper")}</h3>
                     <div className={style.textJustified}>
                         <span>{t("InfoAboutMe1")}</span>
@@ -183,10 +180,10 @@ export const AboutMeMobile = () => {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div style={{ marginTop: "0px", width: "300px", height: "700px", padding: "10px", color: "black", backgroundColor: "white" }}>
+                <div className={style.rectangle}>
                     <h3>{t("aboutMeSkills")}</h3>
                     <span>{t("mySkills1")}</span>
-                    <span style={{fontWeight: "bold"}}>{t("mySkills2")}</span>
+                    <span style={{ fontWeight: "bold" }}>{t("mySkills2")}</span>
                     <div>{t("mySkills3")}</div>
                     <div>{t("mySkills4")}</div>
                     <div>{t("mySkills5")}</div>
@@ -200,7 +197,8 @@ export const AboutMeMobile = () => {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div ref={ref} style={{ marginTop: "0px", width: "300px", height: "700px", padding: "10px", color: "black", backgroundColor: "white" }}>
+
+                <div  className={style.rectangle} ref={ref}>
                     <h3>{t("asPerson")}</h3>
                     <div>{t("Personal")}</div>
                     <div className={`${startAnimation ? style.waterAnimation : style.removeWaterAnimation} ${style.roundedBottom}`}></div>
@@ -212,7 +210,7 @@ export const AboutMeMobile = () => {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div style={{ marginTop: "0px", width: "300px", height: "700px", padding: "10px", color: "black", backgroundColor: "white" }}>
+                <div className={style.rectangle}>
                     <h3>{t("aboutMeGoals")}</h3>
                     {t("goals")}
                 </div>

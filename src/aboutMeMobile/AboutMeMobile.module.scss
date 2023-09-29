@@ -1,12 +1,36 @@
 @import "../common/styles/sass/variables";
 @import "../common/styles/sass/mixins";
 
-.rectanglesContainer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-  gap: 10px;
-  padding: 40px;
+.swiper-pagination-bullet {
+  background-color: black;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $moreOfMyStoryHoverColor; // Замените на необходимый цвет
+}
+
+.swiperPagination {
+  --swiper-pagination-color: black;
+  --swiper-pagination-bullet-inactive-color: #999999;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-size: 16px;
+  --swiper-pagination-bullet-horizontal-gap: 10px;
+}
+
+.rectangle {
+  width: 100%; // Ширина прямоугольника будет занимать 100% от доступной ширины
+  max-width: 600px; // Опционально: установите максимальную ширину, чтобы ограничить рост на больших экранах
+  margin: 0 auto; // Центрирование по горизонтали
+  height: 700px;
+  padding: 25px;
+  background-color: white;
+  overflow: auto;
+  // Остальные стили...
+}
+
+
+.contentMarginBottom {
+  // Стили для .contentMarginBottom
 }
 
 .textJustified {
@@ -19,32 +43,45 @@ a {
   transition: color 0.3s ease;
 
   &:hover {
-    color: $moreOfMyStoryHoverColor;
+    color: $moreOfMyStoryHoverColor; // Замените на необходимый цвет
   }
 }
 
-
-
 .cupContainer {
   margin-top: 20px;
-  width: 260px;
+  width: 80%; // базовая ширина для мобильных устройств
+  max-width: 260px; // максимальная ширина
   height: 50px;
   padding: 10px;
   color: black;
   background-color: white;
   position: relative;
+}
 
+// Увеличиваем ширину на устройствах с шириной экрана от 480px и выше
+@media (min-width: 480px) {
+  .cupContainer {
+    width: 90%;
+  }
+}
+
+// Увеличиваем ширину на устройствах с шириной экрана от 768px и выше
+@media (min-width: 768px) {
+  .cupContainer {
+    width: 95%;
+  }
 }
 
 .waterAnimation {
   position: absolute;
-  bottom: 200px;
+  bottom: 150px;
   left: 10px;
   right: 10px;
   background-color: blue;
   border-radius: 0 0 100px 100px;
   animation: fillWater 5s forwards;
-
+  width: 90%;
+  margin-top: 550px;
 }
 
 @keyframes fillWater {
@@ -52,7 +89,7 @@ a {
     height: 0%;
   }
   to {
-    height: 35%;
+    height: 30%;
   }
 }
 
@@ -69,26 +106,11 @@ a {
 
 .credoText {
   position: absolute;
-  bottom: 50%;
+  bottom: 40%;
   left: 50%;
   transform: translate(-50%, 50%);
   font-weight: bold;
   font-size: 32px;
   text-align: center;
   color: white;
-}
-.swiper-pagination-bullet {
-  background-color: black;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: $moreOfMyStoryHoverColor;
-}
-
-.swiperPagination {
-  --swiper-pagination-color: black;
-  --swiper-pagination-bullet-inactive-color: #999999;
-  --swiper-pagination-bullet-inactive-opacity: 1;
-  --swiper-pagination-bullet-size: 16px;
-  --swiper-pagination-bullet-horizontal-gap: 10px;
 }
