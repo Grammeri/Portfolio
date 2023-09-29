@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useRef, useState} from "react";
 import { useTranslation } from "react-i18next";
 import style from "./AboutMeMobile.module.scss";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -6,12 +6,28 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
-export const AboutMeMobile = React.memo(() => {
-    console.log("AboutMeMobile rendered");
+export const AboutMeMobile = () => {
     const { t } = useTranslation();
     const [isTextVisible, setIsTextVisible] = useState(false);
+    const [startAnimation, setStartAnimation] = useState(false);
+    const ref = useRef(null);
+    const [isInViewport, setIsInViewport] = useState(false);
+    const [isWaterFilled, setIsWaterFilled] = useState(false);
+    const [displayText, setDisplayText] = useState(false);
+    const [displayedCredoText, setDisplayedCredoText] = useState("");
+
+    const russianAlphabet = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя';
+    const englishAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+
+    const chooseAlphabet = (char: string) => {
+        if (russianAlphabet.includes(char)) return russianAlphabet;
+        if (englishAlphabet.includes(char)) return englishAlphabet;
+        return '';
+    };
+
 
     const showText = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+        console.log('showText was clicked');
         event.preventDefault();
         event.stopPropagation();
         setIsTextVisible(true);
@@ -23,6 +39,111 @@ export const AboutMeMobile = React.memo(() => {
         setIsTextVisible(false);
     };
 
+    const isInView = (el: HTMLElement | null) => {
+        if (!el) return false;
+        const rect = el.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        return rect.top <= windowHeight && rect.bottom >= 0;
+    };
+
+    const handleScroll = () => {
+        const visible = isInView(ref.current);
+        setIsInViewport(visible);
+
+        if (visible && !isWaterFilled) {
+            setStartAnimation(true);
+            setTimeout(() => {
+                setIsWaterFilled(true);
+            }, 2000);
+        } else if (!visible) {
+            setIsWaterFilled(false);
+            setStartAnimation(false);
+            setDisplayText(false);
+        }
+    };
+
+    const handleSlideChange = (swiper:any) => {
+        // Добавьте вашу логику здесь
+        // Например, проверка текущего слайда:
+        if (swiper.activeIndex === 2) {
+            handleScroll(); // Если этот слайд с чашкой, то выполните логику handleScroll
+        } else {
+            // Если это другой слайд, возможно, вы захотите сбросить анимацию
+            setIsWaterFilled(false);
+            setStartAnimation(false);
+            setDisplayText(false);
+        }
+    };
+
+
+    useEffect(() => {
+        if (isWaterFilled) {
+            setTimeout(() => {
+                setDisplayText(true);
+            }, 2000);
+        } else {
+            setDisplayText(false);
+        }
+    }, [isWaterFilled]);
+
+    useEffect(() => {
+        if (displayText) {
+            let fullText = t("myCredo");
+            for (let i = 0; i <= fullText.length; i++) {
+                setTimeout(() => {
+                    setDisplayedCredoText(fullText.substr(0, i));
+                }, i * 100);
+            }
+        }
+    }, [displayText, t]);
+
+    useEffect(() => {
+        handleScroll();
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (displayText) {
+            const fullText = t("myCredo");
+            const totalDuration = 3000;
+            const intervalDuration = 50;
+            let animationProgress = 0;
+            let charStopTimes = Array(fullText.length).fill(0).map((_, i) =>
+                (i + 1) * (totalDuration / fullText.length)
+            );
+
+            const interval = setInterval(() => {
+                let animatedText = '';
+
+                for (let i = 0; i < fullText.length; i++) {
+                    const currentChar = fullText[i];
+                    const currentAlphabet = chooseAlphabet(currentChar);
+
+                    if (currentAlphabet && animationProgress < charStopTimes[i]) {
+                        animatedText += currentAlphabet[Math.floor(Math.random() * currentAlphabet.length)];
+                    } else {
+                        animatedText += currentChar;
+                    }
+                }
+
+                setDisplayedCredoText(animatedText);
+                animationProgress += intervalDuration;
+
+                if (animationProgress > totalDuration) {
+                    clearInterval(interval);
+                }
+            }, intervalDuration);
+
+            return () => clearInterval(interval);
+        }
+    }, [displayText, t]);
+
+
     return (
         <Swiper className={style.swiperPagination}
                 pagination={true}
@@ -30,7 +151,8 @@ export const AboutMeMobile = React.memo(() => {
                 spaceBetween={30}
                 slidesPerView={1}
                 touchRatio={2}
-                resistanceRatio={0}>
+                resistanceRatio={0}
+                onSlideChange={(swiper) => handleSlideChange(swiper)}>
             <SwiperSlide>
                 <div className={`${style.rectangle} ${style.contentMarginBottom}`}
                      style={{ marginTop: 0, width: "300px", height: "700px", padding: "25px", backgroundColor: "white", overflow: "auto" }}>
@@ -75,13 +197,18 @@ export const AboutMeMobile = React.memo(() => {
                     <div>{t("mySkills10")}</div>
                     <div>{t("mySkills11")}</div>
                     <div>{t("mySkills12")}</div>
-
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div style={{ marginTop: "0px", width: "300px", height: "700px", padding: "10px", color: "black", backgroundColor: "white" }}>
+                <div ref={ref} style={{ marginTop: "0px", width: "300px", height: "700px", padding: "10px", color: "black", backgroundColor: "white" }}>
                     <h3>{t("asPerson")}</h3>
                     <div>{t("Personal")}</div>
+                    <div className={`${startAnimation ? style.waterAnimation : style.removeWaterAnimation} ${style.roundedBottom}`}></div>
+                    {displayText && (
+                        <h1 className={style.credoText}>
+                            {displayedCredoText}
+                        </h1>
+                    )}
                 </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -92,4 +219,4 @@ export const AboutMeMobile = React.memo(() => {
             </SwiperSlide>
         </Swiper>
     );
-});
+};

@@ -11,6 +11,7 @@
 
 .textJustified {
   text-align: justify;
+  height: 100%; // Устанавливаем высоту текста на 100%, чтобы он занимал весь контейнер.
 }
 
 a {
@@ -22,11 +23,60 @@ a {
   }
 }
 
-.rectangle {
-  padding-right: 30px;
-  padding-left: 30px;
+
+
+.cupContainer {
+  margin-top: 20px;
+  width: 260px;
+  height: 50px;
+  padding: 10px;
+  color: black;
+  background-color: white;
+  position: relative;
+
 }
 
+.waterAnimation {
+  position: absolute;
+  bottom: 200px;
+  left: 10px;
+  right: 10px;
+  background-color: blue;
+  border-radius: 0 0 100px 100px;
+  animation: fillWater 5s forwards;
+
+}
+
+@keyframes fillWater {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 35%;
+  }
+}
+
+.removeWaterAnimation {
+  height: 50%;
+  animation: removeWater 3s forwards;
+}
+
+@keyframes removeWater {
+  to {
+    height: 0%;
+  }
+}
+
+.credoText {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center;
+  color: white;
+}
 .swiper-pagination-bullet {
   background-color: black;
 }
@@ -41,44 +91,4 @@ a {
   --swiper-pagination-bullet-inactive-opacity: 1;
   --swiper-pagination-bullet-size: 16px;
   --swiper-pagination-bullet-horizontal-gap: 10px;
-}
-
-.abutMeBlock {
-  top: 10px;
-  bottom: auto;
-  min-height: auto;
-}
-
-.contentMarginBottom {
-  margin-bottom: 40px;
-}
-
-.waterAnimation, .removeWaterAnimation {
-  position: absolute;
-  bottom: 0;
-  left: 10px;
-  right: 10px;
-  background-color: blue;
-}
-
-.waterAnimation {
-  height: 0%;
-  animation: fillWater 3s forwards;
-}
-
-.removeWaterAnimation {
-  height: 50%;
-  animation: removeWater 3s forwards;
-}
-
-@keyframes fillWater {
-  to {
-    height: 50%;
-  }
-}
-
-@keyframes removeWater {
-  to {
-    height: 0%;
-  }
 }
