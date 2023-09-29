@@ -148,7 +148,7 @@ export const AboutMeMobile = () => {
                 modules={[Pagination]}
                 spaceBetween={30}
                 slidesPerView={1}
-                touchRatio={2}
+                touchRatio={4}
                 resistanceRatio={0}
                 onSlideChange={handleSlideChange}>
             <SwiperSlide>
