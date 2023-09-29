@@ -148,9 +148,22 @@ export const AboutMeMobile = () => {
                 modules={[Pagination]}
                 spaceBetween={30}
                 slidesPerView={1}
-                touchRatio={4}
+                touchRatio={1}
                 resistanceRatio={0}
                 onSlideChange={handleSlideChange}>
+            <SwiperSlide>
+
+                <div  className={style.rectangle} ref={ref}>
+                    <h3>{t("asPerson")}</h3>
+                    <div>{t("Personal")}</div>
+                    <div className={`${startAnimation ? style.waterAnimation : style.removeWaterAnimation} ${style.roundedBottom}`}></div>
+                    {displayText && (
+                        <h1 className={style.credoText}>
+                            {displayedCredoText}
+                        </h1>
+                    )}
+                </div>
+            </SwiperSlide>
             <SwiperSlide>
                 <div className={style.rectangle}>
                     <h3>{t("asDeveloper")}</h3>
@@ -194,19 +207,6 @@ export const AboutMeMobile = () => {
                     <div>{t("mySkills10")}</div>
                     <div>{t("mySkills11")}</div>
                     <div>{t("mySkills12")}</div>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-
-                <div  className={style.rectangle} ref={ref}>
-                    <h3>{t("asPerson")}</h3>
-                    <div>{t("Personal")}</div>
-                    <div className={`${startAnimation ? style.waterAnimation : style.removeWaterAnimation} ${style.roundedBottom}`}></div>
-                    {displayText && (
-                        <h1 className={style.credoText}>
-                            {displayedCredoText}
-                        </h1>
-                    )}
                 </div>
             </SwiperSlide>
             <SwiperSlide>
