@@ -118,8 +118,8 @@ export const AboutMeMobile = () => {
       modules={[Pagination, Navigation]}
       spaceBetween={50}
       slidesPerView={1}
-      touchRatio={3} // Увеличьте чувствительность касания
-      resistanceRatio={0} // Установите resistanceRatio равным 0
+      touchRatio={3}
+      resistanceRatio={0}
       onSlideChange={handleSlideChange}
     >
       <SwiperSlide>

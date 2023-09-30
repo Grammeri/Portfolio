@@ -22,7 +22,7 @@ export function Nav() {
       window.open("https://github.com/Grammeri/Portfolio", "_blank");
     }
 
-    setIsMenuOpen(false); // Close the menu after clicking a link
+    setIsMenuOpen(false);
   };
 
   return (
