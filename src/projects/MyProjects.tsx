@@ -45,7 +45,7 @@ export const MyProjects = () => {
                 pagination={true}
                 modules={[Pagination]}
                 spaceBetween={50}
-                slidesPerView={1.1}
+                slidesPerView={1}
               >
                 {projects.map((project, index) => (
                   <SwiperSlide key={index}>

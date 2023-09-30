@@ -4,7 +4,8 @@ import style from "./AboutMeMobile.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import SwiperCore, { Navigation, Pagination } from "swiper/modules";
+import "swiper/swiper-bundle.css";
 
 export const AboutMeMobile = () => {
   const { t } = useTranslation();
@@ -27,20 +28,26 @@ export const AboutMeMobile = () => {
     return "";
   };
 
-  const showText = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  const showText = (event: {
+    preventDefault: () => void;
+    stopPropagation: () => void;
+  }) => {
     console.log("showText was clicked");
     event.preventDefault();
     event.stopPropagation();
     setIsTextVisible(true);
   };
 
-  const hideText = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  const hideText = (event: {
+    preventDefault: () => void;
+    stopPropagation: () => void;
+  }) => {
     event.preventDefault();
     event.stopPropagation();
     setIsTextVisible(false);
   };
 
-  const isInView = (el: HTMLElement | null) => {
+  const isInView = (el: { getBoundingClientRect: () => any } | null) => {
     if (!el) return false;
     const rect = el.getBoundingClientRect();
     const windowHeight =
@@ -60,19 +67,6 @@ export const AboutMeMobile = () => {
       setIsWaterFilled(false);
       setStartAnimation(false);
       setDisplayText(false);
-    }
-  };
-
-  const handleSlideChange = () => {
-    if (Swiper) {
-      const swiperInstance = Swiper as any;
-      if (swiperInstance.realIndex === 0) {
-        handleScroll();
-      } else {
-        setIsWaterFilled(false);
-        setStartAnimation(false);
-        setDisplayText(false);
-      }
     }
   };
 
@@ -106,54 +100,26 @@ export const AboutMeMobile = () => {
     };
   }, []);
 
-  useEffect(() => {
-    if (displayText) {
-      const fullText = t("myCredo");
-      const totalDuration = 3000;
-      const intervalDuration = 50;
-      let animationProgress = 0;
-      let charStopTimes = Array(fullText.length)
-        .fill(0)
-        .map((_, i) => (i + 1) * (totalDuration / fullText.length));
-
-      const interval = setInterval(() => {
-        let animatedText = "";
-
-        for (let i = 0; i < fullText.length; i++) {
-          const currentChar = fullText[i];
-          const currentAlphabet = chooseAlphabet(currentChar);
-
-          if (currentAlphabet && animationProgress < charStopTimes[i]) {
-            animatedText +=
-              currentAlphabet[
-                Math.floor(Math.random() * currentAlphabet.length)
-              ];
-          } else {
-            animatedText += currentChar;
-          }
-        }
-
-        setDisplayedCredoText(animatedText);
-        animationProgress += intervalDuration;
-
-        if (animationProgress > totalDuration) {
-          clearInterval(interval);
-        }
-      }, intervalDuration);
-
-      return () => clearInterval(interval);
+  const handleSlideChange = (swiper: { realIndex: number }) => {
+    if (swiper.realIndex === 0) {
+      handleScroll();
+    } else {
+      setIsWaterFilled(false);
+      setStartAnimation(false);
+      setDisplayText(false);
     }
-  }, [displayText, t]);
+  };
 
   return (
     <Swiper
       className={style.swiperPagination}
-      pagination={true}
-      modules={[Pagination]}
+      pagination={{ clickable: true }}
+      navigation={true}
+      modules={[Pagination, Navigation]}
       spaceBetween={50}
       slidesPerView={1}
-      touchRatio={1}
-      resistanceRatio={0}
+      touchRatio={3} // Увеличьте чувствительность касания
+      resistanceRatio={0} // Установите resistanceRatio равным 0
       onSlideChange={handleSlideChange}
     >
       <SwiperSlide>
