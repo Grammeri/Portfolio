@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../src/header/Header'
 import { MyProjects } from 'projects/MyProjects'
-import { Contacts } from 'projects/project/contacts/Contacts'
+import { Contacts } from 'contacts/Contacts'
 import { Footer } from 'footer/Footer'
 import { Main } from 'main/Main'
 import { AboutMe } from 'aboutMe/aboutMe'

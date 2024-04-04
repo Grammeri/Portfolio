@@ -9,7 +9,7 @@ type Propstypes = {
 export const Skill = (props: Propstypes) => {
   return (
     <div className={style.skill}>
-      <img src={props.icon} />
+      <img src={props.icon} alt={''} />
 
       <h3>{props.title}</h3>
     </div>

@@ -1,14 +1,15 @@
 import React, { useRef } from 'react'
-import { ToastContainer } from 'react-toastify'
+import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import style from './Contacts.module.scss'
-import { Title } from 'common/Components/title/Title'
+import { Title } from '../common/Components/title/Title'
 import { useTranslation } from 'react-i18next'
 import emailjs from '@emailjs/browser'
 
 export const Contacts = () => {
   const { t } = useTranslation()
   const form = useRef<HTMLFormElement>(null)
+
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     emailjs
@@ -20,11 +21,30 @@ export const Contacts = () => {
       )
       .then(
         () => {
-          alert('Your message has been sent successfully!')
-          form.current && form.current.reset()
+          toast.success('Your message has been sent successfully!', {
+            position: 'bottom-center',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            toastId: 'success-id'
+          })
+          if (form.current) {
+            form.current.reset()
+          }
         },
         () => {
-          alert('Error occured! Please try again.')
+          toast.error('Error occurred! Please try again.', {
+            position: 'bottom-center',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined
+          })
         }
       )
   }
@@ -49,7 +69,7 @@ export const Contacts = () => {
             name="user_name"
             id="name"
             required
-            placeholder={t('yourName') as string}
+            placeholder={(t('yourName') as string) || ''}
           />
           <label htmlFor="email">{t('email')}</label>
           <input
@@ -57,22 +77,21 @@ export const Contacts = () => {
             name="user_email"
             id="email"
             required
-            placeholder={t('yourEmail') as string}
+            placeholder={(t('yourName') as string) || ''}
           />
           <label htmlFor="message">{t('message')}</label>
           <textarea
             name="message"
             id="message"
             required
-            placeholder={t('yourMessage') as string}
+            placeholder={(t('yourName') as string) || ''}
           />
           <button type="submit" className={style.submitBtn}>
             {t('send')}
           </button>
-          <div className={style.formNote}>{t('formNote')}</div>
         </form>
       </div>
-      <ToastContainer position={'bottom-center'} />
+      <ToastContainer />
     </div>
   )
 }
