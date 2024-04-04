@@ -1,9 +1,9 @@
-@import "../../styles/sass/variables";
+@import '../../styles/sass/variables';
 
 .title {
   margin-top: 30px;
   margin-bottom: 30px;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
   color: black;
   text-transform: capitalize;
@@ -17,7 +17,7 @@
   }
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     background: $btnColor;
     width: 55px;
@@ -28,7 +28,7 @@
   }
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
   .title {
     margin-top: 50px;
     margin-bottom: 10px;

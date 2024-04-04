@@ -1,5 +1,5 @@
-@import "/src/common/styles/sass/variables";
-@import "/src/common/styles/sass/mixins";
+@import '/src/common/styles/sass/variables';
+@import '/src/common/styles/sass/mixins';
 
 .contactsBlock {
   min-height: calc(100vh - 140px);
@@ -46,7 +46,7 @@
       position: relative;
 
       &:before {
-        content: "";
+        content: '';
         position: absolute;
         background: $contactsUnderscoreColor;
         width: 55px;
