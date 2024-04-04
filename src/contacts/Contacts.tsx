@@ -77,14 +77,14 @@ export const Contacts = () => {
             name="user_email"
             id="email"
             required
-            placeholder={(t('yourName') as string) || ''}
+            placeholder={(t('yourEmail') as string) || ''}
           />
           <label htmlFor="message">{t('message')}</label>
           <textarea
             name="message"
             id="message"
             required
-            placeholder={(t('yourName') as string) || ''}
+            placeholder={(t('yourMessage') as string) || ''}
           />
           <button type="submit" className={style.submitBtn}>
             {t('send')}

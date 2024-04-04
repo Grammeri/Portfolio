@@ -66,8 +66,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "lint:css": "stylelint \"**/*.{scss,css}\""
+    "format:check": "prettier --check ."
   },
   "eslintConfig": {
     "extends": [
