@@ -1,11 +1,10 @@
 import socialNetWorkImg from './../assets/image/SocialNetwork.jpg'
 import todoImg from './../assets/image/Todolist.jpg'
 import flashCardsImg from './../assets/image/FlashCards.jpg'
-import instagram from './../assets/image/inctagram.png'
 import { TFunction } from 'i18next'
 
 export const projectsList = (t: TFunction) => [
-  {
+  /*{
     title: t('Currently in progress'),
     date: t('inctagramDate'),
     stackBold: t('stackBold'),
@@ -16,7 +15,7 @@ export const projectsList = (t: TFunction) => [
     codeUrl: 'https://github.com/Crash2022/Inctagram',
     videoUrl:
       'https://drive.google.com/file/d/1rjp8iRtwNU9D15OQYWN6U0xE2zYZgo_V/view?usp=drive_link'
-  },
+  },*/
   {
     title: 'Social Network',
     date: t('socialNetworkDate'),
