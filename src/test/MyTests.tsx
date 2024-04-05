@@ -1,19 +1,19 @@
-import React from "react";
-import style from "test/MyTests.module.scss";
-import styleContainer from "../common/styles/Container.module.css";
-import { Title } from "common/Components/title/Title";
-import { useTranslation } from "react-i18next";
-import { testsList } from "test/testsList";
-import { MyTest } from "test/tests/MyTest";
+import React from 'react'
+import style from 'test/MyTests.module.scss'
+import styleContainer from '../common/styles/Container.module.css'
+import { Title } from 'common/Components/title/Title'
+import { useTranslation } from 'react-i18next'
+import { testsList } from 'test/testsList'
+import { MyTest } from 'test/tests/MyTest'
 
 export const MyTests = () => {
-  const { t } = useTranslation();
-  const tests = testsList(t);
+  const { t } = useTranslation()
+  const tests = testsList(t)
 
   return (
     <section id="MyTests" className={style.myTestsBlock}>
       <div className={`${styleContainer.container} ${style.myTestsContainer}`}>
-        <Title header={t("moreProjects")} />
+        <Title header={t('moreProjects')} />
 
         <div className={style.tests}>
           <div className={style.testsInner}>
@@ -35,5 +35,5 @@ export const MyTests = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

@@ -1,5 +1,5 @@
-@import "../../common/styles/sass/variables";
-@import "../../common/styles/sass/mixins";
+@import '../../common/styles/sass/variables';
+@import '../../common/styles/sass/mixins';
 
 .myTest {
   width: 100%;
@@ -9,8 +9,8 @@
   justify-content: space-between;
   margin-bottom: 15px;
 
-  .image{
-    width:100px;
+  .image {
+    width: 100px;
     height: 100px;
   }
   .imageData {
@@ -63,8 +63,8 @@
   }
 }
 @media screen and (max-width: 752px) {
-  .lightning{
- width: 100%;
+  .lightning {
+    width: 100%;
     margin-right: 10px;
     margin-left: 0 !important;
   }
