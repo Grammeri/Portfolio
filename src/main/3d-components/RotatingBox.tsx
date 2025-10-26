@@ -82,7 +82,7 @@ export const RotatingBox = () => {
       {positions.map((position, index) => (
         <group position={position} key={index}>
           <mesh ref={meshRefs[index]}>
-            <boxBufferGeometry args={[13, 13, 13]} />
+            <boxGeometry args={[13, 13, 13]} />
             <meshStandardMaterial color={colors[index]} map={textures[index]} />
           </mesh>
           <Text
