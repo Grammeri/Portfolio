@@ -1,9 +1,9 @@
 import React from 'react'
 import style from './Footer.module.scss'
-import GithubIcon from '@material-ui/icons/GitHub'
-import LinkedInIcon from '@material-ui/icons/LinkedIn'
-import TelegramIcon from '@material-ui/icons/Telegram'
-import AlternateEmailIcon from '@material-ui/icons/AlternateEmail'
+import GithubIcon from '@mui/icons-material/GitHub'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import TelegramIcon from '@mui/icons-material/Telegram'
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
 import { useTranslation } from 'react-i18next'
 
 export const Footer = () => {

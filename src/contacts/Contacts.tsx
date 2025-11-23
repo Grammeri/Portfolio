@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import style from './Contacts.module.scss'
@@ -11,12 +11,8 @@ export const Contacts = () => {
   const form = useRef<HTMLFormElement>(null)
   const [isLoading, setIsLoading] = useState(false)
 
-  useEffect(() => {
-    // Initialize EmailJS with public key
-    if (process.env.REACT_APP_PUBLIC_KEY) {
-      emailjs.init(process.env.REACT_APP_PUBLIC_KEY)
-    }
-  }, [])
+  // EmailJS will be initialized via publicKey parameter in sendForm
+  // No need to initialize separately if passing publicKey in sendForm
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -66,6 +62,8 @@ export const Contacts = () => {
         message: formData.get('message')
       })
 
+      // Try to send without publicKey (if initialized in useEffect)
+      // Fallback: pass publicKey if initialization didn't work
       const result = await emailjs.sendForm(
         serviceId,
         templateId,
@@ -88,19 +86,44 @@ export const Contacts = () => {
         })
         form.current.reset()
       }
-    } catch (error) {
+    } catch (error: unknown) {
       console.error('EmailJS Error:', error)
 
       let errorMessage = 'Failed to send message. Please try again.'
 
-      if (error && typeof error === 'object' && 'text' in error) {
-        const errorText = String(error.text)
-        errorMessage = `Error: ${errorText}`
+      if (error && typeof error === 'object') {
+        // Type guard for EmailJS error structure
+        const emailjsError = error as {
+          status?: number
+          text?: string
+          response?: { status?: number }
+        }
 
-        // Show more helpful message for invalid grant error
-        if (errorText.includes('Invalid grant')) {
+        // Check for status code
+        const status = emailjsError.status || emailjsError.response?.status
+
+        if (status === 412) {
           errorMessage =
-            'Gmail connection expired. Please contact administrator.'
+            'Gmail service error (412). Please reconnect Gmail in EmailJS dashboard: 1) Go to EmailJS → Services, 2) Disconnect Gmail, 3) Reconnect and grant all permissions.'
+        } else if (status === 400) {
+          errorMessage =
+            'Invalid form data. Please check all fields are filled correctly.'
+        } else if (status === 401 || status === 403) {
+          errorMessage =
+            'Authentication failed. Please check EmailJS public key configuration.'
+        }
+
+        // Check for error text/message
+        if (emailjsError.text) {
+          const errorText = String(emailjsError.text)
+          console.error('EmailJS Error Text:', errorText)
+
+          if (errorText.includes('Invalid grant')) {
+            errorMessage =
+              'Gmail connection expired. Please reconnect Gmail service in EmailJS dashboard.'
+          } else if (errorText.includes('Invalid') || errorText.includes('Failed')) {
+            errorMessage = `Error: ${errorText}`
+          }
         }
       }
 
